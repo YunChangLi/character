@@ -4,17 +4,18 @@ using UnityEngine;
 
 public class PlayerA : PlayerBase
 {
-    MoveManager moveManager = new MoveManager();
+    
     private void Start()
     {
         this.PlayerInit();
-        moveManager.MoveInit(animator);
+
         
     }
     void Update()
     {
         this.PlayerLive();
-        moveManager.Moving();
+        //moveManager.Moving();
+        
     }
     public override void PlayerInit()
     {

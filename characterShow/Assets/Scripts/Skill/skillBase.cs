@@ -9,6 +9,13 @@ public abstract class skillBase : MonoBehaviour
     public abstract IEnumerator skillInit();
     public abstract IEnumerator skilling();
     public abstract IEnumerator skillFinish();
+
+    public int getCD() {
+        return CD;
+    }
+    public KeyCode getKey () {
+        return shortCut;
+    }
     
 
     

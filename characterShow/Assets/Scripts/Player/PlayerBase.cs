@@ -11,10 +11,11 @@ public abstract class PlayerBase : MonoBehaviour
     protected int level;  //get from FlowData
     protected Animator animator;
     protected Bag bag;
-    /*public AttackBase[] AttackSet ;
-    public skillBase[] SkillSet ;*/
     public List<AttackBase> AttackSet = new List<AttackBase>();
     public List<skillBase> SkillSet = new List<skillBase>();
+
+    protected MoveManager moveManager = new MoveManager();
+    protected playerInput mInput /*= new playerInput()*/ ;
 
 
     public int getBlood() {
@@ -45,6 +46,8 @@ public abstract class PlayerBase : MonoBehaviour
         //add Skill
         SkillSet = playerModel.GetComponents<skillBase>().ToList();
 
+        GameDataManager.instance.init();
+
         AttackSet.ForEach(p =>
         {
             p.AttackInit();
@@ -54,9 +57,18 @@ public abstract class PlayerBase : MonoBehaviour
         {
             p.skillInit();
         });
+
+        mInput = GetComponent<playerInput>();
+        moveManager.MoveInit(animator, playerModel, mInput);
+        mInput.InputInit();
+
+
         //Create Task Manager
     }
     public virtual void PlayerLive() {
+
+        mInput.Inputing();
+
         foreach (AttackBase attack in AttackSet)
         {
             attack.Attacking();
@@ -65,6 +77,7 @@ public abstract class PlayerBase : MonoBehaviour
         {
             skill.skilling();
         }
+
     }
     public abstract void PlayerDead();
 

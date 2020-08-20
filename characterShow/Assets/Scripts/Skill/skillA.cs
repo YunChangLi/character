@@ -11,11 +11,11 @@ public class skillA : skillBase
     }
     public override IEnumerator skilling()
     {
-        yield return null; ;
+        yield return null; 
     }
     public override IEnumerator skillFinish()
     {
-        yield return null; ;
+        yield return null; 
     }
     // Start is called before the first frame update
     void Start()

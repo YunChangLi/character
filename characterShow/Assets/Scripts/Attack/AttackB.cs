@@ -7,10 +7,11 @@ public class AttackB : AttackBase
     public override void AttackInit()
     {
         base.AttackInit();
+        shortCut = KeyCode.Q;
     }
     public override void Attacking()
     {
-        if (Input.GetKey(KeyCode.Q))
+        if (Input.GetKey(shortCut))
         {
             animator.SetTrigger("Defend");
 
