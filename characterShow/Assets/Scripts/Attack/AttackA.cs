@@ -12,10 +12,13 @@ public class AttackA : AttackBase
     }
     public override void Attacking()
     {
+
         animator.SetFloat("StateTime", Mathf.Repeat(animator.GetCurrentAnimatorStateInfo(0).normalizedTime, 1f));
-        
-        if (Input.GetMouseButtonDown(0))
+        animator.ResetTrigger("Attack");
+
+        if (playerInput.instance.Attack)
         {
+            
             animator.SetTrigger("Attack");
             
         }

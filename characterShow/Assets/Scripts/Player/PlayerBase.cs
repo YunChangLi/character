@@ -5,17 +5,20 @@ using UnityEngine;
 
 public abstract class PlayerBase : MonoBehaviour
 {
-    public GameObject playerModel;
+    
     protected int blood; //get from FlowData
     protected int mana;  //get from FlowData
     protected int level;  //get from FlowData
     protected Animator animator;
     protected Bag bag;
     public List<AttackBase> AttackSet = new List<AttackBase>();
-    public List<skillBase> SkillSet = new List<skillBase>();
+    public skillBase skill_A;
+    public skillBase skill_B;
+    public skillBase skill_C;
+
 
     protected MoveManager moveManager = new MoveManager();
-    protected playerInput mInput /*= new playerInput()*/ ;
+
 
 
     public int getBlood() {
@@ -38,45 +41,40 @@ public abstract class PlayerBase : MonoBehaviour
     {
         this.blood = level;
     }
-    public virtual void PlayerInit() { 
-
-        animator = playerModel.GetComponent<Animator>() ;
-        //add Attack
-        AttackSet = playerModel.GetComponents<AttackBase>().ToList();
-        //add Skill
-        SkillSet = playerModel.GetComponents<skillBase>().ToList();
-
+    public virtual void PlayerInit() {
         GameDataManager.instance.init();
+
+        animator = this.GetComponent<Animator>() ;
+        //add Attack
+        AttackSet = this.GetComponents<AttackBase>().ToList();
+        if(skill_A)
+            skill_A.skillInit(GameDataManager.instance.flowData.keyDatas.Skill_1);
+        if(skill_B)
+            skill_B.skillInit(GameDataManager.instance.flowData.keyDatas.Skill_2);
+        if(skill_C)
+            skill_C.skillInit(GameDataManager.instance.flowData.keyDatas.Skill_3);
+
 
         AttackSet.ForEach(p =>
         {
             p.AttackInit();
         });
 
-        SkillSet.ForEach(p =>
-        {
-            p.skillInit();
-        });
-
-        mInput = GetComponent<playerInput>();
-        moveManager.MoveInit(animator, playerModel, mInput);
-        mInput.InputInit();
+        moveManager.MoveInit(animator, this.gameObject);
+        playerInput.instance.InputInit();
 
 
         //Create Task Manager
     }
     public virtual void PlayerLive() {
 
-        mInput.Inputing();
+        playerInput.instance.Inputing();
 
         foreach (AttackBase attack in AttackSet)
         {
             attack.Attacking();
         }
-        foreach (skillBase skill in SkillSet)
-        {
-            skill.skilling();
-        }
+        skill_A.mSkill();
 
     }
     public abstract void PlayerDead();

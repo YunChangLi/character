@@ -4,7 +4,7 @@ using UnityEngine;
 /// <summary>
 /// return action bool
 /// </summary>
-public class playerInput : MonoBehaviour
+public class playerInput : Singleton<playerInput>
 {
     protected Vector2 playerMove;
     protected Vector2 cameraMove;
@@ -12,8 +12,7 @@ public class playerInput : MonoBehaviour
     protected bool isJump;
     protected bool isAttack;
     protected bool isSkill;
-    protected skillBase skillmode;
-    protected int[] skillCD = new int[3];
+    protected ShortCutData shortKey;
     
     //protected bool[] skillKey = new KeyCode[3];
     
@@ -45,18 +44,18 @@ public class playerInput : MonoBehaviour
     {
         get { return isAttack && !playerBlocked; }
     }
-    public bool Skill
+    public bool Skill_1
     {
         get { return isSkill; }
     }
     
     WaitForSeconds AttackInputWait;
     Coroutine AttackWaitCoroutine;
-    const float AttackInputDuration = 0.03f;
+    const float AttackInputDuration = 0.3f;
 
     public void InputInit()
     {
-        
+        shortKey = GameDataManager.instance.flowData.keyDatas;
         AttackInputWait = new WaitForSeconds(AttackInputDuration);
     }
     public void Inputing() 
@@ -68,11 +67,17 @@ public class playerInput : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1")) { // attack
 
-            if (AttackWaitCoroutine != null)
-                StopCoroutine(AttackWaitCoroutine); //will attack after 3 sec for last attack
+            if (AttackWaitCoroutine != null) {
+                StopCoroutine(AttackWaitCoroutine); //避免一直新增cooroutine
+                Debug.Log("Stop");
+            }
 
             AttackWaitCoroutine = StartCoroutine(AttackWait());
-            isJump = Input.GetButton("Jump");
+
+        }
+        if (Input.GetKeyDown (shortKey.Skill_1)) {
+
+            
         }
        
     }

@@ -5,27 +5,18 @@ using UnityEngine;
 public class skillA : skillBase
 {
 
-    public override IEnumerator skillInit()
+    public override void skillInit(KeyCode shortCut)
     {
-        yield return null; 
+        base.skillInit(shortCut);
     }
-    public override IEnumerator skilling()
-    {
-        yield return null; 
-    }
-    public override IEnumerator skillFinish()
-    {
-        yield return null; 
-    }
-    // Start is called before the first frame update
-    void Start()
+    public override void skilling()
     {
         
     }
+    public override void skillFinish()
+    {
+        
+    }
+    
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

@@ -6,25 +6,23 @@ public class MoveManager : MonoBehaviour
 {
     public int speed; //Get from DataManager
     private Animator animator;
-    private GameObject playermodel;
+    private GameObject player;
     public KeyCode Jump  = KeyCode.Space;
     public KeyCode Forward = KeyCode.W;
     public KeyCode Backward = KeyCode.S;
     public KeyCode Leftward = KeyCode.A;
     public KeyCode Rightward = KeyCode.D;
-    private playerInput mInput;
     private CharacterController playercontroller;
     private Vector3 moveDirection = Vector3.zero;
     /// <summary>
     /// get the animator and flowData to set KeyCode
     /// </summary>
     /// <param name="animator"></param>
-    public void MoveInit(Animator animator , GameObject playermodel , playerInput mInput)
+    public void MoveInit(Animator animator , GameObject player)
     {
         this.animator = animator;
-        this.playermodel = playermodel;
-        this.mInput = mInput;
-        playercontroller = playermodel.GetComponent<CharacterController>();
+        this.player = player;
+        playercontroller = player.GetComponent<CharacterController>();
     }
     public void Moving()
     {

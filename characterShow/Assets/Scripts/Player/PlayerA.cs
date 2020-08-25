@@ -8,13 +8,15 @@ public class PlayerA : PlayerBase
     private void Start()
     {
         this.PlayerInit();
-
+        
         
     }
     void Update()
     {
         this.PlayerLive();
         //moveManager.Moving();
+
+
         
     }
     public override void PlayerInit()
