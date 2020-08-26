@@ -65,7 +65,7 @@ public class playerInput : Singleton<playerInput>
         isJump = Input.GetButton("Jump");
         //綁定skill按鈕
 
-        if (Input.GetButtonDown("Fire1")) { // attack
+        /*if (Input.GetButtonDown("Fire1")) { // attack
 
             if (AttackWaitCoroutine != null) {
                 StopCoroutine(AttackWaitCoroutine); //避免一直新增cooroutine
@@ -74,7 +74,7 @@ public class playerInput : Singleton<playerInput>
 
             AttackWaitCoroutine = StartCoroutine(AttackWait());
 
-        }
+        }*/
         if (Input.GetKeyDown (shortKey.Skill_1)) {
 
             
