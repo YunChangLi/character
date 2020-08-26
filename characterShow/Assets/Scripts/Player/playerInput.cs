@@ -55,6 +55,9 @@ public class playerInput : Singleton<playerInput>
         shortKey = GameDataManager.instance.flowData.keyDatas;
         AttackInputWait = new WaitForSeconds(AttackInputDuration);
     }
+    /*public void move(CharacterController controller , Vector3 Dir) { 
+        controller.Move()
+    }*/
     public void Inputing() 
     {
         playerMove.Set(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));

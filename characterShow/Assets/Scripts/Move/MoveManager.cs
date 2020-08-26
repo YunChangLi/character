@@ -7,13 +7,12 @@ public class MoveManager : MonoBehaviour
     public int speed; //Get from DataManager
     private Animator animator;
     private GameObject player;
-    public KeyCode Jump  = KeyCode.Space;
+    /*public KeyCode Jump  = KeyCode.Space;
     public KeyCode Forward = KeyCode.W;
     public KeyCode Backward = KeyCode.S;
     public KeyCode Leftward = KeyCode.A;
-    public KeyCode Rightward = KeyCode.D;
-    private CharacterController playercontroller;
-    private Vector3 moveDirection = Vector3.zero;
+    public KeyCode Rightward = KeyCode.D;*/
+
     /// <summary>
     /// get the animator and flowData to set KeyCode
     /// </summary>
@@ -22,13 +21,12 @@ public class MoveManager : MonoBehaviour
     {
         this.animator = animator;
         this.player = player;
-        playercontroller = player.GetComponent<CharacterController>();
     }
     public void Moving()
     {
 
    
-        if (Input.GetKey(Jump) && !animator.GetCurrentAnimatorStateInfo(0).IsName("Jump"))
+        /*if (Input.GetKey(Jump) && !animator.GetCurrentAnimatorStateInfo(0).IsName("Jump"))
         {
             animator.SetTrigger("Jump");
         }
@@ -39,7 +37,7 @@ public class MoveManager : MonoBehaviour
         else if (Input.GetKeyUp(Forward)) 
         {
             animator.SetBool("isMove", false);
-        }
+        }*/
     }
     public void updateDirection() 
     {

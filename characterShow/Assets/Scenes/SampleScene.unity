@@ -186,8 +186,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AttackSet: []
-  speed: 2
-  jumpSpeed: 2
+  speed: 0
+  jumpSpeed: 0
   skill_A: {fileID: 173314110}
   skill_B: {fileID: 0}
   skill_C: {fileID: 0}
@@ -204,548 +204,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shortCut: 0
---- !u!54 &173314114
-Rigidbody:
+--- !u!114 &173314113
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 173314107}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!1 &401139215
-GameObject:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 401139217}
-  - component: {fileID: 401139216}
-  m_Layer: 0
-  m_Name: UndoProRecords
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &401139216
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 401139215}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efa53029e0a62304caf81173265515b9, type: 3}
+  m_Script: {fileID: 11500000, guid: 4adc7d4349085374ab607b67cd10d8ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  undoProRecords:
-  - label: Node Selection
-    relativeStackPos: -17
-    perform:
-      serializedTarget:
-        Name: 
-        isNullObject: 0
-        objectType:
-          typeName: NodeEditorFramework.NodeEditorInputSystem+<>c__DisplayClass15_0,
-            Seneral.NodeEditorFramework.Runtime, Version=0.0.0.0, Culture=neutral,
-            PublicKeyToken=null
-          genericTypes: []
-        unityObject: {fileID: 0}
-        serializedSystemObject: 
-        manuallySerializedMembers:
-        - Name: state
-          isNullObject: 0
-          objectType:
-            typeName: NodeEditorFramework.NodeEditorState, Seneral.NodeEditorFramework.Runtime,
-              Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-            genericTypes: []
-          unityObject: {fileID: 0}
-          serializedSystemObject: 
-          manuallySerializedMembers: []
-          collectionObjects: []
-        - Name: newSelection
-          isNullObject: 0
-          objectType:
-            typeName: NodeEditorFramework.Standard.DeciderWaitTime, Assembly-CSharp,
-              Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-            genericTypes: []
-          unityObject: {fileID: 0}
-          serializedSystemObject: 
-          manuallySerializedMembers: []
-          collectionObjects: []
-        - Name: prevSelection
-          isNullObject: 0
-          objectType:
-            typeName: NodeEditorFramework.Standard.DeciderWaitTime, Assembly-CSharp,
-              Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-            genericTypes: []
-          unityObject: {fileID: 0}
-          serializedSystemObject: 
-          manuallySerializedMembers: []
-          collectionObjects: []
-        collectionObjects: []
-      serializedMethod:
-        declaringType:
-          typeName: NodeEditorFramework.NodeEditorInputSystem+<>c__DisplayClass15_0,
-            Seneral.NodeEditorFramework.Runtime, Version=0.0.0.0, Culture=neutral,
-            PublicKeyToken=null
-          genericTypes: []
-        methodName: <HandleSelecting>b__0
-        parameters: []
-        genericTypes: []
-        flags: 20
-    undo:
-      serializedTarget:
-        Name: 
-        isNullObject: 0
-        objectType:
-          typeName: NodeEditorFramework.NodeEditorInputSystem+<>c__DisplayClass15_0,
-            Seneral.NodeEditorFramework.Runtime, Version=0.0.0.0, Culture=neutral,
-            PublicKeyToken=null
-          genericTypes: []
-        unityObject: {fileID: 0}
-        serializedSystemObject: 
-        manuallySerializedMembers:
-        - Name: state
-          isNullObject: 0
-          objectType:
-            typeName: NodeEditorFramework.NodeEditorState, Seneral.NodeEditorFramework.Runtime,
-              Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-            genericTypes: []
-          unityObject: {fileID: 0}
-          serializedSystemObject: 
-          manuallySerializedMembers: []
-          collectionObjects: []
-        - Name: newSelection
-          isNullObject: 0
-          objectType:
-            typeName: NodeEditorFramework.Standard.DeciderWaitTime, Assembly-CSharp,
-              Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-            genericTypes: []
-          unityObject: {fileID: 0}
-          serializedSystemObject: 
-          manuallySerializedMembers: []
-          collectionObjects: []
-        - Name: prevSelection
-          isNullObject: 0
-          objectType:
-            typeName: NodeEditorFramework.Standard.DeciderWaitTime, Assembly-CSharp,
-              Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-            genericTypes: []
-          unityObject: {fileID: 0}
-          serializedSystemObject: 
-          manuallySerializedMembers: []
-          collectionObjects: []
-        collectionObjects: []
-      serializedMethod:
-        declaringType:
-          typeName: NodeEditorFramework.NodeEditorInputSystem+<>c__DisplayClass15_0,
-            Seneral.NodeEditorFramework.Runtime, Version=0.0.0.0, Culture=neutral,
-            PublicKeyToken=null
-          genericTypes: []
-        methodName: <HandleSelecting>b__1
-        parameters: []
-        genericTypes: []
-        flags: 20
-  - label: Node Drag
-    relativeStackPos: -15
-    perform:
-      serializedTarget:
-        Name: 
-        isNullObject: 0
-        objectType:
-          typeName: NodeEditorFramework.NodeEditorInputControls+<>c__DisplayClass8_0,
-            Seneral.NodeEditorFramework.Runtime, Version=0.0.0.0, Culture=neutral,
-            PublicKeyToken=null
-          genericTypes: []
-        unityObject: {fileID: 0}
-        serializedSystemObject: 
-        manuallySerializedMembers:
-        - Name: draggedNode
-          isNullObject: 0
-          objectType:
-            typeName: NodeEditorFramework.Standard.DeciderWaitTime, Assembly-CSharp,
-              Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-            genericTypes: []
-          unityObject: {fileID: 0}
-          serializedSystemObject: 
-          manuallySerializedMembers: []
-          collectionObjects: []
-        - Name: newX
-          isNullObject: 0
-          objectType:
-            typeName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
-              PublicKeyToken=b77a5c561934e089
-            genericTypes: []
-          unityObject: {fileID: 0}
-          serializedSystemObject: AAEAAAD/////AQAAAAAAAAAEAQAAAA1TeXN0ZW0uU2luZ2xlAQAAAAdtX3ZhbHVlAAsAAOVDCw==
-          manuallySerializedMembers: []
-          collectionObjects: []
-        - Name: newY
-          isNullObject: 0
-          objectType:
-            typeName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
-              PublicKeyToken=b77a5c561934e089
-            genericTypes: []
-          unityObject: {fileID: 0}
-          serializedSystemObject: AAEAAAD/////AQAAAAAAAAAEAQAAAA1TeXN0ZW0uU2luZ2xlAQAAAAdtX3ZhbHVlAAszM6fDCw==
-          manuallySerializedMembers: []
-          collectionObjects: []
-        - Name: prevX
-          isNullObject: 0
-          objectType:
-            typeName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
-              PublicKeyToken=b77a5c561934e089
-            genericTypes: []
-          unityObject: {fileID: 0}
-          serializedSystemObject: AAEAAAD/////AQAAAAAAAAAEAQAAAA1TeXN0ZW0uU2luZ2xlAQAAAAdtX3ZhbHVlAAsAANxDCw==
-          manuallySerializedMembers: []
-          collectionObjects: []
-        - Name: prevY
-          isNullObject: 0
-          objectType:
-            typeName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
-              PublicKeyToken=b77a5c561934e089
-            genericTypes: []
-          unityObject: {fileID: 0}
-          serializedSystemObject: AAEAAAD/////AQAAAAAAAAAEAQAAAA1TeXN0ZW0uU2luZ2xlAQAAAAdtX3ZhbHVlAAsAAJHDCw==
-          manuallySerializedMembers: []
-          collectionObjects: []
-        collectionObjects: []
-      serializedMethod:
-        declaringType:
-          typeName: NodeEditorFramework.NodeEditorInputControls+<>c__DisplayClass8_0,
-            Seneral.NodeEditorFramework.Runtime, Version=0.0.0.0, Culture=neutral,
-            PublicKeyToken=null
-          genericTypes: []
-        methodName: <HandleNodeDraggingEnd>b__0
-        parameters: []
-        genericTypes: []
-        flags: 20
-    undo:
-      serializedTarget:
-        Name: 
-        isNullObject: 0
-        objectType:
-          typeName: NodeEditorFramework.NodeEditorInputControls+<>c__DisplayClass8_0,
-            Seneral.NodeEditorFramework.Runtime, Version=0.0.0.0, Culture=neutral,
-            PublicKeyToken=null
-          genericTypes: []
-        unityObject: {fileID: 0}
-        serializedSystemObject: 
-        manuallySerializedMembers:
-        - Name: draggedNode
-          isNullObject: 0
-          objectType:
-            typeName: NodeEditorFramework.Standard.DeciderWaitTime, Assembly-CSharp,
-              Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-            genericTypes: []
-          unityObject: {fileID: 0}
-          serializedSystemObject: 
-          manuallySerializedMembers: []
-          collectionObjects: []
-        - Name: newX
-          isNullObject: 0
-          objectType:
-            typeName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
-              PublicKeyToken=b77a5c561934e089
-            genericTypes: []
-          unityObject: {fileID: 0}
-          serializedSystemObject: AAEAAAD/////AQAAAAAAAAAEAQAAAA1TeXN0ZW0uU2luZ2xlAQAAAAdtX3ZhbHVlAAsAAOVDCw==
-          manuallySerializedMembers: []
-          collectionObjects: []
-        - Name: newY
-          isNullObject: 0
-          objectType:
-            typeName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
-              PublicKeyToken=b77a5c561934e089
-            genericTypes: []
-          unityObject: {fileID: 0}
-          serializedSystemObject: AAEAAAD/////AQAAAAAAAAAEAQAAAA1TeXN0ZW0uU2luZ2xlAQAAAAdtX3ZhbHVlAAszM6fDCw==
-          manuallySerializedMembers: []
-          collectionObjects: []
-        - Name: prevX
-          isNullObject: 0
-          objectType:
-            typeName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
-              PublicKeyToken=b77a5c561934e089
-            genericTypes: []
-          unityObject: {fileID: 0}
-          serializedSystemObject: AAEAAAD/////AQAAAAAAAAAEAQAAAA1TeXN0ZW0uU2luZ2xlAQAAAAdtX3ZhbHVlAAsAANxDCw==
-          manuallySerializedMembers: []
-          collectionObjects: []
-        - Name: prevY
-          isNullObject: 0
-          objectType:
-            typeName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
-              PublicKeyToken=b77a5c561934e089
-            genericTypes: []
-          unityObject: {fileID: 0}
-          serializedSystemObject: AAEAAAD/////AQAAAAAAAAAEAQAAAA1TeXN0ZW0uU2luZ2xlAQAAAAdtX3ZhbHVlAAsAAJHDCw==
-          manuallySerializedMembers: []
-          collectionObjects: []
-        collectionObjects: []
-      serializedMethod:
-        declaringType:
-          typeName: NodeEditorFramework.NodeEditorInputControls+<>c__DisplayClass8_0,
-            Seneral.NodeEditorFramework.Runtime, Version=0.0.0.0, Culture=neutral,
-            PublicKeyToken=null
-          genericTypes: []
-        methodName: <HandleNodeDraggingEnd>b__1
-        parameters: []
-        genericTypes: []
-        flags: 20
-  - label: Create Node
-    relativeStackPos: -7
-    perform:
-      serializedTarget:
-        Name: 
-        isNullObject: 0
-        objectType:
-          typeName: NodeEditorFramework.Node+<>c__DisplayClass46_0, Seneral.NodeEditorFramework.Runtime,
-            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-          genericTypes: []
-        unityObject: {fileID: 0}
-        serializedSystemObject: 
-        manuallySerializedMembers:
-        - Name: createdNode
-          isNullObject: 0
-          objectType:
-            typeName: NodeEditorFramework.Standard.StateNode, Assembly-CSharp, Version=0.0.0.0,
-              Culture=neutral, PublicKeyToken=null
-            genericTypes: []
-          unityObject: {fileID: 0}
-          serializedSystemObject: 
-          manuallySerializedMembers: []
-          collectionObjects: []
-        - Name: connectedPorts
-          isNullObject: 0
-          objectType:
-            typeName: System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0,
-              Culture=neutral, PublicKeyToken=b77a5c561934e089
-            genericTypes:
-            - NodeEditorFramework.ConnectionPort, Seneral.NodeEditorFramework.Runtime,
-              Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-          unityObject: {fileID: 0}
-          serializedSystemObject: 
-          manuallySerializedMembers: []
-          collectionObjects:
-          - Name: 
-            isNullObject: 1
-            objectType:
-              typeName: 
-              genericTypes: []
-            unityObject: {fileID: 0}
-            serializedSystemObject: 
-        collectionObjects: []
-      serializedMethod:
-        declaringType:
-          typeName: NodeEditorFramework.Node+<>c__DisplayClass46_0, Seneral.NodeEditorFramework.Runtime,
-            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-          genericTypes: []
-        methodName: <Create>b__0
-        parameters: []
-        genericTypes: []
-        flags: 20
-    undo:
-      serializedTarget:
-        Name: 
-        isNullObject: 0
-        objectType:
-          typeName: NodeEditorFramework.Node+<>c__DisplayClass46_0, Seneral.NodeEditorFramework.Runtime,
-            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-          genericTypes: []
-        unityObject: {fileID: 0}
-        serializedSystemObject: 
-        manuallySerializedMembers:
-        - Name: createdNode
-          isNullObject: 0
-          objectType:
-            typeName: NodeEditorFramework.Standard.StateNode, Assembly-CSharp, Version=0.0.0.0,
-              Culture=neutral, PublicKeyToken=null
-            genericTypes: []
-          unityObject: {fileID: 0}
-          serializedSystemObject: 
-          manuallySerializedMembers: []
-          collectionObjects: []
-        - Name: connectedPorts
-          isNullObject: 0
-          objectType:
-            typeName: System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0,
-              Culture=neutral, PublicKeyToken=b77a5c561934e089
-            genericTypes:
-            - NodeEditorFramework.ConnectionPort, Seneral.NodeEditorFramework.Runtime,
-              Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-          unityObject: {fileID: 0}
-          serializedSystemObject: 
-          manuallySerializedMembers: []
-          collectionObjects:
-          - Name: 
-            isNullObject: 1
-            objectType:
-              typeName: 
-              genericTypes: []
-            unityObject: {fileID: 0}
-            serializedSystemObject: 
-        collectionObjects: []
-      serializedMethod:
-        declaringType:
-          typeName: NodeEditorFramework.Node+<>c__DisplayClass46_0, Seneral.NodeEditorFramework.Runtime,
-            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-          genericTypes: []
-        methodName: <Create>b__1
-        parameters: []
-        genericTypes: []
-        flags: 20
-  - label: Delete Node
-    relativeStackPos: -6
-    perform:
-      serializedTarget:
-        Name: 
-        isNullObject: 0
-        objectType:
-          typeName: NodeEditorFramework.Node+<>c__DisplayClass47_0, Seneral.NodeEditorFramework.Runtime,
-            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-          genericTypes: []
-        unityObject: {fileID: 0}
-        serializedSystemObject: 
-        manuallySerializedMembers:
-        - Name: deleteNode
-          isNullObject: 0
-          objectType:
-            typeName: NodeEditorFramework.Standard.StateNode, Assembly-CSharp, Version=0.0.0.0,
-              Culture=neutral, PublicKeyToken=null
-            genericTypes: []
-          unityObject: {fileID: 0}
-          serializedSystemObject: 
-          manuallySerializedMembers: []
-          collectionObjects: []
-        - Name: connectedPorts
-          isNullObject: 0
-          objectType:
-            typeName: System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0,
-              Culture=neutral, PublicKeyToken=b77a5c561934e089
-            genericTypes:
-            - NodeEditorFramework.ConnectionPort, Seneral.NodeEditorFramework.Runtime,
-              Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-          unityObject: {fileID: 0}
-          serializedSystemObject: 
-          manuallySerializedMembers: []
-          collectionObjects:
-          - Name: 
-            isNullObject: 1
-            objectType:
-              typeName: 
-              genericTypes: []
-            unityObject: {fileID: 0}
-            serializedSystemObject: 
-        collectionObjects: []
-      serializedMethod:
-        declaringType:
-          typeName: NodeEditorFramework.Node+<>c__DisplayClass47_0, Seneral.NodeEditorFramework.Runtime,
-            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-          genericTypes: []
-        methodName: <Delete>b__0
-        parameters: []
-        genericTypes: []
-        flags: 20
-    undo:
-      serializedTarget:
-        Name: 
-        isNullObject: 0
-        objectType:
-          typeName: NodeEditorFramework.Node+<>c__DisplayClass47_0, Seneral.NodeEditorFramework.Runtime,
-            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-          genericTypes: []
-        unityObject: {fileID: 0}
-        serializedSystemObject: 
-        manuallySerializedMembers:
-        - Name: deleteNode
-          isNullObject: 0
-          objectType:
-            typeName: NodeEditorFramework.Standard.StateNode, Assembly-CSharp, Version=0.0.0.0,
-              Culture=neutral, PublicKeyToken=null
-            genericTypes: []
-          unityObject: {fileID: 0}
-          serializedSystemObject: 
-          manuallySerializedMembers: []
-          collectionObjects: []
-        - Name: connectedPorts
-          isNullObject: 0
-          objectType:
-            typeName: System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0,
-              Culture=neutral, PublicKeyToken=b77a5c561934e089
-            genericTypes:
-            - NodeEditorFramework.ConnectionPort, Seneral.NodeEditorFramework.Runtime,
-              Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-          unityObject: {fileID: 0}
-          serializedSystemObject: 
-          manuallySerializedMembers: []
-          collectionObjects:
-          - Name: 
-            isNullObject: 1
-            objectType:
-              typeName: 
-              genericTypes: []
-            unityObject: {fileID: 0}
-            serializedSystemObject: 
-        collectionObjects: []
-      serializedMethod:
-        declaringType:
-          typeName: NodeEditorFramework.Node+<>c__DisplayClass47_0, Seneral.NodeEditorFramework.Runtime,
-            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-          genericTypes: []
-        methodName: <Delete>b__1
-        parameters: []
-        genericTypes: []
-        flags: 20
-  undoState:
-    redoRecords: []
-    undoRecords:
-    - Selection Change
-    - Node Selection
-    - Selection Change
-    - Node Drag
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Create Node
-    - Delete Node
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
---- !u!4 &401139217
-Transform:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 401139215}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  MaxHP: 0
+  MoveSpeed: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -820,7 +292,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 2.629e-42, z: 0, w: 1.0168026e-36}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -1220,6 +692,107 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1813094432
+GameObject:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1813094434}
+  - component: {fileID: 1813094433}
+  m_Layer: 0
+  m_Name: UndoProRecords
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1813094433
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1813094432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efa53029e0a62304caf81173265515b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  undoProRecords: []
+  undoState:
+    redoRecords: []
+    undoRecords:
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Moved BaseMove
+    - Selection Change
+    - Transition removed
+    - Selection Change
+    - Destroy Object
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Remove Rigidbody
+    - Selection Change
+    - Remove MonoBehaviour
+    - Add PlayerA
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Inspector
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+--- !u!4 &1813094434
+Transform:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1813094432}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1819157439
 GameObject:
