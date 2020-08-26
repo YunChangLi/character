@@ -18,7 +18,7 @@ namespace NodeEditorFramework.Standard
         public Animator Animator;
 
         // State Information
-        public StateInfo StateInfo;
+        //public StateInfo StateInfo;
 
         // 第一個符合條件的Decider
         private DeciderNodeBase targetDecider;
@@ -49,7 +49,7 @@ namespace NodeEditorFramework.Standard
                 StateNodeBase stateNode = (StateNodeBase)node;
                 stateNode.AIObject = gameObject;
                 stateNode.ActionController = this;
-                stateNode.MovementController = StateInfo.MovementController;
+                //stateNode.MovementController = StateInfo.MovementController;
                 stateNode.DoBeforeRunFSM();
             }
             CurrentActionNode = (ActionNodeBase)StateMachineCanvas.FirstStateNode.FirstActionNode;

@@ -11,7 +11,7 @@ namespace NodeEditorFramework.Standard {
 		// AI邏輯控制器
 		public ActionController ActionController;
 		// 角色控制器
-		public MovementController MovementController;
+		public PlayerController MovementController;
 		// 是否摺疊
 		public bool IsFold = true;
 		// 提示摺疊字串

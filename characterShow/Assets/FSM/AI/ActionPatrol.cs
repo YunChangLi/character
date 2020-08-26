@@ -40,7 +40,7 @@ namespace NodeEditorFramework.Standard
                 Vector3 movDir = new Vector3(targetPos.x - AIObject.transform.position.x, 0, targetPos.z - AIObject.transform.position.z);
                 while(AIObject.transform.position.x != targetPos.x || AIObject.transform.position.z != targetPos.z)
                 {
-                    MovementController.CharacterController.Move(movDir.normalized * Time.deltaTime * ActionController.StateInfo.MoveSpeed);
+                    //MovementController.CharacterController.Move(movDir.normalized * Time.deltaTime * ActionController.StateInfo.MoveSpeed);
                     yield return null;
                 }
                 yield return null;
