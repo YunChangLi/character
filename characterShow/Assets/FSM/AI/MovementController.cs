@@ -8,27 +8,27 @@ public class MovementController : MonoBehaviour
     // 控制基礎的移動、跳躍、重力影響等
 
     public CharacterController CharacterController { get; private set; }
-
-    public StateInfo StateInfo { get; private set; }
-
-    public Vector3 MoveDirection { get; set; }
+    // 重力參數
+    public const float Gravity = 9.8f;
+    // 移動速度
+    public float MoveSpeed = 10;
 
     private void Awake()
     {
         CharacterController = GetComponent<CharacterController>();
-        StateInfo = GetComponent<StateInfo>();
     }
 
-    private void Update()
+    public void Move(Vector3 dir)
     {
-        Movement();
-    }
-
-    private void Movement()
-    {
-        if (MoveDirection == Vector3.zero)
+        if (dir == Vector3.zero)
             return;
 
+        gameObject.transform.forward = dir;
+        CharacterController.Move(dir * MoveSpeed * Time.deltaTime);
+    }
+
+    public void Jump()
+    {
 
     }
 }

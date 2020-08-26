@@ -108,15 +108,15 @@ public abstract class PlayerBase : MonoBehaviour
             
         }
         moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")); //Get Axis
-        moveDirection = transform.TransformDirection(moveDirection); //change the local Dir to the world space
-
-        if (Input.GetButton("Jump"))
+        //moveDirection = transform.TransformDirection(moveDirection); //change the local Dir to the world space
+        GetComponent<MovementController>().Move(moveDirection);
+        /*if (Input.GetButton("Jump"))
         {
             moveDirection.y = jumpSpeed;
         }
         moveDirection.y -= gravity * Time.deltaTime;
         controller.Move(moveDirection * speed * Time.deltaTime);
-        Debug.Log(moveDirection);
+        Debug.Log(moveDirection);*/
 
 
     }
