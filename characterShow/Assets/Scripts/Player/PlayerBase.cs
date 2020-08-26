@@ -107,7 +107,7 @@ public abstract class PlayerBase : MonoBehaviour
         {
             
         }
-        moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")); //Get Axis
+        moveDirection = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical")); //Get Axis
         //moveDirection = transform.TransformDirection(moveDirection); //change the local Dir to the world space
         GetComponent<MovementController>().Move(moveDirection);
         /*if (Input.GetButton("Jump"))

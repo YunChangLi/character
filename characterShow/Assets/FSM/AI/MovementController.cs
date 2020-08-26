@@ -20,11 +20,21 @@ public class MovementController : MonoBehaviour
 
     public void Move(Vector3 dir)
     {
+        GetComponent<Animator>().SetBool("isMove", false);
         if (dir == Vector3.zero)
             return;
-
-        gameObject.transform.forward = dir;
-        CharacterController.Move(dir * MoveSpeed * Time.deltaTime);
+        
+        if (gameObject.transform.forward != dir.normalized)
+        {
+            //gameObject.transform.forward = Quaternion.RotateTowards(Quaternion.Euler(gameObject.transform.forward), Quaternion.Euler(dir), Time.deltaTime).eulerAngles;
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(dir), 5);
+            Debug.Log(gameObject.transform.forward + " " + dir);
+        }
+        else
+        {
+            GetComponent<Animator>().SetBool("isMove", true);
+            CharacterController.Move(dir * MoveSpeed * Time.deltaTime);
+        }
     }
 
     public void Jump()
