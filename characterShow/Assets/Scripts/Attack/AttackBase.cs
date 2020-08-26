@@ -4,8 +4,10 @@ using UnityEngine;
 
 public abstract class AttackBase : MonoBehaviour
 {
+    public KeyCode ShortCut;
     protected Animator animator;
-    public KeyCode shortCut;
+    protected PlayerBehaviorInfo behaviorInfo;
+    
     
     /// <summary>
     /// 組合動作初始化
@@ -13,6 +15,7 @@ public abstract class AttackBase : MonoBehaviour
     public virtual void AttackInit() {
         //Get the shortCut
         animator = this.GetComponent<Animator>();
+        behaviorInfo = this.GetComponent<PlayerBehaviorInfo>();
     }
     public abstract void Attacking();
 

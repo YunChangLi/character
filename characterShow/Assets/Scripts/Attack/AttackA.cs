@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AttackA : AttackBase
 {
-    // Start is called before the first frame update
+    private float stateTime = 0.0f;
     public override void AttackInit()
     {
         
@@ -13,19 +13,19 @@ public class AttackA : AttackBase
     public override void Attacking()
     {
 
-        animator.SetFloat("StateTime", Mathf.Repeat(animator.GetCurrentAnimatorStateInfo(0).normalizedTime, 1f));
+        //animator.SetFloat("StateTime", Mathf.Repeat(animator.GetCurrentAnimatorStateInfo(0).normalizedTime, 1f));
         animator.ResetTrigger("Attack");
 
-        if (playerInput.instance.Attack)
-        {
-            
+        if (behaviorInfo.CanAttack) {
             animator.SetTrigger("Attack");
-            
+            if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f)
+                stateTime++;
+            animator.SetFloat("StateTime", stateTime);
         }
         
     }
     public override void AttackFinish()
     {
-        throw new System.NotImplementedException();
+        
     }
 }
