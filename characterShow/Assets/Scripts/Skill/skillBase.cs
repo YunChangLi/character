@@ -28,7 +28,7 @@ public abstract class skillBase : MonoBehaviour
             if (Input.GetKey(shortCut)) {
                 skillWait = StartCoroutine(skillWaitCoroutine());
             }
-            Debug.Log("CanSkill");
+            //Debug.Log("CanSkill");
             
             
             return true;
@@ -36,7 +36,7 @@ public abstract class skillBase : MonoBehaviour
         else
         {
             StopCoroutine(skillWaitCoroutine());
-            Debug.Log("CannotSkill");
+            //Debug.Log("CannotSkill");
             return false;
         }
     

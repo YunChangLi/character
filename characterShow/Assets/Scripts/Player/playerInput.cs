@@ -11,7 +11,7 @@ public class playerInput : Singleton<playerInput>
     protected bool playerBlocked = false;
     protected bool isJump;
     protected bool isAttack;
-    protected bool isSkill;
+
     protected ShortCutData shortKey;
     
     //protected bool[] skillKey = new KeyCode[3];
@@ -44,10 +44,7 @@ public class playerInput : Singleton<playerInput>
     {
         get { return isAttack && !playerBlocked; }
     }
-    public bool Skill_1
-    {
-        get { return isSkill; }
-    }
+
     
     WaitForSeconds AttackInputWait;
     Coroutine AttackWaitCoroutine;

@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameDataManager : Singleton<GameDataManager>
 {
     public GameFlowData flowData;
-    public void init() {
+    public void ManagerInit() {
 
         flowData = new GameFlowData();
         
