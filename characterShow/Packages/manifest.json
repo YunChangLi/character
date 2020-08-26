@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.seneral.undopro": "https://github.com/Seneral/UndoPro.git#v1.0.0-lts",
     "com.unity.cinemachine": "2.6.0",
     "com.unity.collab-proxy": "1.2.16",
     "com.unity.ext.nunit": "1.0.0",
