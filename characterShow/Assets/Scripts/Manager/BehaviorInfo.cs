@@ -31,4 +31,6 @@ public class BehaviorInfo : MonoBehaviour
     public bool IsDead { get { return HP <= 0; } }
 
 
+
+
 }

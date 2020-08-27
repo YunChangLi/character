@@ -25,7 +25,11 @@ public class PlayerBehaviorInfo : BehaviorInfo
     /// </summary>
     public bool CanAttack
     {
-        get { return !IsBlocked && IsGrounded && Input.GetButtonDown("Fire1"); }
+        get { return !IsBlocked /*&& IsGrounded */&& Input.GetButtonDown("Fire1"); }
+    }
+    public bool IsDefense
+    {
+        get { return /**IsGrounded**/Input.GetKey(KeyCode.Z); }
     }
     private void Update()
     {
