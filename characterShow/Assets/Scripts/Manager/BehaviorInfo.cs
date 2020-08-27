@@ -9,6 +9,8 @@ public class BehaviorInfo : MonoBehaviour
     public float HP { get; set; }
     //最大血量
     public float MaxHP;
+    
+    private CharacterController characterController;
 
 
     /// <summary>
@@ -17,7 +19,7 @@ public class BehaviorInfo : MonoBehaviour
     // 是否著地
     public bool IsGrounded 
     { 
-        get { return Physics.Raycast(transform.position, -Vector3.up, 0.05f); }
+        get { return characterController.isGrounded; }
     }
     //是否撞牆
     public bool IsBlocked 
@@ -30,7 +32,10 @@ public class BehaviorInfo : MonoBehaviour
     // 是否死亡
     public bool IsDead { get { return HP <= 0; } }
 
-
+    private void Awake()
+    {
+        characterController = GetComponent<CharacterController>();
+    }
 
 
 }
