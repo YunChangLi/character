@@ -83,7 +83,7 @@ public abstract class PlayerBase : MonoBehaviour
         {
             attack.Attacking();
         }
-        skill_A.mSkill();
+        //skill_A.mSkill();
 
     }
     public abstract void PlayerDead();
