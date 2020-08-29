@@ -306,120 +306,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 620201884}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &714421308
-GameObject:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 714421310}
-  - component: {fileID: 714421309}
-  m_Layer: 0
-  m_Name: UndoProRecords
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &714421309
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 714421308}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efa53029e0a62304caf81173265515b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  undoProRecords: []
-  undoState:
-    redoRecords: []
-    undoRecords:
-    - Selection Change
-    - Create Plane
-    - Add MeshFilter
-    - Add MeshRenderer
-    - Add MeshCollider
-    - Create Plane
-    - Selection Change
-    - Move
-    - Inspector
-    - Inspector
-    - Inspector
-    - Selection Change
-    - Inspector
-    - Inspector
-    - Move
-    - Add CharacterController
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Add test
-    - Selection Change
-    - Remove MonoBehaviour
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Add Testing
-    - Selection Change
-    - Add BoxCollider
---- !u!4 &714421310
-Transform:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 714421308}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &787671442
 GameObject:
   m_ObjectHideFlags: 0
@@ -434,6 +320,7 @@ GameObject:
   - component: {fileID: 787671444}
   - component: {fileID: 787671447}
   - component: {fileID: 787671448}
+  - component: {fileID: 787671449}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -546,6 +433,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa92dbdd8d32a8b48aed7eb36f17664f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &787671449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787671442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7e631c6c06059641a98c5ed10ec3d69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1019549548
 GameObject:
   m_ObjectHideFlags: 0
@@ -639,7 +538,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1019549553
 BoxCollider:
@@ -654,6 +553,57 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 2.220446e-16, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1602568063
+GameObject:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1602568065}
+  - component: {fileID: 1602568064}
+  m_Layer: 0
+  m_Name: UndoProRecords
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1602568064
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1602568063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efa53029e0a62304caf81173265515b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  undoProRecords: []
+  undoState:
+    redoRecords: []
+    undoRecords:
+    - Selection Change
+    - Selection Change
+    - Add PlayerTaskController
+    - Selection Change
+--- !u!4 &1602568065
+Transform:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1602568063}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &5074324869135183300
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -809,17 +759,17 @@ PrefabInstance:
     - target: {fileID: 5074324869226542727, guid: fced8daaf2fd3274ea6cca940cdcfe24,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.05392422
+      value: -0.05392424
       objectReference: {fileID: 0}
     - target: {fileID: 5074324869226542727, guid: fced8daaf2fd3274ea6cca940cdcfe24,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000017181348
+      value: 0.000000017181348
       objectReference: {fileID: 0}
     - target: {fileID: 5074324869226542727, guid: fced8daaf2fd3274ea6cca940cdcfe24,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -9.2784075e-10
+      value: 9.278411e-10
       objectReference: {fileID: 0}
     - target: {fileID: 5074324869226542727, guid: fced8daaf2fd3274ea6cca940cdcfe24,
         type: 3}

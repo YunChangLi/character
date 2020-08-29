@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class GamePlayerManager : Singleton<GamePlayerManager>
 {
-    public PlayerBase player { get; set; }
-    public playerInput input { get; set; }
+    public PlayerBase Player { get; set; }
+    public PlayerTaskController PTaskController { get; set; }
 
     public void ManagerInit() {
-        player = FindObjectOfType<PlayerBase>();
-        input = FindObjectOfType<playerInput>();
+        Player = FindObjectOfType<PlayerBase>();
+        
     }
     
 }
