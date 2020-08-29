@@ -34,8 +34,6 @@ public class PlayerBehaviorInfo : BehaviorInfo
         get { return /**IsGrounded**/Input.GetKey(KeyCode.Z); }
     }
 
-    //內部調整的位移向量
-    private Vector3 movement;
     //內部調整攻擊判定
     private bool isAttack;
     //用來延遲攻擊判定

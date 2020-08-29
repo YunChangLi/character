@@ -17,8 +17,11 @@ namespace NodeEditorFramework.Standard
         // Animator
         public Animator Animator;
 
-        // State Information
-        //public StateInfo StateInfo;
+        // 怪物資訊
+        public MonsterInfo MonsterInfo;
+
+        // 計算移動
+        public MonsterController MonsterController;
 
         // 第一個符合條件的Decider
         private DeciderNodeBase targetDecider;
@@ -34,8 +37,16 @@ namespace NodeEditorFramework.Standard
         {
             NodeEditor.checkInit(false);
             StateMachineCanvas.Validate();
+            // 初始化MonsterController
+            MonsterController.Init();
             InitNodes();
             StartCoroutine(UpdateAction());
+        }
+
+        private void FixedUpdate()
+        {
+            // 持續計算移動量
+            MonsterController.UpdateCalculation();
         }
 
         /// <summary>

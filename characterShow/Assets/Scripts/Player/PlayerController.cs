@@ -73,10 +73,10 @@ public class PlayerController : MonoBehaviour
         // 將加速與減速添加到移動速度上
         forwardSpeed = Mathf.MoveTowards(forwardSpeed, desiredForwardSpeed, acceleration * Time.deltaTime);
 
+        // 計算最後的移動值
         movement = forwardSpeed * transform.forward * Time.deltaTime;
         movement += verticalSpeed * Vector3.up * Time.deltaTime;
 
-        // 計算最後的移動值
         characterController.Move(movement);
 
         isGrounded = playerInfo.IsGrounded;
@@ -84,7 +84,7 @@ public class PlayerController : MonoBehaviour
 
     private void CaluclateVerticalMovement()
     {
-        if(!playerInfo.IsJump && isGrounded)
+        if(!playerInfo.JumpInput && isGrounded)
         {
             readyToJump = true;
         }
@@ -95,7 +95,7 @@ public class PlayerController : MonoBehaviour
             verticalSpeed = -gravity * stickingGravityProportion;
 
             // 當玩家按下跳躍鈕且準備好可以跳
-            if(playerInfo.IsJump && readyToJump)
+            if(playerInfo.JumpInput && readyToJump)
             {
                 verticalSpeed = JumpSpeed;
                 isGrounded = false;
@@ -104,7 +104,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            if(!playerInfo.IsJump && verticalSpeed > 0f)
+            if(!playerInfo.JumpInput && verticalSpeed > 0f)
             {
                 // 當玩家按越久則跳躍高
                 verticalSpeed -= jumpAbortSpeed * Time.deltaTime;

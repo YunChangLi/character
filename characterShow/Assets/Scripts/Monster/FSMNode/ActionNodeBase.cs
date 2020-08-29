@@ -145,5 +145,5 @@ namespace NodeEditorFramework.Standard
 			Clip = RTEditorGUI.ObjectField("Sound Effect", Clip, false);
 			SoundDelay = RTEditorGUI.FloatField(new GUIContent("Sound Delay", "Delay to play sound effect"), SoundDelay);
 		}
-    }
+	}
 }

@@ -7,11 +7,11 @@ namespace NodeEditorFramework.Standard {
     public abstract class StateNodeBase : Node
     {
 		// 由ActionController負責給予此物件的參考
-		public GameObject AIObject;
+		public GameObject AIObject { get; set; }
 		// AI邏輯控制器
-		public ActionController ActionController;
-		// 角色控制器
-		public PlayerController MovementController;
+		public ActionController ActionController { get; set; }
+		// 怪物狀態
+		public MonsterInfo MonsterInfo { get; set; }
 		// 是否摺疊
 		public bool IsFold = true;
 		// 提示摺疊字串

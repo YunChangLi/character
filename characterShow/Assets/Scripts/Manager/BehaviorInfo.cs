@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
+[RequireComponent(typeof(CharacterController))]
 public class BehaviorInfo : MonoBehaviour
 {
     //當前血量
@@ -21,6 +21,7 @@ public class BehaviorInfo : MonoBehaviour
     { 
         get { return characterController.isGrounded; }
     }
+
     //是否撞牆
     public bool IsBlocked 
     {
@@ -29,6 +30,7 @@ public class BehaviorInfo : MonoBehaviour
 
     // 是否無敵
     public bool IsInvincible { get; set; }
+
     // 是否死亡
     public bool IsDead { get { return HP <= 0; } }
 
