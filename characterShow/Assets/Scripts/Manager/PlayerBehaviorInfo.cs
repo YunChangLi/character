@@ -11,8 +11,6 @@ public class PlayerBehaviorInfo : BehaviorInfo
     //內部調整的位移向量
     private Vector3 movement;
 
-    public bool JumpInput;
-
     public Vector3 MovementDir 
     {
         get 
@@ -33,10 +31,13 @@ public class PlayerBehaviorInfo : BehaviorInfo
     {
         get { return /**IsGrounded**/Input.GetKey(KeyCode.Z); }
     }
+    public bool IsJump
+    {
+        get { return Input.GetButton("Jump"); }
+    }
     private void Update()
     {
         movement.Set(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        JumpInput = Input.GetButton("Jump");
     }
 
 

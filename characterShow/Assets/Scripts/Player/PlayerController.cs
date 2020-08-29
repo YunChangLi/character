@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
 {
-    // 控制基礎的移動、跳躍、重力影響等
+    // 控制基礎的移動、跳躍
     // 各項參數
     const float gravity = 20f;
     const float groundAcceleration = 20f;
@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     const float airborneTurnSpeedProportion = 5.4f;
     const float inverseOneEighty = 1f / 180f;
     const float stickingGravityProportion = 0.3f;
-    const float jumpAbortSpeed = 10f;
+    const float jumpAbortSpeed = 10f;   // 當玩家提早放掉跳躍鍵時的額外減速
 
     public float MaxMoveSpeed = 10f; // 移動速度
     public float MinTurnSpeed = 400f;   // 最小旋轉速度
@@ -31,11 +31,13 @@ public class PlayerController : MonoBehaviour
     private bool isGrounded = true;
     private bool readyToJump = true;
     private Vector3 movement;
+    private CameraSetting cameraSetting;
 
     private void Awake()
     {
         characterController = GetComponent<CharacterController>();
         playerInfo = GetComponent<PlayerBehaviorInfo>();
+        cameraSetting = FindObjectOfType<CameraSetting>();
     }
 
     private void FixedUpdate()
@@ -77,12 +79,12 @@ public class PlayerController : MonoBehaviour
         // 計算最後的移動值
         characterController.Move(movement);
 
-        isGrounded = characterController.isGrounded;
+        isGrounded = playerInfo.IsGrounded;
     }
 
     private void CaluclateVerticalMovement()
     {
-        if(!playerInfo.JumpInput && isGrounded)
+        if(!playerInfo.IsJump && isGrounded)
         {
             readyToJump = true;
         }
@@ -93,7 +95,7 @@ public class PlayerController : MonoBehaviour
             verticalSpeed = -gravity * stickingGravityProportion;
 
             // 當玩家按下跳躍鈕且準備好可以跳
-            if(playerInfo.JumpInput && readyToJump)
+            if(playerInfo.IsJump && readyToJump)
             {
                 verticalSpeed = JumpSpeed;
                 isGrounded = false;
@@ -102,7 +104,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            if(!playerInfo.JumpInput && verticalSpeed > 0f)
+            if(!playerInfo.IsJump && verticalSpeed > 0f)
             {
                 // 當玩家按越久則跳躍高
                 verticalSpeed -= jumpAbortSpeed * Time.deltaTime;
@@ -122,7 +124,7 @@ public class PlayerController : MonoBehaviour
     {
         Vector3 localMovementDirection = new Vector3(playerInfo.MovementDir.x, 0, playerInfo.MovementDir.z).normalized;
         // 根據Camera調整向前的方向
-        Vector3 forward = Quaternion.Euler(0f, 0, 0) * Vector3.forward;
+        Vector3 forward = Quaternion.Euler(0, cameraSetting.FreeLook.m_XAxis.Value, 0) * Vector3.forward;
         forward.y = 0f;
         forward.Normalize();
 
