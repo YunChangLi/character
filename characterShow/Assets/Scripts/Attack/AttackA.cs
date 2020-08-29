@@ -11,12 +11,16 @@ public class AttackA : AttackBase
     }
     public override void Attacking()
     {
-
+        Debug.Log(this.GetComponent<PlayerBehaviorInfo>().CanAttack);
         animator.SetFloat("StateTime", Mathf.Repeat(animator.GetCurrentAnimatorStateInfo(0).normalizedTime, 1f));
-        animator.ResetTrigger("Attack");
+        //animator.ResetTrigger("Attack");
 
-        if (this.GetComponent<PlayerBehaviorInfo>().CanAttack) {
+        if (this.GetComponent<PlayerBehaviorInfo>().CanAttack)
+        {
             animator.SetTrigger("Attack");
+        }
+        else {
+            animator.ResetTrigger("Attack");
         }
         
     }
