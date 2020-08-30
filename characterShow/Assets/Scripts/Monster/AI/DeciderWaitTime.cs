@@ -24,17 +24,6 @@ namespace NodeEditorFramework.Standard
 
         public override bool Calculate()
         {
-            /*if (currentTime >= WaitTime)
-            {
-                currentTime = 0;
-                return true;
-            }
-            else
-            {
-                currentTime += Time.deltaTime;
-                //Debug.Log(currentTime);
-                return false;
-            }*/
             return ActionController.CurrentActionNode.RunTime >= WaitTime;
         }
 

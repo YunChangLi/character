@@ -5,6 +5,7 @@ using UnityEngine;
 public class MonsterController : MonoBehaviour
 {
     public Vector3 MoveDir { get; set; }
+    public bool GoJump = false;
     public float MaxMoveSpeed = 1f; // 最大移動速度
     public float JumpSpeed = 20f;   // 跳躍速度
 
@@ -51,7 +52,10 @@ public class MonsterController : MonoBehaviour
         forwardSpeed = Mathf.MoveTowards(forwardSpeed, desiredForwardSpeed, acceleration * Time.deltaTime);
 
         // 計算最後的移動值
-        movement = forwardSpeed * transform.forward * Time.deltaTime;
+        movement = forwardSpeed * MoveDir * Time.deltaTime;
+
+        transform.rotation = Quaternion.LookRotation(movement);
+
         movement += verticalSpeed * Vector3.up * Time.deltaTime;
 
         characterController.Move(movement);
@@ -75,11 +79,12 @@ public class MonsterController : MonoBehaviour
             verticalSpeed = -gravity * stickingGravityProportion;
 
             // 當怪物準備好可以跳
-            if (readyToJump)
+            if (GoJump && readyToJump)
             {
                 verticalSpeed = JumpSpeed;
                 isGrounded = false;
                 readyToJump = false;
+                GoJump = false;
             }
         }
         else

@@ -12,25 +12,21 @@ namespace NodeEditorFramework.Standard
 
         public override string ActionName { get { return "Follow"; } }
 
-        private GameObject target;
-        private NavMeshAgent agent;
+        private Transform playerTransform;
 
-        public override void Init()
+        public override void DoBeforeRunFSM()
         {
-            base.Init();
-            //animator.SetBool("Walk", true);
-
-            //target = GameObject.FindWithTag("Player");
-            //agent = AIObject.GetComponent<NavMeshAgent>();
-            //agent.enabled = true;
+            playerTransform = GameObject.FindWithTag("Player").transform;
         }
 
         public override IEnumerator Process()
         {
-            base.Process();
-            //FollowPlayer();
-            AIObject.transform.position += Vector3.left * Time.deltaTime;
-            yield return null;
+            while (true)
+            {
+                Vector3 movDir = new Vector3(playerTransform.position.x - AIObject.transform.position.x, 0, playerTransform.position.z - AIObject.transform.position.z);
+                ActionController.MonsterController.MoveDir = movDir.normalized;
+                yield return null;
+            }
         }
 
         public override void Exit()
@@ -38,17 +34,6 @@ namespace NodeEditorFramework.Standard
             base.Exit();
             //target = null;
             //animator.SetBool("Walk", false);
-        }
-
-        /// <summary>
-        /// 跟隨玩家
-        /// </summary>
-        private void FollowPlayer()
-        {
-            if (target == null)
-                return;
-
-            agent.SetDestination(target.transform.position);
         }
     }
 }

@@ -60,7 +60,7 @@ namespace NodeEditorFramework.Standard
                 StateNodeBase stateNode = (StateNodeBase)node;
                 stateNode.AIObject = gameObject;
                 stateNode.ActionController = this;
-                //stateNode.MovementController = StateInfo.MovementController;
+                stateNode.MonsterInfo = MonsterInfo;
                 stateNode.DoBeforeRunFSM();
             }
             CurrentActionNode = (ActionNodeBase)StateMachineCanvas.FirstStateNode.FirstActionNode;
@@ -77,6 +77,8 @@ namespace NodeEditorFramework.Standard
                 Debug.Log(CurrentActionNode.Title);
                 // Action初始化
                 CurrentActionNode.Init();
+                // Decider初始化
+                CurrentActionNode.DeciderList.ForEach((decider) => decider.Init());
                 // 計時器
                 timer = CurrentActionNode.Timer();
                 // Action具體過程

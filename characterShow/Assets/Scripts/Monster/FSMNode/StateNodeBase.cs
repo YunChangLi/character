@@ -18,7 +18,7 @@ namespace NodeEditorFramework.Standard {
 		public string FoldStatus = "Fold";
 
 		/// <summary>
-		/// Runtime執行FSM前做的事
+		/// 整個FSM運作前的初始化(一次性)
 		/// </summary>
 		public virtual void DoBeforeRunFSM()
         {

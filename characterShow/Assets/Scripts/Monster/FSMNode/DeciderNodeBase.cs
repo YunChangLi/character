@@ -45,7 +45,7 @@ namespace NodeEditorFramework.Standard
 		}
 
 		/// <summary>
-		/// 使用這個Decider前的初始化
+		/// 整個FSM運作前的初始化(一次性)
 		/// </summary>
 		public override void DoBeforeRunFSM()
         {
@@ -57,7 +57,7 @@ namespace NodeEditorFramework.Standard
 		}
 
 		/// <summary>
-		/// Runtime的初始化'
+		/// Runtime每次使用這個Deicder時的初始化(重複)
 		/// </summary>
 		public virtual void Init()
 		{

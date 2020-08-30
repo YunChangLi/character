@@ -19,31 +19,24 @@ namespace NodeEditorFramework.Standard
         public float PatrolRadius;
 
         private Vector3 initPos;
-
-        public override void DoBeforeRunFSM()
-        {
-            initPos = AIObject.transform.position;
-        }
+        private Vector3 targetPos;
 
         public override void Init()
         {
             base.Init();
+            initPos = AIObject.transform.position;
         }
 
         public override IEnumerator Process()
         {
-            //yield return new WaitUntil(() => monsterInfo.isGrounded);
+            yield return new WaitUntil(() => MonsterInfo.IsGrounded);
             while (true)
             {
                 float rad = (float)UnityEngine.Random.Range(0, 360) / 180f * 3.14f;
-                Vector3 targetPos = initPos + new Vector3((float)(PatrolRadius * Math.Cos(rad)), 0, (float)(PatrolRadius * Math.Sin(rad)));
+                targetPos = initPos + new Vector3((float)(PatrolRadius * Math.Cos(rad)), 0, (float)(PatrolRadius * Math.Sin(rad)));
                 Vector3 movDir = new Vector3(targetPos.x - AIObject.transform.position.x, 0, targetPos.z - AIObject.transform.position.z);
-                while(AIObject.transform.position.x != targetPos.x || AIObject.transform.position.z != targetPos.z)
-                {
-                    //MovementController.CharacterController.Move(movDir.normalized * Time.deltaTime * ActionController.StateInfo.MoveSpeed);
-                    yield return null;
-                }
-                yield return null;
+                ActionController.MonsterController.MoveDir = movDir.normalized;
+                yield return new WaitUntil(ReachTarget);
             }
         }
 
@@ -64,80 +57,13 @@ namespace NodeEditorFramework.Standard
         }
 
         /// <summary>
-        /// 初始化
-        /// </summary>
-        /*public override void Init()
-        {
-            //initPos = transform.position;
-            startMove = false;
-            StartCoroutine(Calculate());
-        }
-
-        /// <summary>
-        /// 計算移動位置
+        /// 判斷是否移動到目的地
         /// </summary>
         /// <returns></returns>
-        public IEnumerator Calculate()
+        private bool ReachTarget()
         {
-            // 等待怪物著地後才開始移動
-            yield return new WaitUntil(() => monsterInfo.isGrounded);
-            while (true)
-            {
-                float theta = Random.Range(0f, 1f) * 2 * Mathf.PI;
-                float len = Random.Range(monsterInfo.FieldRadius * 0.2f, monsterInfo.FieldRadius);
-                //centerX + len * cos(theta), centerZ + len * sin(theta)
-                targetPos = new Vector3(monsterInfo.FieldCenter.x + len * Mathf.Cos(theta), transform.position.y, monsterInfo.FieldCenter.z + len * Mathf.Sin(theta));
-                startMove = true;
-                animator.SetBool("Walk", true);
-                reCalculate = false;
-                yield return CheckArrive();
-                if (!reCalculate)
-                {
-                    startMove = false;
-                    animator.SetBool("Walk", false);
-                    yield return new WaitForSeconds(2);
-                }
-            }
+            return Mathf.Abs(AIObject.transform.position.x - targetPos.x) < 0.1f
+                && Mathf.Abs(AIObject.transform.position.z - targetPos.z) < 0.1f;
         }
-
-        public override void Process()
-        {
-            if (startMove)
-                Move();
-        }
-
-        /// <summary>
-        /// 巡邏移動
-        /// </summary>
-        private void Move()
-        {
-            transform.position = Vector3.MoveTowards(transform.position, targetPos, monsterInfo.MoveSpeed * Time.deltaTime);
-            Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetPos - transform.position, monsterInfo.RotateSpeed * Time.deltaTime, 0.0f);
-            newDirection.y = 0;
-            transform.rotation = Quaternion.LookRotation(newDirection);
-        }
-
-        public override void Exit()
-        {
-            animator.SetBool("Walk", false);
-            StopCoroutine(Calculate());
-        }
-
-        /// <summary>
-        /// 檢查是否抵達目的地或者中途與其他怪物碰撞
-        /// </summary>
-        /// <returns></returns>
-        private IEnumerator CheckArrive()
-        {
-            while (Vector3.Distance(transform.position, targetPos) >= 0.5f)
-            {
-                if (monsterInfo.isCollideMonster)
-                {
-                    reCalculate = true;
-                    yield break;
-                }
-                yield return null;
-            }
-        }*/
     }
 }
