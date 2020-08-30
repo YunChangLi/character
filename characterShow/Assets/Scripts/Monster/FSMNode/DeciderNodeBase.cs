@@ -138,6 +138,8 @@ namespace NodeEditorFramework.Standard
 				isLeftOutputConnected = false;
 				outputLeftKnob.ClearConnections();
 			}
+
+			DrawRange();
 		}
 
         // 子類別實作此函式來製作各自Node的GUI

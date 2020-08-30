@@ -5,6 +5,7 @@ using UnityEngine;
 
 namespace NodeEditorFramework.Standard
 {
+    [RequireComponent(typeof(RangeDrawer))]
     public class ActionController : MonoBehaviour
     {
         // FSM Canvas
@@ -22,6 +23,8 @@ namespace NodeEditorFramework.Standard
 
         // 計算移動
         public MonsterController MonsterController;
+
+        public RangeDrawer Drawer;
 
         // 第一個符合條件的Decider
         private DeciderNodeBase targetDecider;

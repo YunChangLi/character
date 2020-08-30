@@ -54,7 +54,8 @@ public class MonsterController : MonoBehaviour
         // 計算最後的移動值
         movement = forwardSpeed * MoveDir * Time.deltaTime;
 
-        transform.rotation = Quaternion.LookRotation(movement);
+        if(movement != Vector3.zero)
+            transform.rotation = Quaternion.LookRotation(movement);
 
         movement += verticalSpeed * Vector3.up * Time.deltaTime;
 
