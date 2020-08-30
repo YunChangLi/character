@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     const float stickingGravityProportion = 0.3f;
     const float jumpAbortSpeed = 10f;   // 當玩家提早放掉跳躍鍵時的額外減速
 
+    public PlayerTaskController PTaskController { get; set; } //player Task
     public float MaxMoveSpeed = 10f; // 移動速度
     public float MinTurnSpeed = 400f;   // 最小旋轉速度
     public float MaxTurnSpeed = 1200f;  // 最大旋轉速度
@@ -38,6 +39,7 @@ public class PlayerController : MonoBehaviour
         characterController = GetComponent<CharacterController>();
         playerInfo = GetComponent<PlayerBehaviorInfo>();
         cameraSetting = FindObjectOfType<CameraSetting>();
+        //PTaskController = GetComponent<PlayerTaskController>();
     }
 
     private void FixedUpdate()
