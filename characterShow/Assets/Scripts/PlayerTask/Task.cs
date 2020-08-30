@@ -11,19 +11,19 @@ public class Task : MonoBehaviour, ITask
 {
     public enum TaskState
     {
-        UnReceive,
+        UnReceived,
         Receiving,
         Completed
 
     }
     public int TaskID { get; set; } = -1;                   //用來記錄與查找 (等於taskList Number)
     public string TaskName;                                 //Task名稱
-    public Text TaskContent;                                //Task內容 (掛於NPC中)
+
     public NPCController TaskGivenNPC { get; set; }
     public NPCController TaskFinishNPC { get; set; }            //接收完成任務的NPC
     public Item target;                                     //任務目標
 
-    protected TaskState taskState = TaskState.UnReceive;    //init the State
+    protected TaskState taskState = TaskState.UnReceived;    //init the State
     
     /// <summary>
     /// 設定是否完成
@@ -33,6 +33,7 @@ public class Task : MonoBehaviour, ITask
     {
         return this.taskState == TaskState.Completed;
     }
+
     /// <summary>
     /// 改變狀態 (主要是將任務設為已完成)
     /// </summary>
