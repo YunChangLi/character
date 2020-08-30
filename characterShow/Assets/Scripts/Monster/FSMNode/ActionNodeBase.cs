@@ -104,6 +104,8 @@ namespace NodeEditorFramework.Standard
 				GUILayout.EndHorizontal();
 				FoldStatus = "Expand";
 			}
+
+			DrawRange();
 		}
 
 		/// <summary>

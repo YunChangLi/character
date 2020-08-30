@@ -16,6 +16,12 @@ namespace NodeEditorFramework.Standard {
 		public bool IsFold = true;
 		// 提示摺疊字串
 		public string FoldStatus = "Fold";
+		// 是否顯示範圍(需要顯示的Action或Decider需要繼承來覆蓋掉false)
+		public virtual bool IsShowRange { get { return false; } }
+		// 範圍位移
+		public Vector3 RangeOffset;
+		// 範圍半徑
+		public float RangeRadius;
 
 		/// <summary>
 		/// 整個FSM運作前的初始化(一次性)
@@ -39,6 +45,29 @@ namespace NodeEditorFramework.Standard {
 			r.x -= 2;
 			r.width += 6;
 			EditorGUI.DrawRect(r, color);
+		}
+
+		/// <summary>
+		/// 繪製範圍
+		/// </summary>
+		public void DrawRange()
+        {
+			if (NodeEditor.curEditorState.selectedNode == null)
+				return;
+
+			// 繪製範圍
+			if (NodeEditor.curEditorState.selectedNode == this)
+			{
+				foreach(RangeDrawer drawer in FindObjectsOfType<RangeDrawer>())
+                {
+					if(drawer.GetComponent<ActionController>()?.StateMachineCanvas?.canvasName == NodeEditor.curNodeCanvas.canvasName)
+                    {
+						drawer.IsShowRange = IsShowRange;
+						drawer.Offset = RangeOffset;
+						drawer.Radius = RangeRadius;
+					}
+                }
+			}
 		}
 	}
 }
