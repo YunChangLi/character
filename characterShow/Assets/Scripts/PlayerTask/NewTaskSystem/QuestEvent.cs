@@ -20,12 +20,19 @@ public class QuestEvent
     public QuestGoal QuestPrcess { get; set; }  //任務目標及任務進展狀況
     public List<QuestPath> pathList = new List<QuestPath>();
 
-    public QuestEvent(string titleName, string description)
+    public QuestEvent()
     {
-        TitleName = titleName;
-        Description = description;
         QuestId = Guid.NewGuid().ToString();
         status = QuestStatus.Waiting;
+    }
+    public void SetMissionTitle(string title)
+    {
+        TitleName = title;
+    }
+    public void SetMissionDescription(string description)
+    {
+        Description = description;
+        Debug.Log(description);
     }
     public void updateQuestEvent(QuestStatus status) 
     {

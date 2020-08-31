@@ -9,7 +9,7 @@ public class Quest
 
     public QuestEvent AddQuestEvent(string name, string des)
     {
-        QuestEvent questEvent = new QuestEvent(name, des);
+        QuestEvent questEvent = new QuestEvent();
         QuestEvents.Add(questEvent);
         return questEvent;
     }
