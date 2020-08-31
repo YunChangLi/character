@@ -20,3 +20,5 @@
 *.booproj
 characterShow/Assets/Node_Editor_Framework/CurSession.asset
 characterShow/Assets/Node_Editor_Framework/LastSession.asset
+characterShow/Assets/Node_Editor_Framework/CurSession.asset.meta
+characterShow/Assets/Node_Editor_Framework/LastSession.asset.meta
