@@ -506,8 +506,8 @@ MonoBehaviour:
   myCustomStateVariable: 0
   canvas: {fileID: 11400000}
   parentEditor: {fileID: 0}
-  selectedNode: {fileID: -9194816032090677954}
-  panOffset: {x: 45.19998, y: -60.6}
+  selectedNode: {fileID: 1805459207428343461}
+  panOffset: {x: 23.599981, y: 156}
   zoom: 1.2
 --- !u!114 &3473878950599498746
 MonoBehaviour:
