@@ -18,10 +18,9 @@ public class Task : MonoBehaviour, ITask
     }
     public int TaskID { get; set; } = -1;                   //用來記錄與查找 (等於taskList Number)
     public string TaskName;                                 //Task名稱
-
-    public NPCController TaskGivenNPC { get; set; }
-    public NPCController TaskFinishNPC { get; set; }            //接收完成任務的NPC
-    public Item target;                                     //任務目標
+    //public TaskGoal MTaskGoal { get; set; }                 //任務目標及進度追蹤        
+    public NPCController TaskGivenNPC { get; set; }     
+    public NPCController TaskFinishNPC { get; set; }        //接收完成任務的NPC
 
     protected TaskState taskState = TaskState.UnReceived;    //init the State
     
@@ -31,7 +30,11 @@ public class Task : MonoBehaviour, ITask
     /// <returns></returns>
     public bool IsFinished()
     {
-        return this.taskState == TaskState.Completed;
+        /*if (MTaskGoal.CheckTaskFinished())
+            this.taskState = TaskState.Completed;
+
+        return this.taskState == TaskState.Completed;*/
+        return false;
     }
 
     /// <summary>

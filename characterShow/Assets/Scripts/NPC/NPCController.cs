@@ -92,9 +92,9 @@ public class NPCController : MonoBehaviour
     private IEnumerator NPCSpeeking(String speechContent)
     {
         //導入 GameUIManager speech UI
-        int curPos = 0;  //記錄這一行到哪裡
+        //int curPos = 0;  //記錄這一行到哪裡
 
-        int index = 0; //記錄到哪一行
+        //int index = 0; //記錄到哪一行
 
         /* while (isActive)
          {
