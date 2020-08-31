@@ -18,3 +18,5 @@
 *.tmp
 *.pidb
 *.booproj
+CurSession.asset
+LastSession.asset
