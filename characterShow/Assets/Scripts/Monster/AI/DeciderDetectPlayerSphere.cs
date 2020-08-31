@@ -16,7 +16,7 @@ namespace NodeEditorFramework.Standard
 
         public Vector3 DetectOffset;    // 偵測範圍位移
 
-        public float DetectRadius;
+        public float DetectRadius;      // 偵測範圍半徑
 
         public override bool IsShowRange { get { return true; } }
 

@@ -2,28 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Singleton<T> : MonoBehaviour where T : Singleton<T>
+public class Singleton<Instance> : MonoBehaviour where Instance : Singleton<Instance>
 {
-    /// <summary>
-    /// private用來持有唯一的執行實例
-    /// </summary>
-    private static T sInstance  = default(T);
-  
-    public static T instance 
+    public static Instance instance;
+    public bool isPersistant;
+
+    public virtual void Awake()
     {
-        get 
+        if (isPersistant)
         {
-            if (sInstance == null)
+            if (!instance)
             {
-                GameObject go = new GameObject(typeof(T).ToString());
-                DontDestroyOnLoad(go);
-                sInstance = go.AddComponent(typeof(T)) as T;
+                instance = this as Instance;
             }
-            return sInstance;
-           
+            else
+            {
+                Destroy(gameObject);
+            }
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            instance = this as Instance;
         }
     }
-
-   
-
 }

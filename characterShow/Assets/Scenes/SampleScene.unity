@@ -121,75 +121,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &32575327
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 7894317376002956728, guid: 037aa6041ccca4a4b9c53442936051fd,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 73.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 7894317376002956728, guid: 037aa6041ccca4a4b9c53442936051fd,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7894317376002956728, guid: 037aa6041ccca4a4b9c53442936051fd,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -6.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7894317376002956728, guid: 037aa6041ccca4a4b9c53442936051fd,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7894317376002956728, guid: 037aa6041ccca4a4b9c53442936051fd,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7894317376002956728, guid: 037aa6041ccca4a4b9c53442936051fd,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7894317376002956728, guid: 037aa6041ccca4a4b9c53442936051fd,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7894317376002956728, guid: 037aa6041ccca4a4b9c53442936051fd,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7894317376002956728, guid: 037aa6041ccca4a4b9c53442936051fd,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7894317376002956728, guid: 037aa6041ccca4a4b9c53442936051fd,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7894317376002956728, guid: 037aa6041ccca4a4b9c53442936051fd,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7894317376003244440, guid: 037aa6041ccca4a4b9c53442936051fd,
-        type: 3}
-      propertyPath: m_Name
-      value: MyStoneMonster
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 037aa6041ccca4a4b9c53442936051fd, type: 3}
 --- !u!1 &173314107 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8422892626600285392, guid: 214e08cd5e5d74c458e2a81b7ec2c84c,
@@ -378,7 +309,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 5.947e-42, z: 0, w: -11.5}
+  m_BoundingSphereOverride: {x: 0, y: 5.644e-42, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -425,6 +356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07551c34d5c5c414188557e81ebba8cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPersistant: 0
 --- !u!4 &924920287
 Transform:
   m_ObjectHideFlags: 0
@@ -1067,7 +999,180 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1276782914
+--- !u!1 &1373364215
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1373364216}
+  m_Layer: 8
+  m_Name: HeadPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1373364216
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1373364215}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.04, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1045593591}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1696309955
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7894317376002956728, guid: 037aa6041ccca4a4b9c53442936051fd,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 55.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894317376002956728, guid: 037aa6041ccca4a4b9c53442936051fd,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894317376002956728, guid: 037aa6041ccca4a4b9c53442936051fd,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894317376002956728, guid: 037aa6041ccca4a4b9c53442936051fd,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894317376002956728, guid: 037aa6041ccca4a4b9c53442936051fd,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894317376002956728, guid: 037aa6041ccca4a4b9c53442936051fd,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894317376002956728, guid: 037aa6041ccca4a4b9c53442936051fd,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894317376002956728, guid: 037aa6041ccca4a4b9c53442936051fd,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894317376002956728, guid: 037aa6041ccca4a4b9c53442936051fd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894317376002956728, guid: 037aa6041ccca4a4b9c53442936051fd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894317376002956728, guid: 037aa6041ccca4a4b9c53442936051fd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894317376003244440, guid: 037aa6041ccca4a4b9c53442936051fd,
+        type: 3}
+      propertyPath: m_Name
+      value: MyStoneMonster
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 037aa6041ccca4a4b9c53442936051fd, type: 3}
+--- !u!1 &1819157439
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1819157440}
+  m_Layer: 0
+  m_Name: test
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1819157440
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819157439}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 72.44374, y: 0.35045913, z: -26.611479}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1950647794
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1950647795}
+  - component: {fileID: 1950647796}
+  m_Layer: 0
+  m_Name: GamePlayerManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1950647795
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950647794}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1950647796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950647794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e70b3f467b58844f96fa7fb496df742, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPersistant: 1
+--- !u!1 &2006878895
 GameObject:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1075,8 +1180,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1276782916}
-  - component: {fileID: 1276782915}
+  - component: {fileID: 2006878897}
+  - component: {fileID: 2006878896}
   m_Layer: 0
   m_Name: UndoProRecords
   m_TagString: Untagged
@@ -1084,245 +1189,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1276782915
+--- !u!114 &2006878896
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1276782914}
+  m_GameObject: {fileID: 2006878895}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: efa53029e0a62304caf81173265515b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   undoProRecords:
-  - label: Delete Node
-    relativeStackPos: -5
-    perform:
-      serializedTarget:
-        Name: 
-        isNullObject: 0
-        objectType:
-          typeName: NodeEditorFramework.Node+<>c__DisplayClass47_0, Seneral.NodeEditorFramework.Runtime,
-            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-          genericTypes: []
-        unityObject: {fileID: 0}
-        serializedSystemObject: 
-        manuallySerializedMembers:
-        - Name: deleteNode
-          isNullObject: 0
-          objectType:
-            typeName: NodeEditorFramework.Standard.FirstStateNode, Assembly-CSharp,
-              Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-            genericTypes: []
-          unityObject: {fileID: -2783231001142476200, guid: 7c76660fbf50b4e4aa02e4947e2cd631,
-            type: 2}
-          serializedSystemObject: 
-          manuallySerializedMembers: []
-          collectionObjects: []
-        - Name: connectedPorts
-          isNullObject: 0
-          objectType:
-            typeName: System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0,
-              Culture=neutral, PublicKeyToken=b77a5c561934e089
-            genericTypes:
-            - NodeEditorFramework.ConnectionPort, Seneral.NodeEditorFramework.Runtime,
-              Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-          unityObject: {fileID: 0}
-          serializedSystemObject: 
-          manuallySerializedMembers: []
-          collectionObjects:
-          - Name: 
-            isNullObject: 0
-            objectType:
-              typeName: NodeEditorFramework.ValueConnectionKnob, Seneral.NodeEditorFramework.Runtime,
-                Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-              genericTypes: []
-            unityObject: {fileID: -7119993426257165723, guid: 7c76660fbf50b4e4aa02e4947e2cd631,
-              type: 2}
-            serializedSystemObject: 
-          - Name: 
-            isNullObject: 1
-            objectType:
-              typeName: 
-              genericTypes: []
-            unityObject: {fileID: 0}
-            serializedSystemObject: 
-        collectionObjects: []
-      serializedMethod:
-        declaringType:
-          typeName: NodeEditorFramework.Node+<>c__DisplayClass47_0, Seneral.NodeEditorFramework.Runtime,
-            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-          genericTypes: []
-        methodName: <Delete>b__0
-        parameters: []
-        genericTypes: []
-        flags: 20
-    undo:
-      serializedTarget:
-        Name: 
-        isNullObject: 0
-        objectType:
-          typeName: NodeEditorFramework.Node+<>c__DisplayClass47_0, Seneral.NodeEditorFramework.Runtime,
-            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-          genericTypes: []
-        unityObject: {fileID: 0}
-        serializedSystemObject: 
-        manuallySerializedMembers:
-        - Name: deleteNode
-          isNullObject: 0
-          objectType:
-            typeName: NodeEditorFramework.Standard.FirstStateNode, Assembly-CSharp,
-              Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-            genericTypes: []
-          unityObject: {fileID: -2783231001142476200, guid: 7c76660fbf50b4e4aa02e4947e2cd631,
-            type: 2}
-          serializedSystemObject: 
-          manuallySerializedMembers: []
-          collectionObjects: []
-        - Name: connectedPorts
-          isNullObject: 0
-          objectType:
-            typeName: System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0,
-              Culture=neutral, PublicKeyToken=b77a5c561934e089
-            genericTypes:
-            - NodeEditorFramework.ConnectionPort, Seneral.NodeEditorFramework.Runtime,
-              Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-          unityObject: {fileID: 0}
-          serializedSystemObject: 
-          manuallySerializedMembers: []
-          collectionObjects:
-          - Name: 
-            isNullObject: 0
-            objectType:
-              typeName: NodeEditorFramework.ValueConnectionKnob, Seneral.NodeEditorFramework.Runtime,
-                Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-              genericTypes: []
-            unityObject: {fileID: -7119993426257165723, guid: 7c76660fbf50b4e4aa02e4947e2cd631,
-              type: 2}
-            serializedSystemObject: 
-          - Name: 
-            isNullObject: 1
-            objectType:
-              typeName: 
-              genericTypes: []
-            unityObject: {fileID: 0}
-            serializedSystemObject: 
-        collectionObjects: []
-      serializedMethod:
-        declaringType:
-          typeName: NodeEditorFramework.Node+<>c__DisplayClass47_0, Seneral.NodeEditorFramework.Runtime,
-            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-          genericTypes: []
-        methodName: <Delete>b__1
-        parameters: []
-        genericTypes: []
-        flags: 20
-  - label: Create Node
-    relativeStackPos: -4
-    perform:
-      serializedTarget:
-        Name: 
-        isNullObject: 0
-        objectType:
-          typeName: NodeEditorFramework.Node+<>c__DisplayClass46_0, Seneral.NodeEditorFramework.Runtime,
-            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-          genericTypes: []
-        unityObject: {fileID: 0}
-        serializedSystemObject: 
-        manuallySerializedMembers:
-        - Name: createdNode
-          isNullObject: 0
-          objectType:
-            typeName: NodeEditorFramework.Standard.FirstStateNode, Assembly-CSharp,
-              Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-            genericTypes: []
-          unityObject: {fileID: 1462457661}
-          serializedSystemObject: 
-          manuallySerializedMembers: []
-          collectionObjects: []
-        - Name: connectedPorts
-          isNullObject: 0
-          objectType:
-            typeName: System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0,
-              Culture=neutral, PublicKeyToken=b77a5c561934e089
-            genericTypes:
-            - NodeEditorFramework.ConnectionPort, Seneral.NodeEditorFramework.Runtime,
-              Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-          unityObject: {fileID: 0}
-          serializedSystemObject: 
-          manuallySerializedMembers: []
-          collectionObjects:
-          - Name: 
-            isNullObject: 1
-            objectType:
-              typeName: 
-              genericTypes: []
-            unityObject: {fileID: 0}
-            serializedSystemObject: 
-        collectionObjects: []
-      serializedMethod:
-        declaringType:
-          typeName: NodeEditorFramework.Node+<>c__DisplayClass46_0, Seneral.NodeEditorFramework.Runtime,
-            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-          genericTypes: []
-        methodName: <Create>b__0
-        parameters: []
-        genericTypes: []
-        flags: 20
-    undo:
-      serializedTarget:
-        Name: 
-        isNullObject: 0
-        objectType:
-          typeName: NodeEditorFramework.Node+<>c__DisplayClass46_0, Seneral.NodeEditorFramework.Runtime,
-            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-          genericTypes: []
-        unityObject: {fileID: 0}
-        serializedSystemObject: 
-        manuallySerializedMembers:
-        - Name: createdNode
-          isNullObject: 0
-          objectType:
-            typeName: NodeEditorFramework.Standard.FirstStateNode, Assembly-CSharp,
-              Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-            genericTypes: []
-          unityObject: {fileID: 1462457661}
-          serializedSystemObject: 
-          manuallySerializedMembers: []
-          collectionObjects: []
-        - Name: connectedPorts
-          isNullObject: 0
-          objectType:
-            typeName: System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0,
-              Culture=neutral, PublicKeyToken=b77a5c561934e089
-            genericTypes:
-            - NodeEditorFramework.ConnectionPort, Seneral.NodeEditorFramework.Runtime,
-              Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-          unityObject: {fileID: 0}
-          serializedSystemObject: 
-          manuallySerializedMembers: []
-          collectionObjects:
-          - Name: 
-            isNullObject: 1
-            objectType:
-              typeName: 
-              genericTypes: []
-            unityObject: {fileID: 0}
-            serializedSystemObject: 
-        collectionObjects: []
-      serializedMethod:
-        declaringType:
-          typeName: NodeEditorFramework.Node+<>c__DisplayClass46_0, Seneral.NodeEditorFramework.Runtime,
-            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-          genericTypes: []
-        methodName: <Create>b__1
-        parameters: []
-        genericTypes: []
-        flags: 20
   - label: Node Selection
-    relativeStackPos: -3
+    relativeStackPos: -4
     perform:
       serializedTarget:
         Name: 
@@ -1341,7 +1222,7 @@ MonoBehaviour:
             typeName: NodeEditorFramework.NodeEditorState, Seneral.NodeEditorFramework.Runtime,
               Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
             genericTypes: []
-          unityObject: {fileID: -3469128210671410758, guid: 7c76660fbf50b4e4aa02e4947e2cd631,
+          unityObject: {fileID: 3025294830524307592, guid: 7c76660fbf50b4e4aa02e4947e2cd631,
             type: 2}
           serializedSystemObject: 
           manuallySerializedMembers: []
@@ -1352,7 +1233,8 @@ MonoBehaviour:
             typeName: NodeEditorFramework.Standard.FirstStateNode, Assembly-CSharp,
               Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
             genericTypes: []
-          unityObject: {fileID: 1462457661}
+          unityObject: {fileID: -9194816032090677954, guid: 7c76660fbf50b4e4aa02e4947e2cd631,
+            type: 2}
           serializedSystemObject: 
           manuallySerializedMembers: []
           collectionObjects: []
@@ -1362,7 +1244,8 @@ MonoBehaviour:
             typeName: NodeEditorFramework.Standard.FirstStateNode, Assembly-CSharp,
               Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
             genericTypes: []
-          unityObject: {fileID: 1462457661}
+          unityObject: {fileID: -9194816032090677954, guid: 7c76660fbf50b4e4aa02e4947e2cd631,
+            type: 2}
           serializedSystemObject: 
           manuallySerializedMembers: []
           collectionObjects: []
@@ -1395,7 +1278,7 @@ MonoBehaviour:
             typeName: NodeEditorFramework.NodeEditorState, Seneral.NodeEditorFramework.Runtime,
               Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
             genericTypes: []
-          unityObject: {fileID: -3469128210671410758, guid: 7c76660fbf50b4e4aa02e4947e2cd631,
+          unityObject: {fileID: 3025294830524307592, guid: 7c76660fbf50b4e4aa02e4947e2cd631,
             type: 2}
           serializedSystemObject: 
           manuallySerializedMembers: []
@@ -1406,7 +1289,8 @@ MonoBehaviour:
             typeName: NodeEditorFramework.Standard.FirstStateNode, Assembly-CSharp,
               Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
             genericTypes: []
-          unityObject: {fileID: 1462457661}
+          unityObject: {fileID: -9194816032090677954, guid: 7c76660fbf50b4e4aa02e4947e2cd631,
+            type: 2}
           serializedSystemObject: 
           manuallySerializedMembers: []
           collectionObjects: []
@@ -1416,7 +1300,8 @@ MonoBehaviour:
             typeName: NodeEditorFramework.Standard.FirstStateNode, Assembly-CSharp,
               Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
             genericTypes: []
-          unityObject: {fileID: 1462457661}
+          unityObject: {fileID: -9194816032090677954, guid: 7c76660fbf50b4e4aa02e4947e2cd631,
+            type: 2}
           serializedSystemObject: 
           manuallySerializedMembers: []
           collectionObjects: []
@@ -1431,371 +1316,36 @@ MonoBehaviour:
         parameters: []
         genericTypes: []
         flags: 20
-  - label: Node Drag
-    relativeStackPos: -1
-    perform:
-      serializedTarget:
-        Name: 
-        isNullObject: 0
-        objectType:
-          typeName: NodeEditorFramework.NodeEditorInputControls+<>c__DisplayClass8_0,
-            Seneral.NodeEditorFramework.Runtime, Version=0.0.0.0, Culture=neutral,
-            PublicKeyToken=null
-          genericTypes: []
-        unityObject: {fileID: 0}
-        serializedSystemObject: 
-        manuallySerializedMembers:
-        - Name: draggedNode
-          isNullObject: 0
-          objectType:
-            typeName: NodeEditorFramework.Standard.FirstStateNode, Assembly-CSharp,
-              Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-            genericTypes: []
-          unityObject: {fileID: 1462457661}
-          serializedSystemObject: 
-          manuallySerializedMembers: []
-          collectionObjects: []
-        - Name: newX
-          isNullObject: 0
-          objectType:
-            typeName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
-              PublicKeyToken=b77a5c561934e089
-            genericTypes: []
-          unityObject: {fileID: 0}
-          serializedSystemObject: AAEAAAD/////AQAAAAAAAAAEAQAAAA1TeXN0ZW0uU2luZ2xlAQAAAAdtX3ZhbHVlAAsz8xfECw==
-          manuallySerializedMembers: []
-          collectionObjects: []
-        - Name: newY
-          isNullObject: 0
-          objectType:
-            typeName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
-              PublicKeyToken=b77a5c561934e089
-            genericTypes: []
-          unityObject: {fileID: 0}
-          serializedSystemObject: AAEAAAD/////AQAAAAAAAAAEAQAAAA1TeXN0ZW0uU2luZ2xlAQAAAAdtX3ZhbHVlAAsAAHTDCw==
-          manuallySerializedMembers: []
-          collectionObjects: []
-        - Name: prevX
-          isNullObject: 0
-          objectType:
-            typeName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
-              PublicKeyToken=b77a5c561934e089
-            genericTypes: []
-          unityObject: {fileID: 0}
-          serializedSystemObject: AAEAAAD/////AQAAAAAAAAAEAQAAAA1TeXN0ZW0uU2luZ2xlAQAAAAdtX3ZhbHVlAAtm5vnDCw==
-          manuallySerializedMembers: []
-          collectionObjects: []
-        - Name: prevY
-          isNullObject: 0
-          objectType:
-            typeName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
-              PublicKeyToken=b77a5c561934e089
-            genericTypes: []
-          unityObject: {fileID: 0}
-          serializedSystemObject: AAEAAAD/////AQAAAAAAAAAEAQAAAA1TeXN0ZW0uU2luZ2xlAQAAAAdtX3ZhbHVlAAsAAG7DCw==
-          manuallySerializedMembers: []
-          collectionObjects: []
-        collectionObjects: []
-      serializedMethod:
-        declaringType:
-          typeName: NodeEditorFramework.NodeEditorInputControls+<>c__DisplayClass8_0,
-            Seneral.NodeEditorFramework.Runtime, Version=0.0.0.0, Culture=neutral,
-            PublicKeyToken=null
-          genericTypes: []
-        methodName: <HandleNodeDraggingEnd>b__0
-        parameters: []
-        genericTypes: []
-        flags: 20
-    undo:
-      serializedTarget:
-        Name: 
-        isNullObject: 0
-        objectType:
-          typeName: NodeEditorFramework.NodeEditorInputControls+<>c__DisplayClass8_0,
-            Seneral.NodeEditorFramework.Runtime, Version=0.0.0.0, Culture=neutral,
-            PublicKeyToken=null
-          genericTypes: []
-        unityObject: {fileID: 0}
-        serializedSystemObject: 
-        manuallySerializedMembers:
-        - Name: draggedNode
-          isNullObject: 0
-          objectType:
-            typeName: NodeEditorFramework.Standard.FirstStateNode, Assembly-CSharp,
-              Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-            genericTypes: []
-          unityObject: {fileID: 1462457661}
-          serializedSystemObject: 
-          manuallySerializedMembers: []
-          collectionObjects: []
-        - Name: newX
-          isNullObject: 0
-          objectType:
-            typeName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
-              PublicKeyToken=b77a5c561934e089
-            genericTypes: []
-          unityObject: {fileID: 0}
-          serializedSystemObject: AAEAAAD/////AQAAAAAAAAAEAQAAAA1TeXN0ZW0uU2luZ2xlAQAAAAdtX3ZhbHVlAAsz8xfECw==
-          manuallySerializedMembers: []
-          collectionObjects: []
-        - Name: newY
-          isNullObject: 0
-          objectType:
-            typeName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
-              PublicKeyToken=b77a5c561934e089
-            genericTypes: []
-          unityObject: {fileID: 0}
-          serializedSystemObject: AAEAAAD/////AQAAAAAAAAAEAQAAAA1TeXN0ZW0uU2luZ2xlAQAAAAdtX3ZhbHVlAAsAAHTDCw==
-          manuallySerializedMembers: []
-          collectionObjects: []
-        - Name: prevX
-          isNullObject: 0
-          objectType:
-            typeName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
-              PublicKeyToken=b77a5c561934e089
-            genericTypes: []
-          unityObject: {fileID: 0}
-          serializedSystemObject: AAEAAAD/////AQAAAAAAAAAEAQAAAA1TeXN0ZW0uU2luZ2xlAQAAAAdtX3ZhbHVlAAtm5vnDCw==
-          manuallySerializedMembers: []
-          collectionObjects: []
-        - Name: prevY
-          isNullObject: 0
-          objectType:
-            typeName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
-              PublicKeyToken=b77a5c561934e089
-            genericTypes: []
-          unityObject: {fileID: 0}
-          serializedSystemObject: AAEAAAD/////AQAAAAAAAAAEAQAAAA1TeXN0ZW0uU2luZ2xlAQAAAAdtX3ZhbHVlAAsAAG7DCw==
-          manuallySerializedMembers: []
-          collectionObjects: []
-        collectionObjects: []
-      serializedMethod:
-        declaringType:
-          typeName: NodeEditorFramework.NodeEditorInputControls+<>c__DisplayClass8_0,
-            Seneral.NodeEditorFramework.Runtime, Version=0.0.0.0, Culture=neutral,
-            PublicKeyToken=null
-          genericTypes: []
-        methodName: <HandleNodeDraggingEnd>b__1
-        parameters: []
-        genericTypes: []
-        flags: 20
-  - label: Create Connection
-    relativeStackPos: 0
-    perform:
-      serializedTarget:
-        Name: 
-        isNullObject: 0
-        objectType:
-          typeName: NodeEditorFramework.ConnectionPort+<>c__DisplayClass25_0, Seneral.NodeEditorFramework.Runtime,
-            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-          genericTypes: []
-        unityObject: {fileID: 0}
-        serializedSystemObject: 
-        manuallySerializedMembers:
-        - Name: port1
-          isNullObject: 0
-          objectType:
-            typeName: NodeEditorFramework.ValueConnectionKnob, Seneral.NodeEditorFramework.Runtime,
-              Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-            genericTypes: []
-          unityObject: {fileID: -7119993426257165723, guid: 7c76660fbf50b4e4aa02e4947e2cd631,
-            type: 2}
-          serializedSystemObject: 
-          manuallySerializedMembers: []
-          collectionObjects: []
-        - Name: port2
-          isNullObject: 0
-          objectType:
-            typeName: NodeEditorFramework.ValueConnectionKnob, Seneral.NodeEditorFramework.Runtime,
-              Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-            genericTypes: []
-          unityObject: {fileID: 1551078543}
-          serializedSystemObject: 
-          manuallySerializedMembers: []
-          collectionObjects: []
-        collectionObjects: []
-      serializedMethod:
-        declaringType:
-          typeName: NodeEditorFramework.ConnectionPort+<>c__DisplayClass25_0, Seneral.NodeEditorFramework.Runtime,
-            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-          genericTypes: []
-        methodName: <ApplyConnection>b__0
-        parameters: []
-        genericTypes: []
-        flags: 20
-    undo:
-      serializedTarget:
-        Name: 
-        isNullObject: 0
-        objectType:
-          typeName: NodeEditorFramework.ConnectionPort+<>c__DisplayClass25_0, Seneral.NodeEditorFramework.Runtime,
-            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-          genericTypes: []
-        unityObject: {fileID: 0}
-        serializedSystemObject: 
-        manuallySerializedMembers:
-        - Name: port1
-          isNullObject: 0
-          objectType:
-            typeName: NodeEditorFramework.ValueConnectionKnob, Seneral.NodeEditorFramework.Runtime,
-              Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-            genericTypes: []
-          unityObject: {fileID: -7119993426257165723, guid: 7c76660fbf50b4e4aa02e4947e2cd631,
-            type: 2}
-          serializedSystemObject: 
-          manuallySerializedMembers: []
-          collectionObjects: []
-        - Name: port2
-          isNullObject: 0
-          objectType:
-            typeName: NodeEditorFramework.ValueConnectionKnob, Seneral.NodeEditorFramework.Runtime,
-              Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-            genericTypes: []
-          unityObject: {fileID: 1551078543}
-          serializedSystemObject: 
-          manuallySerializedMembers: []
-          collectionObjects: []
-        collectionObjects: []
-      serializedMethod:
-        declaringType:
-          typeName: NodeEditorFramework.ConnectionPort+<>c__DisplayClass25_0, Seneral.NodeEditorFramework.Runtime,
-            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-          genericTypes: []
-        methodName: <ApplyConnection>b__1
-        parameters: []
-        genericTypes: []
-        flags: 20
   undoState:
     redoRecords: []
     undoRecords:
     - Selection Change
     - Selection Change
     - Selection Change
+    - Delete Game Objects
+    - Delete Game Objects
+    - ' Drag Instantiate'
     - Selection Change
+    - Node GUI
     - Selection Change
-    - Selection Change
-    - Selection Change
-    - Delete Node
-    - Create Node
     - Node Selection
     - Selection Change
-    - Node Drag
-    - Create Connection
---- !u!4 &1276782916
+    - Selection Change
+    - Node GUI
+    - Node GUI
+--- !u!4 &2006878897
 Transform:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1276782914}
+  m_GameObject: {fileID: 2006878895}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1373364215
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1373364216}
-  m_Layer: 8
-  m_Name: HeadPos
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1373364216
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1373364215}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.04, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1045593591}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1462457661
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94af8616d0237714c89d4e522e60a222, type: 3}
-  m_Name: Entry State
-  m_EditorClassIdentifier: 
-  canvas: {fileID: 11400000, guid: 7c76660fbf50b4e4aa02e4947e2cd631, type: 2}
-  position: {x: -607.8, y: -244}
-  dynamicConnectionPorts: []
-  nodeGUIHeight: {x: 200, y: 78}
-  backgroundColor: {r: 0, g: 1, b: 1, a: 1}
-  IsFold: 1
-  FoldStatus: Fold
-  outputKnob: {fileID: 1551078543}
-  FirstActionNode: {fileID: 0}
---- !u!114 &1551078543
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
-  m_Name: Output
-  m_EditorClassIdentifier: 
-  body: {fileID: 1462457661}
-  direction: 2
-  maxConnectionCount: 0
-  styleID: Float
-  _connections:
-  - {fileID: -7119993426257165723, guid: 7c76660fbf50b4e4aa02e4947e2cd631, type: 2}
-  side: 2
-  sidePosition: 49
-  sideOffset: 0
---- !u!1 &1819157439
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1819157440}
-  m_Layer: 0
-  m_Name: test
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1819157440
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1819157439}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 72.44374, y: 0.35045913, z: -26.611479}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2056055085
 PrefabInstance:
@@ -1901,6 +1451,50 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fced8daaf2fd3274ea6cca940cdcfe24, type: 3}
+--- !u!1 &2126200168
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2126200169}
+  - component: {fileID: 2126200170}
+  m_Layer: 0
+  m_Name: GameDataManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2126200169
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2126200168}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2126200170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2126200168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9b9fa70ae79e6b4f8a55d58700407d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPersistant: 1
 --- !u!1001 &6224852549639013444
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1967,6 +1561,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6224852550318588295, guid: dab42f14d54db044b883c8859eae311c,
+        type: 3}
+      propertyPath: isPersistant
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dab42f14d54db044b883c8859eae311c, type: 3}

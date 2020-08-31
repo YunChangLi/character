@@ -6,6 +6,7 @@ public class MonsterController : MonoBehaviour
 {
     public Vector3 MoveDir { get; set; }
     public bool GoJump = false;
+    public bool CanMove = true;
     public float MaxMoveSpeed = 1f; // 最大移動速度
     public float JumpSpeed = 20f;   // 跳躍速度
 
@@ -44,6 +45,9 @@ public class MonsterController : MonoBehaviour
         //Vector2 moveInput = new Vector2(ActionController.Info.MovementDir.x, playerInfo.MovementDir.z);
         if (MoveDir.sqrMagnitude > 1f)
             MoveDir.Normalize();
+
+        if (!CanMove)
+            return;
 
         // 根據Input計算速度
         desiredForwardSpeed = MoveDir.magnitude * MaxMoveSpeed;
