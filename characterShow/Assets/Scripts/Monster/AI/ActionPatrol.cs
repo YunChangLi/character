@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace NodeEditorFramework.Standard
 {
-    [Node(false, "State/ActionNode/Patrol")]
+    [Node(false, "State/ActionNode/Patrol", typeof(StateMachineCanvasType))]
     public class ActionPatrol : ActionNodeBase
     {
         // 這個Action用來讓怪物在活動領域內巡邏
@@ -38,16 +38,6 @@ namespace NodeEditorFramework.Standard
                 ActionController.MonsterController.MoveDir = movDir.normalized;
                 yield return new WaitUntil(ReachTarget);
             }
-        }
-
-        public override void Exit()
-        {
-            base.Exit();
-        }
-
-        public override void NodeGUI()
-        {
-            base.NodeGUI();
         }
 
         public override void ActionBody()

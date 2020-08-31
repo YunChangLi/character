@@ -57,6 +57,7 @@ MonoBehaviour:
   canvas: {fileID: 11400000}
   position: {x: 900, y: -150}
   dynamicConnectionPorts: []
+  nodeGUIHeight: {x: 0, y: 0}
   backgroundColor: {r: 1, g: 1, b: 1, a: 1}
   flowIn: {fileID: -1673751548966668600}
   flowOut: {fileID: 2681735378947938106}
@@ -160,6 +161,7 @@ MonoBehaviour:
   canvas: {fileID: 11400000}
   position: {x: 1200, y: 50}
   dynamicConnectionPorts: []
+  nodeGUIHeight: {x: 0, y: 0}
   backgroundColor: {r: 1, g: 1, b: 1, a: 1}
   inputKnob: {fileID: 9067574662575697667}
 --- !u!114 &-6793701994850253975
@@ -218,6 +220,7 @@ MonoBehaviour:
   canvas: {fileID: 11400000}
   position: {x: 300, y: -50}
   dynamicConnectionPorts: []
+  nodeGUIHeight: {x: 0, y: 0}
   backgroundColor: {r: 1, g: 1, b: 1, a: 1}
   flowIn: {fileID: -7607964893913269482}
   flowOut: {fileID: 8077340254360692206}
@@ -238,6 +241,7 @@ MonoBehaviour:
   canvas: {fileID: 11400000}
   position: {x: 0, y: 0}
   dynamicConnectionPorts: []
+  nodeGUIHeight: {x: 0, y: 0}
   backgroundColor: {r: 1, g: 1, b: 1, a: 1}
   flowChild1: {fileID: 234742444523613221}
   flowChild2: {fileID: -8199273508132782736}
@@ -257,6 +261,7 @@ MonoBehaviour:
   canvas: {fileID: 11400000}
   position: {x: 600, y: 300}
   dynamicConnectionPorts: []
+  nodeGUIHeight: {x: 0, y: 0}
   backgroundColor: {r: 1, g: 1, b: 1, a: 1}
   flowIn: {fileID: 344922424468280056}
   flowOut: {fileID: -9215810759025461228}
@@ -277,6 +282,7 @@ MonoBehaviour:
   canvas: {fileID: 11400000}
   position: {x: 300, y: 200}
   dynamicConnectionPorts: []
+  nodeGUIHeight: {x: 0, y: 0}
   backgroundColor: {r: 1, g: 1, b: 1, a: 1}
   flowIn: {fileID: -8956587959316719339}
   flowOut: {fileID: -1455829290434939670}
@@ -297,6 +303,7 @@ MonoBehaviour:
   canvas: {fileID: 11400000}
   position: {x: 900, y: 50}
   dynamicConnectionPorts: []
+  nodeGUIHeight: {x: 0, y: 0}
   backgroundColor: {r: 1, g: 1, b: 1, a: 1}
   flowIn: {fileID: 2296127529370165189}
   flowOut: {fileID: -6598958275429626043}
@@ -380,6 +387,7 @@ MonoBehaviour:
   canvas: {fileID: 11400000}
   position: {x: -50, y: 250}
   dynamicConnectionPorts: []
+  nodeGUIHeight: {x: 0, y: 0}
   backgroundColor: {r: 1, g: 1, b: 1, a: 1}
   outputKnob: {fileID: -593979717155422475}
   value: 1
@@ -439,7 +447,7 @@ MonoBehaviour:
   editorStates:
   - {fileID: 5573819106108963586}
   saveName: Graph Canvas
-  savePath: Assets\Examples\Saves\Graph Canvas.asset
+  savePath: Assets\Node_Editor_Framework\Examples\Saves\Graph Canvas.asset
   livesInScene: 0
   nodes:
   - {fileID: -6083667496927581089}
