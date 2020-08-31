@@ -16,12 +16,25 @@ namespace NodeEditorFramework.Standard {
 		public bool IsFold = true;
 		// 提示摺疊字串
 		public string FoldStatus = "Fold";
-		// 是否顯示範圍(需要顯示的Action或Decider需要繼承來覆蓋掉false)
+
+		// 範圍類型
+		public virtual RangeDrawer.RangeType RangeType { get { return RangeDrawer.RangeType.Box; } }
+		// 是否顯示範圍
 		public virtual bool IsShowRange { get { return false; } }
 		// 範圍位移
-		public Vector3 RangeOffset;
+		public virtual Vector3 GetRangeOffset { get { return Vector3.zero; } }
+
+		#region 圓球形範圍必須繼承以下參數
 		// 範圍半徑
-		public float RangeRadius;
+		public virtual float GetRangeRadius { get { return 1f; } }
+		#endregion
+
+		#region 方形範圍必須繼承以下參數
+		// 範圍大小
+		public virtual Vector3 GetRangeSize { get { return Vector3.one; } }
+		// 範圍旋轉
+		public virtual Quaternion Rot { get { return Quaternion.identity; } }
+		#endregion
 
 		/// <summary>
 		/// 整個FSM運作前的初始化(一次性)
@@ -52,8 +65,16 @@ namespace NodeEditorFramework.Standard {
 		/// </summary>
 		public void DrawRange()
         {
-			if (NodeEditor.curEditorState.selectedNode == null)
+			if (NodeEditor.curEditorState == null)
+			{
+				Debug.LogError("Null curEditorState");
 				return;
+			}
+			if (NodeEditor.curEditorState.selectedNode == null)
+			{
+				Debug.Log("Null selectNode");
+				return;
+			}
 
 			// 繪製範圍
 			if (NodeEditor.curEditorState.selectedNode == this)
@@ -62,9 +83,22 @@ namespace NodeEditorFramework.Standard {
                 {
 					if(drawer.GetComponent<ActionController>()?.StateMachineCanvas?.canvasName == NodeEditor.curNodeCanvas.canvasName)
                     {
-						drawer.IsShowRange = IsShowRange;
-						drawer.Offset = RangeOffset;
-						drawer.Radius = RangeRadius;
+						// 繪製圓形範圍
+						if (RangeType == RangeDrawer.RangeType.Sphere)
+						{
+							drawer.IsShowRange = IsShowRange;
+							drawer.Offset = GetRangeOffset;
+							drawer.Radius = GetRangeRadius;
+							drawer.DrawRangeType = RangeDrawer.RangeType.Sphere;
+						}
+						// 繪製矩形範圍
+						else if (RangeType == RangeDrawer.RangeType.Box)
+						{
+							drawer.IsShowRange = IsShowRange;
+							drawer.Offset = GetRangeOffset;
+							drawer.Size = GetRangeSize;
+							drawer.DrawRangeType = RangeDrawer.RangeType.Box;
+						}
 					}
                 }
 			}

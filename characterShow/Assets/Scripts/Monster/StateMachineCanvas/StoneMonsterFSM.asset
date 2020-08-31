@@ -100,8 +100,6 @@ MonoBehaviour:
   backgroundColor: {r: 1, g: 0.85, b: 0.92, a: 1}
   IsFold: 1
   FoldStatus: Fold
-  RangeOffset: {x: 0, y: 0, z: 0}
-  RangeRadius: 0
   inputLeftKnob: {fileID: 6385611444999773045}
   inputRightKnob: {fileID: -2536085786484233489}
   outputLeftKnob: {fileID: 5198895854790493775}
@@ -217,8 +215,6 @@ MonoBehaviour:
   backgroundColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   IsFold: 1
   FoldStatus: Fold
-  RangeOffset: {x: 0, y: 0, z: 0}
-  RangeRadius: 12.06
   inputLeftKnob: {fileID: -8987190204407075401}
   inputRightKnob: {fileID: -3643531001976857819}
   outputLeftKnob: {fileID: 4662962050412816664}
@@ -227,7 +223,8 @@ MonoBehaviour:
   Order: 0
   NextNode: {fileID: 9090550347266984802}
   IsRangeStable: 0
-  DetectCenter: {x: 0, y: 0, z: 0}
+  DetectOffset: {x: 0, y: 0, z: 0}
+  DetectRadius: 0
 --- !u!114 &-3711675738569020197
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -393,8 +390,6 @@ MonoBehaviour:
   backgroundColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   IsFold: 1
   FoldStatus: Fold
-  RangeOffset: {x: 0, y: 0, z: 0}
-  RangeRadius: 8.75
   inputLeftKnob: {fileID: -5069880270985286368}
   inputRightKnob: {fileID: 3349191800119194911}
   outputLeftKnob: {fileID: 6357839845492029610}
@@ -403,7 +398,8 @@ MonoBehaviour:
   Order: 0
   NextNode: {fileID: -5970868496417057450}
   IsRangeStable: 0
-  DetectCenter: {x: 0, y: 0, z: 0}
+  DetectOffset: {x: 0, y: 0, z: 0}
+  DetectRadius: 0
 --- !u!114 &4894702357553717638
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -505,8 +501,6 @@ MonoBehaviour:
   backgroundColor: {r: 0, g: 1, b: 1, a: 1}
   IsFold: 1
   FoldStatus: Fold
-  RangeOffset: {x: 0, y: 0, z: 0}
-  RangeRadius: 0
   outputKnob: {fileID: -3976726150686702379}
   FirstActionNode: {fileID: 9090550347266984802}
 --- !u!114 &9090550347266984802
@@ -528,14 +522,12 @@ MonoBehaviour:
   backgroundColor: {r: 1, g: 0.85, b: 0.92, a: 1}
   IsFold: 1
   FoldStatus: Fold
-  RangeOffset: {x: 0, y: 0, z: 0}
-  RangeRadius: 0
   inputLeftKnob: {fileID: -4419595809506839195}
   inputRightKnob: {fileID: -7745961692502287679}
   outputLeftKnob: {fileID: -8073878892124207534}
   outputRightKnob: {fileID: -8509375112292934463}
   StateName: Patrol
-  RunTime: 7.389361
+  RunTime: 21.550518
   DeciderList:
   - {fileID: 4835779788975708559}
   IsActiveAction: 1

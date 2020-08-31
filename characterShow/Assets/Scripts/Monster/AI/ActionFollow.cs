@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 namespace NodeEditorFramework.Standard
 {
-    [Node(false, "State/ActionNode/Follow")]
+    [Node(false, "State/ActionNode/Follow", typeof(StateMachineCanvasType))]
     public class ActionFollow : ActionNodeBase
     {
         public override string GetID { get { return "followNode"; } }

@@ -2,17 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ActionHit : MonoBehaviour
+namespace NodeEditorFramework.Standard
 {
-    // Start is called before the first frame update
-    void Start()
+    [Node(false, "State/ActionNode/Hit", typeof(StateMachineCanvasType))]
+    public class ActionHit : ActionNodeBase
     {
-        
-    }
+        // 這個Action用來讓怪物進行撞擊
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public override string GetID { get { return "hitNode"; } }
+
+        public override string ActionName { get { return "Hit"; } }
+
+        public override IEnumerator Process()
+        {
+            ActionController.Animator.SetTrigger("Attack");
+            //DamageAreaCreator.instance.CreateCubeArea()
+            yield return null;
+        }
     }
 }
