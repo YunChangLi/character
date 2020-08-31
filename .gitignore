@@ -18,5 +18,5 @@
 *.tmp
 *.pidb
 *.booproj
-CurSession.asset
-LastSession.asset
+characterShow/Assets/Node_Editor_Framework/CurSession.asset
+characterShow/Assets/Node_Editor_Framework/LastSession.asset

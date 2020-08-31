@@ -266,7 +266,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   undoProRecords:
   - label: Node Selection
-    relativeStackPos: -5
+    relativeStackPos: -35
     perform:
       serializedTarget:
         Name: 
@@ -285,8 +285,7 @@ MonoBehaviour:
             typeName: NodeEditorFramework.NodeEditorState, Seneral.NodeEditorFramework.Runtime,
               Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
             genericTypes: []
-          unityObject: {fileID: 3025294830524307592, guid: 7c76660fbf50b4e4aa02e4947e2cd631,
-            type: 2}
+          unityObject: {fileID: 0}
           serializedSystemObject: 
           manuallySerializedMembers: []
           collectionObjects: []
@@ -296,8 +295,7 @@ MonoBehaviour:
             typeName: NodeEditorFramework.Standard.DeciderDetectPlayerBox, Assembly-CSharp,
               Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
             genericTypes: []
-          unityObject: {fileID: 1805459207428343461, guid: 7c76660fbf50b4e4aa02e4947e2cd631,
-            type: 2}
+          unityObject: {fileID: 0}
           serializedSystemObject: 
           manuallySerializedMembers: []
           collectionObjects: []
@@ -307,8 +305,7 @@ MonoBehaviour:
             typeName: NodeEditorFramework.Standard.DeciderDetectPlayerBox, Assembly-CSharp,
               Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
             genericTypes: []
-          unityObject: {fileID: 1805459207428343461, guid: 7c76660fbf50b4e4aa02e4947e2cd631,
-            type: 2}
+          unityObject: {fileID: 0}
           serializedSystemObject: 
           manuallySerializedMembers: []
           collectionObjects: []
@@ -341,8 +338,7 @@ MonoBehaviour:
             typeName: NodeEditorFramework.NodeEditorState, Seneral.NodeEditorFramework.Runtime,
               Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
             genericTypes: []
-          unityObject: {fileID: 3025294830524307592, guid: 7c76660fbf50b4e4aa02e4947e2cd631,
-            type: 2}
+          unityObject: {fileID: 0}
           serializedSystemObject: 
           manuallySerializedMembers: []
           collectionObjects: []
@@ -352,8 +348,7 @@ MonoBehaviour:
             typeName: NodeEditorFramework.Standard.DeciderDetectPlayerBox, Assembly-CSharp,
               Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
             genericTypes: []
-          unityObject: {fileID: 1805459207428343461, guid: 7c76660fbf50b4e4aa02e4947e2cd631,
-            type: 2}
+          unityObject: {fileID: 0}
           serializedSystemObject: 
           manuallySerializedMembers: []
           collectionObjects: []
@@ -363,8 +358,7 @@ MonoBehaviour:
             typeName: NodeEditorFramework.Standard.DeciderDetectPlayerBox, Assembly-CSharp,
               Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
             genericTypes: []
-          unityObject: {fileID: 1805459207428343461, guid: 7c76660fbf50b4e4aa02e4947e2cd631,
-            type: 2}
+          unityObject: {fileID: 0}
           serializedSystemObject: 
           manuallySerializedMembers: []
           collectionObjects: []
@@ -376,6 +370,156 @@ MonoBehaviour:
             PublicKeyToken=null
           genericTypes: []
         methodName: <HandleSelecting>b__1
+        parameters: []
+        genericTypes: []
+        flags: 20
+  - label: Node Drag
+    relativeStackPos: 0
+    perform:
+      serializedTarget:
+        Name: 
+        isNullObject: 0
+        objectType:
+          typeName: NodeEditorFramework.NodeEditorInputControls+<>c__DisplayClass8_0,
+            Seneral.NodeEditorFramework.Runtime, Version=0.0.0.0, Culture=neutral,
+            PublicKeyToken=null
+          genericTypes: []
+        unityObject: {fileID: 0}
+        serializedSystemObject: 
+        manuallySerializedMembers:
+        - Name: draggedNode
+          isNullObject: 0
+          objectType:
+            typeName: NodeEditorFramework.Standard.ActionHit, Assembly-CSharp, Version=0.0.0.0,
+              Culture=neutral, PublicKeyToken=null
+            genericTypes: []
+          unityObject: {fileID: 6277350885664092863, guid: 7c76660fbf50b4e4aa02e4947e2cd631,
+            type: 2}
+          serializedSystemObject: 
+          manuallySerializedMembers: []
+          collectionObjects: []
+        - Name: newX
+          isNullObject: 0
+          objectType:
+            typeName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+              PublicKeyToken=b77a5c561934e089
+            genericTypes: []
+          unityObject: {fileID: 0}
+          serializedSystemObject: AAEAAAD/////AQAAAAAAAAAEAQAAAA1TeXN0ZW0uU2luZ2xlAQAAAAdtX3ZhbHVlAAsz80zECw==
+          manuallySerializedMembers: []
+          collectionObjects: []
+        - Name: newY
+          isNullObject: 0
+          objectType:
+            typeName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+              PublicKeyToken=b77a5c561934e089
+            genericTypes: []
+          unityObject: {fileID: 0}
+          serializedSystemObject: AAEAAAD/////AQAAAAAAAAAEAQAAAA1TeXN0ZW0uU2luZ2xlAQAAAAdtX3ZhbHVlAAvMzExBCw==
+          manuallySerializedMembers: []
+          collectionObjects: []
+        - Name: prevX
+          isNullObject: 0
+          objectType:
+            typeName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+              PublicKeyToken=b77a5c561934e089
+            genericTypes: []
+          unityObject: {fileID: 0}
+          serializedSystemObject: AAEAAAD/////AQAAAAAAAAAEAQAAAA1TeXN0ZW0uU2luZ2xlAQAAAAdtX3ZhbHVlAAsAAFfECw==
+          manuallySerializedMembers: []
+          collectionObjects: []
+        - Name: prevY
+          isNullObject: 0
+          objectType:
+            typeName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+              PublicKeyToken=b77a5c561934e089
+            genericTypes: []
+          unityObject: {fileID: 0}
+          serializedSystemObject: AAEAAAD/////AQAAAAAAAAAEAQAAAA1TeXN0ZW0uU2luZ2xlAQAAAAdtX3ZhbHVlAAsAAKBBCw==
+          manuallySerializedMembers: []
+          collectionObjects: []
+        collectionObjects: []
+      serializedMethod:
+        declaringType:
+          typeName: NodeEditorFramework.NodeEditorInputControls+<>c__DisplayClass8_0,
+            Seneral.NodeEditorFramework.Runtime, Version=0.0.0.0, Culture=neutral,
+            PublicKeyToken=null
+          genericTypes: []
+        methodName: <HandleNodeDraggingEnd>b__0
+        parameters: []
+        genericTypes: []
+        flags: 20
+    undo:
+      serializedTarget:
+        Name: 
+        isNullObject: 0
+        objectType:
+          typeName: NodeEditorFramework.NodeEditorInputControls+<>c__DisplayClass8_0,
+            Seneral.NodeEditorFramework.Runtime, Version=0.0.0.0, Culture=neutral,
+            PublicKeyToken=null
+          genericTypes: []
+        unityObject: {fileID: 0}
+        serializedSystemObject: 
+        manuallySerializedMembers:
+        - Name: draggedNode
+          isNullObject: 0
+          objectType:
+            typeName: NodeEditorFramework.Standard.ActionHit, Assembly-CSharp, Version=0.0.0.0,
+              Culture=neutral, PublicKeyToken=null
+            genericTypes: []
+          unityObject: {fileID: 6277350885664092863, guid: 7c76660fbf50b4e4aa02e4947e2cd631,
+            type: 2}
+          serializedSystemObject: 
+          manuallySerializedMembers: []
+          collectionObjects: []
+        - Name: newX
+          isNullObject: 0
+          objectType:
+            typeName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+              PublicKeyToken=b77a5c561934e089
+            genericTypes: []
+          unityObject: {fileID: 0}
+          serializedSystemObject: AAEAAAD/////AQAAAAAAAAAEAQAAAA1TeXN0ZW0uU2luZ2xlAQAAAAdtX3ZhbHVlAAsz80zECw==
+          manuallySerializedMembers: []
+          collectionObjects: []
+        - Name: newY
+          isNullObject: 0
+          objectType:
+            typeName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+              PublicKeyToken=b77a5c561934e089
+            genericTypes: []
+          unityObject: {fileID: 0}
+          serializedSystemObject: AAEAAAD/////AQAAAAAAAAAEAQAAAA1TeXN0ZW0uU2luZ2xlAQAAAAdtX3ZhbHVlAAvMzExBCw==
+          manuallySerializedMembers: []
+          collectionObjects: []
+        - Name: prevX
+          isNullObject: 0
+          objectType:
+            typeName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+              PublicKeyToken=b77a5c561934e089
+            genericTypes: []
+          unityObject: {fileID: 0}
+          serializedSystemObject: AAEAAAD/////AQAAAAAAAAAEAQAAAA1TeXN0ZW0uU2luZ2xlAQAAAAdtX3ZhbHVlAAsAAFfECw==
+          manuallySerializedMembers: []
+          collectionObjects: []
+        - Name: prevY
+          isNullObject: 0
+          objectType:
+            typeName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+              PublicKeyToken=b77a5c561934e089
+            genericTypes: []
+          unityObject: {fileID: 0}
+          serializedSystemObject: AAEAAAD/////AQAAAAAAAAAEAQAAAA1TeXN0ZW0uU2luZ2xlAQAAAAdtX3ZhbHVlAAsAAKBBCw==
+          manuallySerializedMembers: []
+          collectionObjects: []
+        collectionObjects: []
+      serializedMethod:
+        declaringType:
+          typeName: NodeEditorFramework.NodeEditorInputControls+<>c__DisplayClass8_0,
+            Seneral.NodeEditorFramework.Runtime, Version=0.0.0.0, Culture=neutral,
+            PublicKeyToken=null
+          genericTypes: []
+        methodName: <HandleNodeDraggingEnd>b__1
         parameters: []
         genericTypes: []
         flags: 20
@@ -393,6 +537,36 @@ MonoBehaviour:
     - Selection Change
     - Selection Change
     - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Node Drag
 --- !u!4 &695360740
 Transform:
   m_ObjectHideFlags: 3
