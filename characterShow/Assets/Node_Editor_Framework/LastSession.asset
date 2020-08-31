@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-2365669065639729088
+--- !u!114 &-9019821903596500068
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9,17 +9,334 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34d256ced8046b54b9c765961ec8e6c7, type: 3}
-  m_Name: Quest Event
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Output
+  m_EditorClassIdentifier: 
+  body: {fileID: 8358900051265988877}
+  direction: 2
+  maxConnectionCount: 0
+  styleID: Float
+  _connections:
+  - {fileID: -3719616424542679945}
+  side: 2
+  sidePosition: 159.5
+  sideOffset: 0
+--- !u!114 &-8965556717270166391
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Input
+  m_EditorClassIdentifier: 
+  body: {fileID: -4459424417116612577}
+  direction: 1
+  maxConnectionCount: 0
+  styleID: System.String
+  _connections:
+  - {fileID: 127187146181354140}
+  side: 4
+  sidePosition: 48.5
+  sideOffset: 0
+--- !u!114 &-8838869033660474136
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aed1cb8d4a4380949a43c914f6473868, type: 3}
+  m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 0}
-  position: {x: -172.5, y: -269.3}
+  position: {x: -109.5, y: 65}
   dynamicConnectionPorts: []
-  nodeGUIHeight: {x: 150, y: 178}
-  backgroundColor: {r: 1, g: 1, b: 1, a: 1}
-  TitleName: 
-  Description: 
-  QuestId: b71cd5e8-b3bf-4290-8baa-9cef6f4bc919
+  nodeGUIHeight: {x: 196, y: 186}
+  backgroundColor: {r: 1, g: 0.85, b: 0.92, a: 1}
+  IsFold: 1
+  FoldStatus: Fold
+  inputLeftKnob: {fileID: 3224383384619189335}
+  inputRightKnob: {fileID: 3749030123881818770}
+  outputLeftKnob: {fileID: -6753455793666354837}
+  outputRightKnob: {fileID: -838553806590548479}
+  StateName: Follow
+  RunTime: 0.15385461
+  DeciderList:
+  - {fileID: 0}
+  IsActiveAction: 0
+  Clip: {fileID: 0}
+  SoundDelay: 0
+--- !u!114 &-8435109406098109340
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Output
+  m_EditorClassIdentifier: 
+  body: {fileID: 8806196546721817361}
+  direction: 2
+  maxConnectionCount: 0
+  styleID: Float
+  _connections:
+  - {fileID: -3719616424542679945}
+  side: 2
+  sidePosition: 48.5
+  sideOffset: 0
+--- !u!114 &-8373112768016661486
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Input
+  m_EditorClassIdentifier: 
+  body: {fileID: 8358900051265988877}
+  direction: 1
+  maxConnectionCount: 0
+  styleID: System.String
+  _connections: []
+  side: 2
+  sidePosition: 48.5
+  sideOffset: 0
+--- !u!114 &-7933231869953248068
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Input
+  m_EditorClassIdentifier: 
+  body: {fileID: 3776299756217503259}
+  direction: 1
+  maxConnectionCount: 1
+  styleID: Float
+  _connections:
+  - {fileID: 7643392696393132853}
+  side: 2
+  sidePosition: 67.5
+  sideOffset: 0
+--- !u!114 &-7576527070030140347
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Output
+  m_EditorClassIdentifier: 
+  body: {fileID: 3776299756217503259}
+  direction: 2
+  maxConnectionCount: 1
+  styleID: System.String
+  _connections: []
+  side: 4
+  sidePosition: 295.5
+  sideOffset: 0
+--- !u!114 &-6753455793666354837
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Output
+  m_EditorClassIdentifier: 
+  body: {fileID: -8838869033660474136}
+  direction: 2
+  maxConnectionCount: 1
+  styleID: System.String
+  _connections:
+  - {fileID: 2065103469167504009}
+  side: 4
+  sidePosition: 177.5
+  sideOffset: 0
+--- !u!114 &-5430928241831773228
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Output
+  m_EditorClassIdentifier: 
+  body: {fileID: 6954993152308107719}
+  direction: 2
+  maxConnectionCount: 1
+  styleID: System.String
+  _connections: []
+  side: 4
+  sidePosition: 197.5
+  sideOffset: 0
+--- !u!114 &-4459424417116612577
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e1067cb7167a11428f67e2708e6a27c, type: 3}
+  m_Name: DetectPlayerSphere
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 0}
+  position: {x: 313.5, y: -110}
+  dynamicConnectionPorts: []
+  nodeGUIHeight: {x: 199, y: 227}
+  backgroundColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  IsFold: 1
+  FoldStatus: Fold
+  inputLeftKnob: {fileID: -8965556717270166391}
+  inputRightKnob: {fileID: -4135615212012891413}
+  outputLeftKnob: {fileID: 7190368113766003260}
+  outputRightKnob: {fileID: 2588385260709625146}
+  Type: 0
+  Order: 0
+  NextNode: {fileID: -5887608121759073888, guid: 58d453395772d134db4c04b2b706c485,
+    type: 2}
+  IsRangeStable: 0
+  DetectOffset: {x: 0, y: 5, z: 0}
+  DetectRadius: 10
+--- !u!114 &-4135615212012891413
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Input
+  m_EditorClassIdentifier: 
+  body: {fileID: -4459424417116612577}
+  direction: 1
+  maxConnectionCount: 0
+  styleID: System.String
+  _connections: []
+  side: 2
+  sidePosition: 48.5
+  sideOffset: 0
+--- !u!114 &-4132157035944222213
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba53fa1402c7a14cb5c7e899cd446d5, type: 3}
+  m_Name: DetectPlayerBox
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 0}
+  position: {x: -423.2, y: 135.79999}
+  dynamicConnectionPorts: []
+  nodeGUIHeight: {x: 199, y: 246}
+  backgroundColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  IsFold: 1
+  FoldStatus: Fold
+  inputLeftKnob: {fileID: 5221805447969800242}
+  inputRightKnob: {fileID: 2065103469167504009}
+  outputLeftKnob: {fileID: 7643392696393132853}
+  outputRightKnob: {fileID: -1273145734638776878}
+  Type: 0
+  Order: 0
+  NextNode: {fileID: 3170088721716679123, guid: 58d453395772d134db4c04b2b706c485,
+    type: 2}
+  IsRangeStable: 0
+  DetectOffset: {x: 0, y: 0, z: 0.75}
+  DetectSize: {x: 1, y: 0.61, z: 1.29}
+--- !u!114 &-3719616424542679945
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Input
+  m_EditorClassIdentifier: 
+  body: {fileID: 6954993152308107719}
+  direction: 1
+  maxConnectionCount: 1
+  styleID: Float
+  _connections:
+  - {fileID: -8435109406098109340}
+  - {fileID: -9019821903596500068}
+  side: 4
+  sidePosition: 67.5
+  sideOffset: 0
+--- !u!114 &-1273145734638776878
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Output
+  m_EditorClassIdentifier: 
+  body: {fileID: -4132157035944222213}
+  direction: 2
+  maxConnectionCount: 0
+  styleID: Float
+  _connections: []
+  side: 2
+  sidePosition: 237.5
+  sideOffset: 0
+--- !u!114 &-838553806590548479
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Output
+  m_EditorClassIdentifier: 
+  body: {fileID: -8838869033660474136}
+  direction: 2
+  maxConnectionCount: 1
+  styleID: System.String
+  _connections: []
+  side: 2
+  sidePosition: 177.5
+  sideOffset: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29,19 +346,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e95faa3a78b37604e972e2c74a0bf829, type: 3}
+  m_Script: {fileID: 11500000, guid: 5449f935bdd5a064fb16fcd6030db356, type: 3}
   m_Name: LastSession
   m_EditorClassIdentifier: 
   editorStates:
-  - {fileID: 3629389769456768955}
-  saveName: TestingTaskGraph
-  savePath: Assets\Scripts\PlayerTask\QuestGraph\TestingTaskGraph.asset
+  - {fileID: 161819860991216633}
+  saveName: StoneMonsterFSM
+  savePath: Assets\Scripts\Monster\StateMachineCanvas\StoneMonsterFSM.asset
   livesInScene: 0
   nodes:
-  - {fileID: 39229188487286503}
-  - {fileID: -2365669065639729088}
+  - {fileID: 6954993152308107719}
+  - {fileID: -8838869033660474136}
+  - {fileID: -4459424417116612577}
+  - {fileID: 8806196546721817361}
+  - {fileID: -4132157035944222213}
+  - {fileID: 3776299756217503259}
+  - {fileID: 8358900051265988877}
   groups: []
---- !u!114 &39229188487286503
+  FirstStateNode: {fileID: -9194816032090677954, guid: 7c76660fbf50b4e4aa02e4947e2cd631,
+    type: 2}
+  HasStartNode: 1
+--- !u!114 &127187146181354140
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -50,18 +375,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34d256ced8046b54b9c765961ec8e6c7, type: 3}
-  m_Name: Quest Event Node
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Output
   m_EditorClassIdentifier: 
-  canvas: {fileID: 0}
-  position: {x: -417, y: -268.5}
-  dynamicConnectionPorts: []
-  nodeGUIHeight: {x: 150, y: 178}
-  backgroundColor: {r: 1, g: 1, b: 1, a: 1}
-  TitleName: 
-  Description: 
-  QuestId: 89bdb02e-892a-4eca-8c99-27d27da4c47a
---- !u!114 &3629389769456768955
+  body: {fileID: 6954993152308107719}
+  direction: 2
+  maxConnectionCount: 1
+  styleID: System.String
+  _connections:
+  - {fileID: -8965556717270166391}
+  side: 2
+  sidePosition: 197.5
+  sideOffset: 0
+--- !u!114 &161819860991216633
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -76,6 +402,367 @@ MonoBehaviour:
   myCustomStateVariable: 0
   canvas: {fileID: 0}
   parentEditor: {fileID: 0}
-  selectedNode: {fileID: 0}
-  panOffset: {x: 203.4, y: 169.2}
-  zoom: 1
+  selectedNode: {fileID: -4132157035944222213}
+  panOffset: {x: 23.599981, y: 156}
+  zoom: 1.2
+--- !u!114 &2065103469167504009
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Input
+  m_EditorClassIdentifier: 
+  body: {fileID: -4132157035944222213}
+  direction: 1
+  maxConnectionCount: 0
+  styleID: System.String
+  _connections:
+  - {fileID: -6753455793666354837}
+  side: 2
+  sidePosition: 48.5
+  sideOffset: 0
+--- !u!114 &2588385260709625146
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Output
+  m_EditorClassIdentifier: 
+  body: {fileID: -4459424417116612577}
+  direction: 2
+  maxConnectionCount: 0
+  styleID: Float
+  _connections: []
+  side: 2
+  sidePosition: 218.5
+  sideOffset: 0
+--- !u!114 &3224383384619189335
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Input
+  m_EditorClassIdentifier: 
+  body: {fileID: -8838869033660474136}
+  direction: 1
+  maxConnectionCount: 1
+  styleID: Float
+  _connections: []
+  side: 4
+  sidePosition: 67.5
+  sideOffset: 0
+--- !u!114 &3749030123881818770
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Input
+  m_EditorClassIdentifier: 
+  body: {fileID: -8838869033660474136}
+  direction: 1
+  maxConnectionCount: 1
+  styleID: Float
+  _connections:
+  - {fileID: 7190368113766003260}
+  side: 2
+  sidePosition: 67.5
+  sideOffset: 0
+--- !u!114 &3776299756217503259
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52a687e5b69338145b0793e2b55de1f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 0}
+  position: {x: -860, y: 20}
+  dynamicConnectionPorts: []
+  nodeGUIHeight: {x: 196, y: 304}
+  backgroundColor: {r: 1, g: 0.85, b: 0.92, a: 1}
+  IsFold: 1
+  FoldStatus: Fold
+  inputLeftKnob: {fileID: 4828991456635427403}
+  inputRightKnob: {fileID: -7933231869953248068}
+  outputLeftKnob: {fileID: -7576527070030140347}
+  outputRightKnob: {fileID: 8675874830489609617}
+  StateName: Hit
+  RunTime: 0.51033235
+  DeciderList:
+  - {fileID: 0}
+  IsActiveAction: 1
+  Clip: {fileID: 0}
+  SoundDelay: 0
+  AttackRangeOffset: {x: 0, y: 0, z: 0.75}
+  AttackRangeSize: {x: 1, y: 0.61, z: 1.29}
+  DamageAreaKeepTime: 1
+  Damage: 0
+--- !u!114 &4053058169305358614
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Input
+  m_EditorClassIdentifier: 
+  body: {fileID: 8358900051265988877}
+  direction: 1
+  maxConnectionCount: 0
+  styleID: System.String
+  _connections:
+  - {fileID: 8675874830489609617}
+  side: 4
+  sidePosition: 48.5
+  sideOffset: 0
+--- !u!114 &4828991456635427403
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Input
+  m_EditorClassIdentifier: 
+  body: {fileID: 3776299756217503259}
+  direction: 1
+  maxConnectionCount: 1
+  styleID: Float
+  _connections: []
+  side: 4
+  sidePosition: 67.5
+  sideOffset: 0
+--- !u!114 &5221805447969800242
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Input
+  m_EditorClassIdentifier: 
+  body: {fileID: -4132157035944222213}
+  direction: 1
+  maxConnectionCount: 0
+  styleID: System.String
+  _connections: []
+  side: 4
+  sidePosition: 48.5
+  sideOffset: 0
+--- !u!114 &6954993152308107719
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4b2b9ee20867414e80ea0dc863a28f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 0}
+  position: {x: -130, y: -330}
+  dynamicConnectionPorts: []
+  nodeGUIHeight: {x: 196, y: 206}
+  backgroundColor: {r: 1, g: 0.85, b: 0.92, a: 1}
+  IsFold: 1
+  FoldStatus: Fold
+  inputLeftKnob: {fileID: -3719616424542679945}
+  inputRightKnob: {fileID: 8345015121638649217}
+  outputLeftKnob: {fileID: -5430928241831773228}
+  outputRightKnob: {fileID: 127187146181354140}
+  StateName: Patrol
+  RunTime: 0.030389398
+  DeciderList:
+  - {fileID: 0}
+  IsActiveAction: 0
+  Clip: {fileID: 0}
+  SoundDelay: 0
+  PatrolRadius: 10
+--- !u!114 &7067293662868158245
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Output
+  m_EditorClassIdentifier: 
+  body: {fileID: 8358900051265988877}
+  direction: 2
+  maxConnectionCount: 0
+  styleID: Float
+  _connections: []
+  side: 4
+  sidePosition: 159.5
+  sideOffset: 0
+--- !u!114 &7190368113766003260
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Output
+  m_EditorClassIdentifier: 
+  body: {fileID: -4459424417116612577}
+  direction: 2
+  maxConnectionCount: 0
+  styleID: Float
+  _connections:
+  - {fileID: 3749030123881818770}
+  side: 4
+  sidePosition: 218.5
+  sideOffset: 0
+--- !u!114 &7643392696393132853
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Output
+  m_EditorClassIdentifier: 
+  body: {fileID: -4132157035944222213}
+  direction: 2
+  maxConnectionCount: 0
+  styleID: Float
+  _connections:
+  - {fileID: -7933231869953248068}
+  side: 4
+  sidePosition: 237.5
+  sideOffset: 0
+--- !u!114 &8345015121638649217
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Input
+  m_EditorClassIdentifier: 
+  body: {fileID: 6954993152308107719}
+  direction: 1
+  maxConnectionCount: 1
+  styleID: Float
+  _connections: []
+  side: 2
+  sidePosition: 67.5
+  sideOffset: 0
+--- !u!114 &8358900051265988877
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70747e764d0190f4eba065f5d301e6d6, type: 3}
+  m_Name: WaitTime
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 0}
+  position: {x: -480, y: -140}
+  dynamicConnectionPorts: []
+  nodeGUIHeight: {x: 199, y: 168}
+  backgroundColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  IsFold: 1
+  FoldStatus: Fold
+  inputLeftKnob: {fileID: 4053058169305358614}
+  inputRightKnob: {fileID: -8373112768016661486}
+  outputLeftKnob: {fileID: 7067293662868158245}
+  outputRightKnob: {fileID: -9019821903596500068}
+  Type: 0
+  Order: 0
+  NextNode: {fileID: 3623421135280209322, guid: 58d453395772d134db4c04b2b706c485,
+    type: 2}
+  WaitTime: 1
+--- !u!114 &8675874830489609617
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Output
+  m_EditorClassIdentifier: 
+  body: {fileID: 3776299756217503259}
+  direction: 2
+  maxConnectionCount: 1
+  styleID: System.String
+  _connections:
+  - {fileID: 4053058169305358614}
+  side: 2
+  sidePosition: 295.5
+  sideOffset: 0
+--- !u!114 &8806196546721817361
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94af8616d0237714c89d4e522e60a222, type: 3}
+  m_Name: Entry State
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 0}
+  position: {x: -693.5, y: -330}
+  dynamicConnectionPorts: []
+  nodeGUIHeight: {x: 200, y: 76}
+  backgroundColor: {r: 0, g: 1, b: 1, a: 1}
+  IsFold: 1
+  FoldStatus: Fold
+  outputKnob: {fileID: -8435109406098109340}
+  FirstActionNode: {fileID: 3623421135280209322, guid: 58d453395772d134db4c04b2b706c485,
+    type: 2}
