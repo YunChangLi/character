@@ -6,7 +6,7 @@ using NodeEditorFramework.Utilities;
 
 namespace NodeEditorFramework.Standard
 {
-    [Node(false, "State/DeciderNode/WaitTime")]
+    [Node(false, "State/DeciderNode/WaitTime", typeof(StateMachineCanvasType))]
     public class DeciderWaitTime : DeciderNodeBase
     {
         public override string GetID { get { return "waitTimeDeciderNode"; } }

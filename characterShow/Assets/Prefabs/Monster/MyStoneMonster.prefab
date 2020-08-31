@@ -228,6 +228,7 @@ GameObject:
   - component: {fileID: 4666019668977482665}
   - component: {fileID: 4666019668977482667}
   - component: {fileID: 7087226956091218160}
+  - component: {fileID: 898146248}
   m_Layer: 0
   m_Name: MyStoneMonster
   m_TagString: Untagged
@@ -261,7 +262,7 @@ Animator:
   m_GameObject: {fileID: 7894317376003244440}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 1db38da97b6ad094dbca967f13dd370f, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bd7977a668e872e41aa2d6c46807db2b, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -281,13 +282,13 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.5
+  m_Height: 1
+  m_Radius: 0.6
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.49, z: 0}
 --- !u!114 &4666019668977482665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -305,6 +306,7 @@ MonoBehaviour:
   Animator: {fileID: 7894317375993901654}
   MonsterInfo: {fileID: 4666019668977482667}
   MonsterController: {fileID: 7087226956091218160}
+  Drawer: {fileID: 898146248}
 --- !u!114 &4666019668977482667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -330,8 +332,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f6ca67a89042de47bcf74a68ec455f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxMoveSpeed: 1
+  GoJump: 0
+  MaxMoveSpeed: 3
   JumpSpeed: 20
+--- !u!114 &898146248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7894317376003244440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5beed246ac982ec498c3b604befd85aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7894317376003244442
 GameObject:
   m_ObjectHideFlags: 0

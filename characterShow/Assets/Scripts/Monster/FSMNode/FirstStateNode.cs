@@ -5,12 +5,10 @@ using UnityEngine;
 
 namespace NodeEditorFramework.Standard
 {
-    [Node(false, "State/First State Node")]
+    [Node(false, "State/First State Node", typeof(StateMachineCanvasType))]
     public class FirstStateNode : StateNodeBase
     {
-        public const string ID = "firstStateNode";
-
-        public override string GetID { get { return ID; } }
+        public override string GetID { get { return "firstStateNode"; } }
 
         public override string Title { get { return "Entry State"; } }
 

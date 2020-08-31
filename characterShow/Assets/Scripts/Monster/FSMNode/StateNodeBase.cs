@@ -67,12 +67,10 @@ namespace NodeEditorFramework.Standard {
         {
 			if (NodeEditor.curEditorState == null)
 			{
-				Debug.LogError("Null curEditorState");
 				return;
 			}
 			if (NodeEditor.curEditorState.selectedNode == null)
 			{
-				Debug.Log("Null selectNode");
 				return;
 			}
 

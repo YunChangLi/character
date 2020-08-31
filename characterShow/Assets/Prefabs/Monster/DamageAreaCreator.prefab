@@ -43,4 +43,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e8ef6a3cddb82a438a73e157ef11598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AreaPrefab: {fileID: 0}
+  DamageAreaPrefab: {fileID: 4226897556915224169, guid: 4cbefaf3f82625247b9696a8ecb101e0,
+    type: 3}
