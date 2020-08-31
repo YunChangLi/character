@@ -29,23 +29,21 @@ namespace NodeEditorFramework.Standard
         }*/
         public QuestEventNode()
         {
-            QEvent = new QuestEvent();
         }
 
         public override void NodeGUI()
         {
             GUILayout.BeginVertical();
-            TitleName = (string)RTEditorGUI.TextField(new GUIContent("title Name", "The name of the mission"), TitleName);
-            QuestId = (string)RTEditorGUI.TextField(new GUIContent("id", "The name of the mission"), QEvent.GetID());
+            GUILayout.Label("QuestTitleName : ");
+            TitleName = (string)RTEditorGUI.TextField(TitleName);
+            GUILayout.Label("QuestID : ");
+            GUILayout.Label(QuestId);
             GUILayout.EndVertical();
 
             GUILayout.Label("description");
             GUILayout.BeginHorizontal();
             Description = (string)RTEditorGUI.TextField(Description, GetTextFieldLayout(100));
             GUILayout.EndHorizontal();
-
-           /* QEvent.SetMissionTitle(TitleName);
-            QEvent.SetMissionDescription(Description);*/
 
         }
         private GUILayoutOption[] GetTextFieldLayout(int height)
