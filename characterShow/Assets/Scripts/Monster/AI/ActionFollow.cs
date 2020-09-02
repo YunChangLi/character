@@ -28,12 +28,5 @@ namespace NodeEditorFramework.Standard
                 yield return null;
             }
         }
-
-        public override void Exit()
-        {
-            base.Exit();
-            //target = null;
-            //animator.SetBool("Walk", false);
-        }
     }
 }

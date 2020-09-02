@@ -5,8 +5,12 @@ using UnityEngine;
 public class PlayerBehaviorInfo : BehaviorInfo
 {
     //當前血量
-    public float MP { get; set; }
+    public float HP { get; set; }
     //最大血量
+    public float MaxHP;
+    //當前魔量
+    public float MP { get; set; }
+    //最大魔量
     public float MaxMp ;
     //內部調整的位移向量
     private Vector3 movement;
@@ -32,6 +36,11 @@ public class PlayerBehaviorInfo : BehaviorInfo
     public bool IsDefense
     {
         get { return /**IsGrounded**/Input.GetKey(KeyCode.Z); }
+    }
+
+    public override bool IsDead()
+    {
+        return HP <= 0;
     }
 
     //內部調整攻擊判定

@@ -319,7 +319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dde3b45fd9475c64fabd04458d6914ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHP: 0
+  Data: {fileID: 11400000, guid: 1f0342ca0a6bac649a31cb564c1c3e7a, type: 2}
 --- !u!114 &7087226956091218160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -332,9 +332,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f6ca67a89042de47bcf74a68ec455f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GoJump: 0
-  MaxMoveSpeed: 3
-  JumpSpeed: 20
 --- !u!114 &898146248
 MonoBehaviour:
   m_ObjectHideFlags: 0

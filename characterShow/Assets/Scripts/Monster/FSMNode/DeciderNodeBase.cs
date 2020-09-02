@@ -14,10 +14,10 @@ namespace NodeEditorFramework.Standard
         public override bool AutoLayout { get { return true; } } // IMPORTANT -> Automatically resize to fit list
 
 		// 只允許有一個輸入狀態
-		[ValueConnectionKnob("Input", Direction.In, "System.String", MaxConnectionCount = ConnectionCount.Single, NodeSide = NodeSide.Left)]
+		[ValueConnectionKnob("Input", Direction.In, "System.String", MaxConnectionCount = ConnectionCount.Multi, NodeSide = NodeSide.Left)]
         public ValueConnectionKnob inputLeftKnob;
 
-		[ValueConnectionKnob("Input", Direction.In, "System.String", MaxConnectionCount = ConnectionCount.Single, NodeSide = NodeSide.Right)]
+		[ValueConnectionKnob("Input", Direction.In, "System.String", MaxConnectionCount = ConnectionCount.Multi, NodeSide = NodeSide.Right)]
 		public ValueConnectionKnob inputRightKnob;
 
 		[ValueConnectionKnob("Output", Direction.Out, "Float", MaxConnectionCount = ConnectionCount.Single, NodeSide = NodeSide.Left)]

@@ -11,9 +11,8 @@ namespace NodeEditorFramework.Standard
         // FSM Canvas
         public StateMachineCanvasType StateMachineCanvas;
 
-        [HideInInspector]
         // 狀態機的當前Action
-        public ActionNodeBase CurrentActionNode;
+        public ActionNodeBase CurrentActionNode { get; set; }
 
         // Animator
         public Animator Animator;
@@ -25,6 +24,8 @@ namespace NodeEditorFramework.Standard
         public MonsterController MonsterController;
 
         public RangeDrawer Drawer;
+
+        public bool ShowCurrentAction = false;
 
         // 第一個符合條件的Decider
         private DeciderNodeBase targetDecider;
@@ -66,7 +67,8 @@ namespace NodeEditorFramework.Standard
                 stateNode.MonsterInfo = MonsterInfo;
                 stateNode.DoBeforeRunFSM();
             }
-            CurrentActionNode = (ActionNodeBase)StateMachineCanvas.FirstStateNode.FirstActionNode;
+            var firstStateNode = nodeList.Find((node) => node.name == "Entry State") as FirstStateNode;
+            CurrentActionNode = (ActionNodeBase)firstStateNode.FirstActionNode;
         }
 
         /// <summary>
@@ -77,7 +79,8 @@ namespace NodeEditorFramework.Standard
         {
             while (true)
             {
-                Debug.Log(CurrentActionNode.Title);
+                if(ShowCurrentAction)
+                    Debug.Log(CurrentActionNode.Title);
                 // Action初始化
                 CurrentActionNode.Init();
                 // Decider初始化

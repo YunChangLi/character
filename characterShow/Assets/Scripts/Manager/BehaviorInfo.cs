@@ -3,13 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
-public class BehaviorInfo : MonoBehaviour
-{
-    //當前血量
-    public float HP { get; set; }
-    //最大血量
-    public float MaxHP;
-    
+public abstract class BehaviorInfo : MonoBehaviour
+{   
     private CharacterController characterController;
 
 
@@ -31,8 +26,11 @@ public class BehaviorInfo : MonoBehaviour
     // 是否無敵
     public bool IsInvincible { get; set; }
 
-    // 是否死亡
-    public bool IsDead { get { return HP <= 0; } }
+    /// <summary>
+    /// 是否死亡
+    /// </summary>
+    /// <returns></returns>
+    public abstract bool IsDead();
 
     private void Awake()
     {

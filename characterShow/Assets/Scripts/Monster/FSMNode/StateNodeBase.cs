@@ -79,7 +79,7 @@ namespace NodeEditorFramework.Standard {
 			{
 				foreach(RangeDrawer drawer in FindObjectsOfType<RangeDrawer>())
                 {
-					if(drawer.GetComponent<ActionController>()?.StateMachineCanvas?.canvasName == NodeEditor.curNodeCanvas.canvasName)
+					if(drawer.gameObject.GetComponent<ActionController>()?.StateMachineCanvas?.savePath == NodeEditor.curNodeCanvas.savePath)
                     {
 						// 繪製圓形範圍
 						if (RangeType == RangeDrawer.RangeType.Sphere)
@@ -98,6 +98,10 @@ namespace NodeEditorFramework.Standard {
 							drawer.DrawRangeType = RangeDrawer.RangeType.Box;
 						}
 					}
+                    else
+                    {
+						drawer.IsShowRange = false;
+                    }
                 }
 			}
 		}

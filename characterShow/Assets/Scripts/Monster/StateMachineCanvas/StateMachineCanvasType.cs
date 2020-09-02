@@ -73,5 +73,33 @@ namespace NodeEditorFramework.Standard
                 ((StateNodeBase)node).FoldStatus = "Expand";
             }
         }
+
+        [ContextEntryAttribute(ContextType.Node, "ClearLink/LeftInput")]
+        private static void ClearLeftInputConnect(NodeEditorInputInfo info)
+        {
+            info.SetAsCurrentEnvironment();
+            info.editorState.focusedNode.connectionKnobs[0].ClearConnections();
+        }
+
+        [ContextEntryAttribute(ContextType.Node, "ClearLink/RightInput")]
+        private static void ClearRightInputConnect(NodeEditorInputInfo info)
+        {
+            info.SetAsCurrentEnvironment();
+            info.editorState.focusedNode.connectionKnobs[1].ClearConnections();
+        }
+
+        [ContextEntryAttribute(ContextType.Node, "ClearLink/LeftOutput")]
+        private static void ClearLeftOutputConnect(NodeEditorInputInfo info)
+        {
+            info.SetAsCurrentEnvironment();
+            info.editorState.focusedNode.connectionKnobs[2].ClearConnections();
+        }
+
+        [ContextEntryAttribute(ContextType.Node, "ClearLink/RightOutput")]
+        private static void ClearRightOutputConnect(NodeEditorInputInfo info)
+        {
+            info.SetAsCurrentEnvironment();
+            info.editorState.focusedNode.connectionKnobs[3].ClearConnections();
+        }
     }
 }

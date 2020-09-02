@@ -5,10 +5,12 @@ using UnityEngine;
 public class MonsterController : MonoBehaviour
 {
     public Vector3 MoveDir { get; set; }
-    public bool GoJump = false;
-    public bool CanMove = true;
-    public float MaxMoveSpeed = 1f; // 最大移動速度
-    public float JumpSpeed = 20f;   // 跳躍速度
+    public GameObject LookAtTarget { get; set; }
+    public bool JumpInput { get; set; }
+    public bool CanMove { get; set; }
+    public float MaxMoveSpeed { get; private set; } // 最大移動速度
+    public float JumpSpeed { get; private set; } // 跳躍速度
+    public float StandRotateSpeed { get; private set; } // 原地旋轉速度
 
     private CharacterController characterController;
     private MonsterInfo monsterInfo;
@@ -19,6 +21,7 @@ public class MonsterController : MonoBehaviour
     private Vector3 movement;
     private float verticalSpeed;
     private bool readyToJump;
+    private Animator animator;
 
     const float gravity = 20f;
     const float inverseOneEighty = 1f / 180f;
@@ -29,12 +32,20 @@ public class MonsterController : MonoBehaviour
     {
         characterController = GetComponent<CharacterController>();
         monsterInfo = GetComponent<MonsterInfo>();
+        animator = GetComponent<Animator>();
+        MaxMoveSpeed = monsterInfo.Data.MaxMoveSpeed;
+        JumpSpeed = monsterInfo.Data.JumpSpeed;
+        StandRotateSpeed = monsterInfo.Data.StandRotateSpeed;
+        JumpInput = false;
+        CanMove = true;
     }
 
     public void UpdateCalculation()
     {
         CalculateMovement();
         CaluclateVerticalMovement();
+        SetLookAtRotation();
+        UpdateAnimator();
     }
 
     /// <summary>
@@ -58,8 +69,10 @@ public class MonsterController : MonoBehaviour
         // 計算最後的移動值
         movement = forwardSpeed * MoveDir * Time.deltaTime;
 
-        if(movement != Vector3.zero)
+        if (movement != Vector3.zero)
+        {
             transform.rotation = Quaternion.LookRotation(movement);
+        }
 
         movement += verticalSpeed * Vector3.up * Time.deltaTime;
 
@@ -84,12 +97,12 @@ public class MonsterController : MonoBehaviour
             verticalSpeed = -gravity * stickingGravityProportion;
 
             // 當怪物準備好可以跳
-            if (GoJump && readyToJump)
+            if (JumpInput && readyToJump)
             {
                 verticalSpeed = JumpSpeed;
                 isGrounded = false;
                 readyToJump = false;
-                GoJump = false;
+                JumpInput = false;
             }
         }
         else
@@ -102,5 +115,26 @@ public class MonsterController : MonoBehaviour
 
             verticalSpeed -= gravity * Time.deltaTime;
         }
+    }
+
+    /// <summary>
+    /// 原地旋轉
+    /// </summary>
+    public virtual void SetLookAtRotation()
+    {
+        if(LookAtTarget != null)
+        {
+            // 持續面朝著指定物體
+            Vector3 dir = LookAtTarget.transform.position - transform.position;
+            dir.Normalize();
+            Vector3 newDir = Vector3.RotateTowards(transform.forward, dir, Time.deltaTime * StandRotateSpeed, 0.0f);
+            transform.rotation = Quaternion.LookRotation(newDir);
+        }
+    }
+
+    public virtual void UpdateAnimator()
+    {
+        if(forwardSpeed != 0)
+            animator.SetBool("Walk", true);
     }
 }
