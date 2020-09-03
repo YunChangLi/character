@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-2456404319068152231
+--- !u!114 &-7835480917504490857
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9,17 +9,81 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34d256ced8046b54b9c765961ec8e6c7, type: 3}
-  m_Name: Quest Event
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: End Flow
   m_EditorClassIdentifier: 
-  canvas: {fileID: 0}
-  position: {x: -172.5, y: -269.3}
-  dynamicConnectionPorts: []
-  nodeGUIHeight: {x: 150, y: 220}
-  backgroundColor: {r: 1, g: 1, b: 1, a: 1}
-  TitleName: 
-  Description: 
-  QuestId: b71cd5e8-b3bf-4290-8baa-9cef6f4bc919
+  body: {fileID: 4658841671182402092}
+  direction: 1
+  maxConnectionCount: 0
+  styleID: System.Boolean
+  _connections:
+  - {fileID: 6234860334308470491}
+  side: 4
+  sidePosition: 20
+  sideOffset: 0
+--- !u!114 &-7727773934712389883
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Output
+  m_EditorClassIdentifier: 
+  body: {fileID: 1965633114268116651}
+  direction: 2
+  maxConnectionCount: 0
+  styleID: System.Boolean
+  _connections:
+  - {fileID: -1105941253456346463}
+  side: 2
+  sidePosition: 314.5
+  sideOffset: 0
+--- !u!114 &-5649048439587137141
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Input
+  m_EditorClassIdentifier: 
+  body: {fileID: 1965633114268116651}
+  direction: 1
+  maxConnectionCount: 0
+  styleID: System.Boolean
+  _connections:
+  - {fileID: 2657457486712605735}
+  side: 4
+  sidePosition: 28.5
+  sideOffset: 0
+--- !u!114 &-1105941253456346463
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Input
+  m_EditorClassIdentifier: 
+  body: {fileID: 1699990236224406337}
+  direction: 1
+  maxConnectionCount: 0
+  styleID: System.Boolean
+  _connections:
+  - {fileID: -7727773934712389883}
+  side: 4
+  sidePosition: 28.5
+  sideOffset: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33,15 +97,19 @@ MonoBehaviour:
   m_Name: TestingTaskGraph
   m_EditorClassIdentifier: 
   editorStates:
-  - {fileID: 4717086419869022629}
+  - {fileID: 495711153041883927}
   saveName: TestingTaskGraph
   savePath: Assets\Scripts\PlayerTask\QuestGraph\TestingTaskGraph.asset
   livesInScene: 0
   nodes:
-  - {fileID: 4819406093217411219}
-  - {fileID: -2456404319068152231}
+  - {fileID: 1965633114268116651}
+  - {fileID: 4389900589325350828}
+  - {fileID: 4658841671182402092}
+  - {fileID: 1699990236224406337}
   groups: []
---- !u!114 &4717086419869022629
+  StartState: {fileID: 0}
+  EndState: {fileID: 0}
+--- !u!114 &495711153041883927
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -57,9 +125,9 @@ MonoBehaviour:
   canvas: {fileID: 0}
   parentEditor: {fileID: 0}
   selectedNode: {fileID: 0}
-  panOffset: {x: 203.4, y: 169.2}
-  zoom: 1
---- !u!114 &4819406093217411219
+  panOffset: {x: 118.19997, y: -27.600021}
+  zoom: 1.4
+--- !u!114 &1699990236224406337
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -68,14 +136,120 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34d256ced8046b54b9c765961ec8e6c7, type: 3}
-  m_Name: Quest Event Node
+  m_Script: {fileID: 11500000, guid: 80e95447395112148bdb00a683819b33, type: 3}
+  m_Name: Gathering
   m_EditorClassIdentifier: 
   canvas: {fileID: 0}
-  position: {x: -417, y: -268.5}
+  position: {x: -58.69995, y: -201.29997}
   dynamicConnectionPorts: []
-  nodeGUIHeight: {x: 150, y: 220}
+  nodeGUIHeight: {x: 196, y: 323}
   backgroundColor: {r: 1, g: 1, b: 1, a: 1}
+  InputKnob: {fileID: -1105941253456346463}
+  OutputKnob: {fileID: 6234860334308470491}
   TitleName: 
   Description: 
-  QuestId: 89bdb02e-892a-4eca-8c99-27d27da4c47a
+  QuestId: 
+  GatheringItem: {fileID: 0}
+  RequiredAmount: 0
+--- !u!114 &1965633114268116651
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80e95447395112148bdb00a683819b33, type: 3}
+  m_Name: Gathering
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 0}
+  position: {x: -478.49997, y: -209.1}
+  dynamicConnectionPorts: []
+  nodeGUIHeight: {x: 196, y: 323}
+  backgroundColor: {r: 1, g: 1, b: 1, a: 1}
+  InputKnob: {fileID: -5649048439587137141}
+  OutputKnob: {fileID: -7727773934712389883}
+  TitleName: 
+  Description: 
+  QuestId: 
+  GatheringItem: {fileID: 11400000, guid: 4966cc7670925f249ba1c53602a168af, type: 2}
+  RequiredAmount: 123
+--- !u!114 &2657457486712605735
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Start Flow
+  m_EditorClassIdentifier: 
+  body: {fileID: 4389900589325350828}
+  direction: 2
+  maxConnectionCount: 0
+  styleID: System.Boolean
+  _connections:
+  - {fileID: -5649048439587137141}
+  side: 2
+  sidePosition: 20
+  sideOffset: 0
+--- !u!114 &4389900589325350828
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d88efa09189ae445ad8c720de24fb12, type: 3}
+  m_Name: Start Quest
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 0}
+  position: {x: -736.4, y: -135.6}
+  dynamicConnectionPorts: []
+  nodeGUIHeight: {x: 200, y: 37}
+  backgroundColor: {r: 0, g: 1, b: 0, a: 1}
+  StartFlowPort: {fileID: 2657457486712605735}
+--- !u!114 &4658841671182402092
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63798f8cba3780441a365fe1ef7a2c6f, type: 3}
+  m_Name: End Quest
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 0}
+  position: {x: 307.40005, y: -16.399979}
+  dynamicConnectionPorts: []
+  nodeGUIHeight: {x: 200, y: 37}
+  backgroundColor: {r: 1, g: 0, b: 0, a: 1}
+  EndFlowPort: {fileID: -7835480917504490857}
+--- !u!114 &6234860334308470491
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Output
+  m_EditorClassIdentifier: 
+  body: {fileID: 1699990236224406337}
+  direction: 2
+  maxConnectionCount: 0
+  styleID: System.Boolean
+  _connections:
+  - {fileID: -7835480917504490857}
+  side: 2
+  sidePosition: 314.5
+  sideOffset: 0

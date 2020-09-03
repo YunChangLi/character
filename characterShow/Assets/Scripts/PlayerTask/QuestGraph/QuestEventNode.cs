@@ -6,7 +6,7 @@ using UnityEditor;
 
 namespace NodeEditorFramework.Standard
 {
-    [Node(false, "QuestEventNode")]
+    [Node(false, "QuestEventNode/prototype")]
     public class QuestEventNode : Node
     {
         public const string ID = "questEventNode";
