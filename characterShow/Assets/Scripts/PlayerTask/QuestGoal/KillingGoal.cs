@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class KillingGoal : QuestGoal
 {
-    public MonsterInfo TargetMonster { get; set; }
-    public KillingGoal(int requiredAmount , MonsterInfo targetMonster) : base(requiredAmount)
+    public MonsterData TargetMonster { get; set; }
+    public KillingGoal(int requiredAmount , MonsterData targetMonster) : base(requiredAmount)
     {
         this.TargetMonster = targetMonster;
     }

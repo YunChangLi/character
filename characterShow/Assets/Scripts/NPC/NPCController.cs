@@ -21,33 +21,27 @@ public class NPCController : MonoBehaviour
     public void GiveTask(PlayerController player) 
     {
         Task task = new Task();
-        player.PTaskController.AddTask(task);
+        //player.PTaskController.AddTask(task);
     }
     public void GiveGroupTask(PlayerController player)
     {
         GroupTask tasks = new GroupTask();
-        player.PTaskController.AddTask(tasks);
+        //player.PTaskController.AddTask(tasks);
     }
     /// <summary>
     /// called by player
     /// </summary>
     /// <param name="player"></param>
-    public void ChattedWithPlayer(PlayerTaskController player) 
+    public void ChattedWithPlayer() 
     {
         //catch player
-        if (player != null) 
-        {
-            
-
-            StartCoroutine(npcChattingProcessForUR(player));
-            StartCoroutine(npcChattingProcessForWR(player));
-        }
+        
     }
     /// <summary>
     /// 有空任務/空任務被接收
     /// </summary>
     /// <returns></returns>
-    private IEnumerator npcChattingProcessForUR(PlayerTaskController player) 
+    /*private IEnumerator npcChattingProcessForUR(PlayerTaskController player) 
     {
         //尋找派送任務是否有在玩家的任務清單
         Task sendedTask = player.FindTaskInList(NPCOwnTask.SendTask.TaskID);
@@ -87,7 +81,7 @@ public class NPCController : MonoBehaviour
         else if (recievedTask.GetTheCurrentState() == Task.TaskState.Receiving) //要接收的任務未被完成
             yield return null;
 
-    }
+    }*/
 
     private IEnumerator NPCSpeeking(String speechContent)
     {

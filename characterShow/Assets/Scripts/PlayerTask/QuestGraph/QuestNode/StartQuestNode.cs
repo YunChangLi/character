@@ -31,6 +31,11 @@ namespace NodeEditorFramework.Standard
             StartFlowPort.DisplayLayout();
             GUILayout.EndVertical();
         }
+        public override bool Calculate()
+        {
+            StartFlowPort.SetValue<bool>(false);
+            return true;
+        }
 
 
 

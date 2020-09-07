@@ -6,11 +6,15 @@ namespace NodeEditorFramework.Standard
 {
     public class QuestFlowCanvasTraversal : NodeCanvasTraversal
     {
+        private QuestFlowCanvasType questCanvas;
 
-        public QuestFlowCanvasTraversal(NodeCanvas canvas) : base(canvas) { }
+        public QuestFlowCanvasTraversal(QuestFlowCanvasType canvas) : base(canvas) 
+        {
+            questCanvas = canvas;
+        }
         public override void TraverseAll()
         {
-            
+          
         }
 
     }

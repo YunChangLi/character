@@ -14,12 +14,15 @@ namespace NodeEditorFramework.Standard
         [ValueConnectionKnob("Output", Direction.Out, "System.Boolean", ConnectionCount.Single, NodeSide.Right)]
         public ValueConnectionKnob OutputKnob;
 
-        public string TitleName;
-        public string Description;
-        public string QuestId;
+        public string TitleName;    //任務名稱
+        public string Description;  //任務詳述
+        public int QuestId;      //任務id
+        public QuestGoal goalSetting; //實際任務運作
+
+        public bool isFinished = false;
 
 
-
+        //public vo
         public override void NodeGUI()
         {
             GUILayout.BeginVertical();
@@ -30,7 +33,7 @@ namespace NodeEditorFramework.Standard
             GUILayout.Label("QuestTitleName : ");
             TitleName = (string)RTEditorGUI.TextField(TitleName);
             GUILayout.Label("QuestID : ");
-            GUILayout.Label(QuestId);
+            GUILayout.Label(QuestId.ToString()) ;
             GUILayout.EndVertical();
 
             GUILayout.Label("description");
@@ -40,9 +43,10 @@ namespace NodeEditorFramework.Standard
 
             UniqueContent();
 
-            GUILayout.BeginVertical();
+            GUILayout.BeginHorizontal();
+            isFinished = RTEditorGUI.Toggle(isFinished, new GUIContent("isFinished"));
             OutputKnob.DisplayLayout();
-            GUILayout.EndVertical();
+            GUILayout.EndHorizontal();
 
 
         }
@@ -58,8 +62,28 @@ namespace NodeEditorFramework.Standard
         { 
 
         }
+        public override bool Calculate()
+        {
+            OutputKnob.SetValue<bool>(isFinished);
+            return true;
+        }
+        public void SetIsFinish(bool isFinished)
+        {
+            this.isFinished = isFinished;
+        }
+        public QuestBaseNode GetTheNextNode()
+        {
+            SetIsFinish(true);
+            if (this.OutputKnob.connections[0].body.GetID == "endQuest")
+                return null;
 
-
+            return (QuestBaseNode)this.OutputKnob.connections[0].body;
+        }
+        public void SetQuestId(int questId)
+        {
+            this.QuestId = questId;
+        }
+        public abstract void CreateQuestInstance();
     }
 
 }

@@ -28,6 +28,7 @@ namespace NodeEditorFramework.Standard
 		{
 			if (Traversal == null)
 				Traversal = new QuestFlowCanvasTraversal(this);
+
 		}
 		public override bool CanAddNode(string nodeID)
 		{
@@ -42,6 +43,7 @@ namespace NodeEditorFramework.Standard
 		{
 			if (Traversal == null)
 				Traversal = new QuestFlowCanvasTraversal(this);
+
 		}
 
 
