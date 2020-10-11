@@ -7,12 +7,16 @@ public class QuestGoal
     
     public int RequiredAmount { get; set; }
     public int CurrentAmount { get; set; }
+    public QuestGoal()
+    {
 
+    }
     public QuestGoal( int requiredAmount)
     {
         this.RequiredAmount = requiredAmount;
     }
-    public bool CheckTaskFinished()
+
+    public virtual bool CheckTaskFinished()
     {
         return CurrentAmount >= RequiredAmount;
     }

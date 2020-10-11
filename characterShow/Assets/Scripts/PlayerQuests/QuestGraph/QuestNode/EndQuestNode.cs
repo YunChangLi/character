@@ -18,8 +18,13 @@ namespace NodeEditorFramework.Standard
 
         public override Vector2 MinSize { get { return new Vector2(200, 40); } }
 
+
         [ValueConnectionKnob("End Flow", Direction.In, "System.Boolean", ConnectionCount.Single, NodeSide.Left, NodeSidePos = 20)]
         public ValueConnectionKnob EndFlowPort;
+
+        //判斷任務條完成時是否有額外的活動
+        public bool hasFinishEvent = false;
+        public string Description;
 
         protected override void OnCreate()
         {
@@ -30,10 +35,26 @@ namespace NodeEditorFramework.Standard
             GUILayout.BeginVertical();
             EndFlowPort.DisplayLayout();
             GUILayout.EndVertical();
+            GUILayout.BeginHorizontal();
+            hasFinishEvent = RTEditorGUI.Toggle(hasFinishEvent, new GUIContent("Has Finish Event"));
+
+            GUILayout.EndHorizontal();
+            if (hasFinishEvent) 
+            {
+                GUILayout.Label("description");
+                GUILayout.BeginHorizontal();
+                Description = (string)RTEditorGUI.TextField(Description, AdjustFieldLayout(200, 100));
+                GUILayout.EndHorizontal();
+            }
         }
+        private GUILayoutOption[] AdjustFieldLayout(int width, int height)
+        {
+            return new GUILayoutOption[] {
+                GUILayout.Height(height),
+                GUILayout.Width(width),
+            };
 
-
-
+        }
 
     }
 

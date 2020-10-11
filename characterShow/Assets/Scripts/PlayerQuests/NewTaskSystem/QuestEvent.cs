@@ -11,8 +11,6 @@ public class QuestEvent
         Current,
         Done
     }
-    public NPCController QuestReceiver { get; set; }
-    public NPCController QuestSender { get; set; }
     public string TitleName { get; set; }
     public string Description { get; set; }
     public string QuestId { get; set; }

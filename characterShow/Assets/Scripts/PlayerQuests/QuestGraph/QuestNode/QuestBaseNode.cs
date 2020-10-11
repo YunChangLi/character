@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using NodeEditorFramework.Utilities;
 using UnityEditor;
+using UnityEngine.UI;
 
 namespace NodeEditorFramework.Standard
 {
@@ -16,9 +17,10 @@ namespace NodeEditorFramework.Standard
 
         public string TitleName;    //任務名稱
         public string Description;  //任務詳述
-        public int QuestId;      //任務id
+        public string QuestId;      //任務id
+        public string ParentID;     //QuestSetID
+        public int PlayerListID;    //玩家任務列表裡的排序
         public QuestGoal goalSetting; //實際任務運作
-
         public bool isFinished = false;
 
 
@@ -33,7 +35,7 @@ namespace NodeEditorFramework.Standard
             GUILayout.Label("QuestTitleName : ");
             TitleName = (string)RTEditorGUI.TextField(TitleName);
             GUILayout.Label("QuestID : ");
-            GUILayout.Label(QuestId.ToString()) ;
+            GUILayout.Label(QuestId) ;
             GUILayout.EndVertical();
 
             GUILayout.Label("description");
@@ -43,6 +45,13 @@ namespace NodeEditorFramework.Standard
 
             UniqueContent();
 
+            GUILayout.BeginVertical();
+            if (GUILayout.Button("Open Dialog")) 
+            {
+                Debug.Log("Open");
+            }
+            GUILayout.EndVertical();
+            
             GUILayout.BeginHorizontal();
             isFinished = RTEditorGUI.Toggle(isFinished, new GUIContent("isFinished"));
             OutputKnob.DisplayLayout();
@@ -65,8 +74,10 @@ namespace NodeEditorFramework.Standard
         public override bool Calculate()
         {
             OutputKnob.SetValue<bool>(isFinished);
+            SetQuestId(System.Guid.NewGuid().ToString());
             return true;
         }
+
         public void SetIsFinish(bool isFinished)
         {
             this.isFinished = isFinished;
@@ -74,16 +85,42 @@ namespace NodeEditorFramework.Standard
         public QuestBaseNode GetTheNextNode()
         {
             SetIsFinish(true);
-            if (this.OutputKnob.connections[0].body.GetID == "endQuest")
+
+            if (this.OutputKnob.connections[0].body.GetID == "endQuest") 
+            {
+                //show the UI 可說明故事劇情 in Finish event
                 return null;
+            }
+                
 
             return (QuestBaseNode)this.OutputKnob.connections[0].body;
         }
-        public void SetQuestId(int questId)
+        /// <summary>
+        /// 記錄此任務節點是存在玩家任務列表裡的哪一項
+        /// </summary>
+        /// <param name="ListID"></param>
+        public void SetPlayerListID(int ListID)
+        {
+            this.PlayerListID = ListID;
+        }
+        public void SetQuestId(string questId)
         {
             this.QuestId = questId;
         }
+        /// <summary>
+        /// 獲取QuestFlowID
+        /// </summary>
+        /// <param name="parentID"></param>
+        public void setParentID(string parentID)
+        {
+            this.ParentID = parentID;
+        }
+        /// <summary>
+        /// 實例化任務目標
+        /// </summary>
         public abstract void CreateQuestInstance();
+
+
     }
 
 }

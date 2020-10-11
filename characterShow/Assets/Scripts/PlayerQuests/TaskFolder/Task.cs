@@ -19,8 +19,7 @@ public class Task : MonoBehaviour, ITask
     public int TaskID { get; set; } = -1;                   //用來記錄與查找 (等於taskList Number)
     public string TaskName;                                 //Task名稱
     //public TaskGoal MTaskGoal { get; set; }                 //任務目標及進度追蹤        
-    public NPCController TaskGivenNPC { get; set; }     
-    public NPCController TaskFinishNPC { get; set; }        //接收完成任務的NPC
+
 
     protected TaskState taskState = TaskState.UnReceived;    //init the State
     

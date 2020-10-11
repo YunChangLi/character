@@ -1,0 +1,249 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6852855003608719009
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf141a47664efc445a8e7631d617f97c, type: 3}
+  m_Name: Dialog
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 11400000}
+  position: {x: 141.6, y: -195.20001}
+  dynamicConnectionPorts: []
+  nodeGUIHeight: {x: 200, y: 187}
+  backgroundColor: {r: 1, g: 1, b: 1, a: 1}
+  InputKnob: {fileID: 4895895211377680747}
+  OutputKnob: {fileID: -2408263175482464922}
+  Description: 
+--- !u!114 &-2484316571931121736
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Start Flow
+  m_EditorClassIdentifier: 
+  body: {fileID: -1677586455712828575}
+  direction: 2
+  maxConnectionCount: 0
+  styleID: System.Boolean
+  _connections:
+  - {fileID: 178531975784758534}
+  side: 2
+  sidePosition: 20
+  sideOffset: 0
+--- !u!114 &-2408263175482464922
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Output
+  m_EditorClassIdentifier: 
+  body: {fileID: -6852855003608719009}
+  direction: 2
+  maxConnectionCount: 1
+  styleID: System.Boolean
+  _connections: []
+  side: 2
+  sidePosition: 178.5
+  sideOffset: 0
+--- !u!114 &-1677586455712828575
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e9a7b7fda504694d9766e2475ea623c, type: 3}
+  m_Name: Start Dialog
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 11400000}
+  position: {x: -563.2, y: -180.6}
+  dynamicConnectionPorts: []
+  nodeGUIHeight: {x: 200, y: 37}
+  backgroundColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  StartFlowPort: {fileID: -2484316571931121736}
+--- !u!114 &-251379523060351022
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6ab6487237ff124ea4c2aa5de9ce3fb, type: 3}
+  m_Name: MainEditorState
+  m_EditorClassIdentifier: 
+  myCustomStateVariable: 0
+  canvas: {fileID: 11400000}
+  parentEditor: {fileID: 0}
+  selectedNode: {fileID: -6852855003608719009}
+  panOffset: {x: 0, y: 0}
+  zoom: 1.6
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f1daabf3780a03448e137dfe56cf1dd, type: 3}
+  m_Name: Node_Canvas_Test
+  m_EditorClassIdentifier: 
+  editorStates:
+  - {fileID: -251379523060351022}
+  saveName: Node_Canvas_Test
+  savePath: Assets\Scripts\Dialog\DialogGraph\Node_Canvas_Test.asset
+  livesInScene: 0
+  nodes:
+  - {fileID: -1677586455712828575}
+  - {fileID: 1967705566802806326}
+  - {fileID: 4359726105296594095}
+  - {fileID: -6852855003608719009}
+  groups: []
+  StartState: {fileID: -5223269680851064934, guid: 7c76660fbf50b4e4aa02e4947e2cd631,
+    type: 2}
+  EndState: {fileID: -7495647571654650704, guid: 7c76660fbf50b4e4aa02e4947e2cd631,
+    type: 2}
+--- !u!114 &178531975784758534
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Input
+  m_EditorClassIdentifier: 
+  body: {fileID: 4359726105296594095}
+  direction: 1
+  maxConnectionCount: 1
+  styleID: System.Boolean
+  _connections:
+  - {fileID: -2484316571931121736}
+  side: 4
+  sidePosition: 28.5
+  sideOffset: 0
+--- !u!114 &945923301199267439
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Output
+  m_EditorClassIdentifier: 
+  body: {fileID: 4359726105296594095}
+  direction: 2
+  maxConnectionCount: 1
+  styleID: System.Boolean
+  _connections:
+  - {fileID: 3129689540007123551}
+  - {fileID: 4895895211377680747}
+  side: 2
+  sidePosition: 178.5
+  sideOffset: 0
+--- !u!114 &1967705566802806326
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b56cd4b9a1e4d824a8e88ad8e44beedb, type: 3}
+  m_Name: End Dialog
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 11400000}
+  position: {x: 100, y: 100}
+  dynamicConnectionPorts: []
+  nodeGUIHeight: {x: 200, y: 37}
+  backgroundColor: {r: 0, g: 0, b: 1, a: 1}
+  EndFlowPort: {fileID: 3129689540007123551}
+--- !u!114 &3129689540007123551
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: End Flow
+  m_EditorClassIdentifier: 
+  body: {fileID: 1967705566802806326}
+  direction: 1
+  maxConnectionCount: 1
+  styleID: System.Boolean
+  _connections:
+  - {fileID: 945923301199267439}
+  side: 4
+  sidePosition: 20
+  sideOffset: 0
+--- !u!114 &4359726105296594095
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf141a47664efc445a8e7631d617f97c, type: 3}
+  m_Name: Dialog
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 11400000}
+  position: {x: -221.9, y: -122}
+  dynamicConnectionPorts: []
+  nodeGUIHeight: {x: 200, y: 187}
+  backgroundColor: {r: 1, g: 1, b: 1, a: 1}
+  InputKnob: {fileID: 178531975784758534}
+  OutputKnob: {fileID: 945923301199267439}
+  Description: 
+--- !u!114 &4895895211377680747
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Input
+  m_EditorClassIdentifier: 
+  body: {fileID: -6852855003608719009}
+  direction: 1
+  maxConnectionCount: 1
+  styleID: System.Boolean
+  _connections:
+  - {fileID: 945923301199267439}
+  side: 4
+  sidePosition: 28.5
+  sideOffset: 0

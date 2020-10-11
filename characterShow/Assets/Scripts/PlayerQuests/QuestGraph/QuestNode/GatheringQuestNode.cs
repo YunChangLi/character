@@ -5,6 +5,7 @@ using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
+
 namespace NodeEditorFramework.Standard {
     [Node(false, "QuestEventNode/Gathering Quest")]
     public class GatheringQuestNode : QuestBaseNode
