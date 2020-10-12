@@ -124,9 +124,11 @@ MonoBehaviour:
   OutputKnob: {fileID: -7683161671146768886}
   TitleName: GGG
   Description: 
-  QuestId: 
+  QuestId: ae02eb3a-29b1-4475-b0fc-becda423a91f
+  ParentID: 
   PlayerListID: 0
   isFinished: 0
+  DialogFlowCanvas: {fileID: 0}
   GatheringItem: {fileID: 11400000, guid: 4966cc7670925f249ba1c53602a168af, type: 2}
   RequiredAmount: 3
 --- !u!114 &3599703622671342011
@@ -212,9 +214,11 @@ MonoBehaviour:
   OutputKnob: {fileID: 3599703622671342011}
   TitleName: KKK
   Description: 
-  QuestId: 935adf2d-4c81-4b46-ac26-17db36946ded
-  PlayerListID: 0
+  QuestId: fbbe9eda-8c02-4f4c-b5b9-10b664b8a20a
+  ParentID: 8ac4b864-f469-4aff-b2e0-29d7ad7267c2
+  PlayerListID: 1
   isFinished: 0
+  DialogFlowCanvas: {fileID: 0}
   GatheringItem: {fileID: 11400000, guid: 4966cc7670925f249ba1c53602a168af, type: 2}
   RequiredAmount: 3
 --- !u!114 &5411439949371516886

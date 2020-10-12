@@ -20,8 +20,11 @@ namespace NodeEditorFramework.Standard
         public string QuestId;      //任務id
         public string ParentID;     //QuestSetID
         public int PlayerListID;    //玩家任務列表裡的排序
+        public bool isFinished = false; //任務是否完成
         public QuestGoal goalSetting; //實際任務運作
-        public bool isFinished = false;
+        public DialogFlowCanvasType DialogFlowCanvas; //可按按鈕開起的對話編輯器
+        private bool isOpenDialog = false;
+
 
 
         //public vo
@@ -40,21 +43,29 @@ namespace NodeEditorFramework.Standard
 
             GUILayout.Label("description");
             GUILayout.BeginHorizontal();
-            Description = (string)RTEditorGUI.TextField(Description, AdjustFieldLayout(200, 100));
+            //Description = (string)RTEditorGUI.TextField(Description, AdjustFieldLayout(200, 100));
+            Description = GUILayout.TextArea(Description, 500);
             GUILayout.EndHorizontal();
 
             UniqueContent();
 
             GUILayout.BeginVertical();
-            if (GUILayout.Button("Open Dialog")) 
+            DialogFlowCanvas = RTEditorGUI.ObjectField<DialogFlowCanvasType>(new GUIContent("Dialog Editor"), DialogFlowCanvas, false, AdjustFieldLayout(10, 10));
+            if (GUILayout.Button("Open Dialog")) //設置按鈕開啟對話編輯器
             {
-                Debug.Log("Open");
+                if (DialogFlowCanvas != null)
+                {
+                    string CanvasPath = AssetDatabase.GetAssetPath(DialogFlowCanvas);
+                    NodeEditorWindow.OpenNodeEditor().canvasCache.LoadNodeCanvas(CanvasPath);
+                    isOpenDialog = true;
+                }
             }
             GUILayout.EndVertical();
             
             GUILayout.BeginHorizontal();
             isFinished = RTEditorGUI.Toggle(isFinished, new GUIContent("isFinished"));
-            OutputKnob.DisplayLayout();
+            if(!isOpenDialog)
+                OutputKnob.DisplayLayout();
             GUILayout.EndHorizontal();
 
 
