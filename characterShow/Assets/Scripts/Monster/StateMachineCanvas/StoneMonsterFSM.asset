@@ -190,10 +190,10 @@ MonoBehaviour:
   outputLeftKnob: {fileID: -5168907501263340705}
   outputRightKnob: {fileID: -4265301985389173979}
   StateName: Patrol
-  RunTime: 0.0059748
+  RunTime: 37.583355
   DeciderList:
   - {fileID: 7854803383140569561}
-  IsActiveAction: 0
+  IsActiveAction: 1
   Clip: {fileID: 0}
   SoundDelay: 0
   PatrolRadius: 10
