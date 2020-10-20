@@ -1,71 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8528565814020297152
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf141a47664efc445a8e7631d617f97c, type: 3}
-  m_Name: Dialog
-  m_EditorClassIdentifier: 
-  canvas: {fileID: 0}
-  position: {x: -298.4, y: -124.40001}
-  dynamicConnectionPorts:
-  - {fileID: 6920937138863220967}
-  - {fileID: -2461277719920359578}
-  nodeGUIHeight: {x: 200, y: 178}
-  backgroundColor: {r: 1, g: 1, b: 1, a: 1}
-  InputKnob: {fileID: 9204117758707763664}
-  OuputLabels:
-  - yes
-  - no
-  Description: 'How Are You?
-
-    Maybe you can help me to send the paper to my neighbor.'
---- !u!114 &-5540025328554074948
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
-  m_Name: Start Flow
-  m_EditorClassIdentifier: 
-  body: {fileID: 5780035717075728346}
-  direction: 2
-  maxConnectionCount: 0
-  styleID: System.Boolean
-  _connections:
-  - {fileID: 9204117758707763664}
-  side: 2
-  sidePosition: 20
-  sideOffset: 0
---- !u!114 &-4433466285598099309
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b56cd4b9a1e4d824a8e88ad8e44beedb, type: 3}
-  m_Name: End Dialog
-  m_EditorClassIdentifier: 
-  canvas: {fileID: 0}
-  position: {x: 294.2, y: 194.20001}
-  dynamicConnectionPorts: []
-  nodeGUIHeight: {x: 200, y: 38}
-  backgroundColor: {r: 0, g: 0, b: 1, a: 1}
-  EndFlowPort: {fileID: -612441103604162974}
---- !u!114 &-2461277719920359578
+--- !u!114 &-7310106556637990787
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -77,16 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
   m_Name: Choose
   m_EditorClassIdentifier: 
-  body: {fileID: -8528565814020297152}
+  body: {fileID: -3209807062432908205}
   direction: 2
   maxConnectionCount: 1
   styleID: System.Boolean
   _connections:
-  - {fileID: -612441103604162974}
+  - {fileID: 8217284440001465497}
   side: 2
-  sidePosition: 167
+  sidePosition: 168
   sideOffset: 0
---- !u!114 &-612441103604162974
+--- !u!114 &-4828287055306050151
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -96,44 +31,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
-  m_Name: End Flow
+  m_Name: Choose
   m_EditorClassIdentifier: 
-  body: {fileID: -4433466285598099309}
-  direction: 1
+  body: {fileID: -3019298610166247065}
+  direction: 2
   maxConnectionCount: 1
   styleID: System.Boolean
   _connections:
-  - {fileID: -2461277719920359578}
-  - {fileID: 6049847168834165169}
-  side: 4
-  sidePosition: 20
+  - {fileID: 8217284440001465497}
+  side: 2
+  sidePosition: 135
   sideOffset: 0
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f1daabf3780a03448e137dfe56cf1dd, type: 3}
-  m_Name: Node_Canvas_Test
-  m_EditorClassIdentifier: 
-  editorStates:
-  - {fileID: 8425469019865294972}
-  saveName: Node_Canvas_Test
-  savePath: Assets\Scripts\Dialog\DialogGraph\Node_Canvas_Test.asset
-  livesInScene: 0
-  nodes:
-  - {fileID: 5780035717075728346}
-  - {fileID: -4433466285598099309}
-  - {fileID: -8528565814020297152}
-  - {fileID: 4403599647470302542}
-  groups: []
-  StartState: {fileID: 0}
-  EndState: {fileID: 0}
---- !u!114 &4403599647470302542
+--- !u!114 &-3209807062432908205
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -146,18 +55,20 @@ MonoBehaviour:
   m_Name: Dialog
   m_EditorClassIdentifier: 
   canvas: {fileID: 0}
-  position: {x: 52.200005, y: -126.8}
+  position: {x: -464, y: -205.40001}
   dynamicConnectionPorts:
-  - {fileID: 6049847168834165169}
-  nodeGUIHeight: {x: 200, y: 145}
+  - {fileID: -2768441718938662246}
+  - {fileID: -7310106556637990787}
+  nodeGUIHeight: {x: 200, y: 179}
   backgroundColor: {r: 1, g: 1, b: 1, a: 1}
-  InputKnob: {fileID: 8246882356410114845}
+  InputKnob: {fileID: 8426473459581923884}
   OuputLabels:
-  - No Problem
-  Description: 'OK, this is my paper.
+  - yes
+  - no
+  Description: 'How Are You?
 
-    Be carefully.'
---- !u!114 &5780035717075728346
+    Maybe you can help me to send the paper to my neighbor.'
+--- !u!114 &-3081323542657503748
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -170,12 +81,43 @@ MonoBehaviour:
   m_Name: Start Dialog
   m_EditorClassIdentifier: 
   canvas: {fileID: 0}
-  position: {x: -665.4, y: -180.6}
-  dynamicConnectionPorts: []
-  nodeGUIHeight: {x: 200, y: 38}
+  position: {x: -870.4, y: 44.999985}
+  dynamicConnectionPorts:
+  - {fileID: 1753814076587298286}
+  - {fileID: -2450207659028634712}
+  - {fileID: 6218104391008946674}
+  nodeGUIHeight: {x: 200, y: 101}
   backgroundColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  StartFlowPort: {fileID: -5540025328554074948}
---- !u!114 &6049847168834165169
+  StartOuputLabels:
+  - UnFinishQuest
+  - FinishQuest
+  - None
+  selected: 0
+--- !u!114 &-3019298610166247065
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf141a47664efc445a8e7631d617f97c, type: 3}
+  m_Name: Dialog
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 0}
+  position: {x: -154.79999, y: -193.4}
+  dynamicConnectionPorts:
+  - {fileID: -4828287055306050151}
+  nodeGUIHeight: {x: 200, y: 146}
+  backgroundColor: {r: 1, g: 1, b: 1, a: 1}
+  InputKnob: {fileID: 6468864502174910294}
+  OuputLabels:
+  - No Problem
+  Description: 'OK, this is my paper.
+
+    Be carefully.'
+--- !u!114 &-2768441718938662246
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -187,16 +129,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
   m_Name: Choose
   m_EditorClassIdentifier: 
-  body: {fileID: 4403599647470302542}
+  body: {fileID: -3209807062432908205}
   direction: 2
   maxConnectionCount: 1
   styleID: System.Boolean
   _connections:
-  - {fileID: -612441103604162974}
+  - {fileID: 6468864502174910294}
   side: 2
-  sidePosition: 134
+  sidePosition: 149
   sideOffset: 0
---- !u!114 &6920937138863220967
+--- !u!114 &-2450207659028634712
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -208,37 +150,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
   m_Name: Choose
   m_EditorClassIdentifier: 
-  body: {fileID: -8528565814020297152}
+  body: {fileID: -3081323542657503748}
   direction: 2
   maxConnectionCount: 1
   styleID: System.Boolean
   _connections:
-  - {fileID: 8246882356410114845}
+  - {fileID: 8426473459581923884}
   side: 2
-  sidePosition: 148
+  sidePosition: 71
   sideOffset: 0
---- !u!114 &8246882356410114845
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
-  m_Name: Input
-  m_EditorClassIdentifier: 
-  body: {fileID: 4403599647470302542}
-  direction: 1
-  maxConnectionCount: 1
-  styleID: System.Boolean
-  _connections:
-  - {fileID: 6920937138863220967}
-  side: 4
-  sidePosition: 29
-  sideOffset: 0
---- !u!114 &8425469019865294972
+--- !u!114 &-1419625658552718483
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -254,9 +175,94 @@ MonoBehaviour:
   canvas: {fileID: 0}
   parentEditor: {fileID: 0}
   selectedNode: {fileID: 0}
-  panOffset: {x: -135.60002, y: -24.799992}
-  zoom: 2.4
---- !u!114 &9204117758707763664
+  panOffset: {x: 339.26996, y: -11.719994}
+  zoom: 2.2
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f1daabf3780a03448e137dfe56cf1dd, type: 3}
+  m_Name: Node_Canvas_Test
+  m_EditorClassIdentifier: 
+  editorStates:
+  - {fileID: -1419625658552718483}
+  saveName: Node_Canvas_Test
+  savePath: Assets\Scripts\Dialog\DialogGraph\Node_Canvas_Test.asset
+  livesInScene: 0
+  nodes:
+  - {fileID: -3081323542657503748}
+  - {fileID: 643891764881975788}
+  - {fileID: -3209807062432908205}
+  - {fileID: -3019298610166247065}
+  groups: []
+  StartState: {fileID: 0}
+  EndState: {fileID: 0}
+--- !u!114 &643891764881975788
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b56cd4b9a1e4d824a8e88ad8e44beedb, type: 3}
+  m_Name: End Dialog
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 0}
+  position: {x: 128.00003, y: 287}
+  dynamicConnectionPorts: []
+  nodeGUIHeight: {x: 200, y: 38}
+  backgroundColor: {r: 0, g: 0, b: 1, a: 1}
+  EndFlowPort: {fileID: 8217284440001465497}
+--- !u!114 &1753814076587298286
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Choose
+  m_EditorClassIdentifier: 
+  body: {fileID: -3081323542657503748}
+  direction: 2
+  maxConnectionCount: 1
+  styleID: System.Boolean
+  _connections:
+  - {fileID: 8426473459581923884}
+  side: 2
+  sidePosition: 52
+  sideOffset: 0
+--- !u!114 &6218104391008946674
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Choose
+  m_EditorClassIdentifier: 
+  body: {fileID: -3081323542657503748}
+  direction: 2
+  maxConnectionCount: 1
+  styleID: System.Boolean
+  _connections:
+  - {fileID: 8217284440001465497}
+  side: 2
+  sidePosition: 90
+  sideOffset: 0
+--- !u!114 &6468864502174910294
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -268,12 +274,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
   m_Name: Input
   m_EditorClassIdentifier: 
-  body: {fileID: -8528565814020297152}
+  body: {fileID: -3019298610166247065}
   direction: 1
   maxConnectionCount: 1
   styleID: System.Boolean
   _connections:
-  - {fileID: -5540025328554074948}
+  - {fileID: -2768441718938662246}
+  side: 4
+  sidePosition: 29
+  sideOffset: 0
+--- !u!114 &8217284440001465497
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: End Flow
+  m_EditorClassIdentifier: 
+  body: {fileID: 643891764881975788}
+  direction: 1
+  maxConnectionCount: 1
+  styleID: System.Boolean
+  _connections:
+  - {fileID: -7310106556637990787}
+  - {fileID: -4828287055306050151}
+  - {fileID: 6218104391008946674}
+  side: 4
+  sidePosition: 20
+  sideOffset: 0
+--- !u!114 &8426473459581923884
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Input
+  m_EditorClassIdentifier: 
+  body: {fileID: -3209807062432908205}
+  direction: 1
+  maxConnectionCount: 1
+  styleID: System.Boolean
+  _connections:
+  - {fileID: 1753814076587298286}
+  - {fileID: -2450207659028634712}
   side: 4
   sidePosition: 29
   sideOffset: 0
