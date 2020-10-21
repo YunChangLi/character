@@ -190,7 +190,7 @@ MonoBehaviour:
   outputLeftKnob: {fileID: -5168907501263340705}
   outputRightKnob: {fileID: -4265301985389173979}
   StateName: Patrol
-  RunTime: 37.583355
+  RunTime: 17.93206
   DeciderList:
   - {fileID: 7854803383140569561}
   IsActiveAction: 1

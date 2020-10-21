@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ForceFieldMaterial
+  m_Name: Material_Shield
   m_Shader: {fileID: -6465566751694194690, guid: 8e9a7d15f8ef9194b99eec6be36ced32,
     type: 3}
   m_ShaderKeywords: 
@@ -25,9 +25,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_867B7C63: 2
+    - Vector1_867B7C63: 5
     - Vector1_BCC7A645: 0.6
     - Vector1_CAE84A4D: 0.05
     - Vector1_F5C1148: 0.1
     m_Colors:
-    - Color_8AC411BD: {r: 0.08193417, g: 5.134541, b: 5.2164755, a: 0}
+    - Color_8AC411BD: {r: 0.040967084, g: 2.5672705, b: 2.6082377, a: 0}

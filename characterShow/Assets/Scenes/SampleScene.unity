@@ -121,6 +121,130 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &93602491
+GameObject:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 93602493}
+  - component: {fileID: 93602492}
+  m_Layer: 0
+  m_Name: UndoProRecords
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &93602492
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 93602491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efa53029e0a62304caf81173265515b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  undoProRecords: []
+  undoState:
+    redoRecords: []
+    undoRecords:
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Inspector
+    - Selection Change
+    - Selection Change
+    - Modify Fresnel Power of ForceFieldMaterial
+    - Modify Fresnel Power of ForceFieldMaterial
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Add Volume Override
+    - Inspector
+    - Inspector
+    - Inspector
+    - Inspector
+    - Inspector
+    - Inspector
+    - Inspector
+    - Inspector
+    - Inspector
+    - Inspector
+    - Inspector
+    - Inspector
+    - Inspector
+    - Inspector
+    - Inspector
+    - Inspector
+    - Inspector
+    - Inspector
+    - Inspector
+    - Inspector
+    - Inspector
+    - Inspector
+    - Inspector
+    - Inspector
+    - Inspector
+    - Inspector
+    - Inspector
+    - Selection Change
+    - Selection Change
+    - Inspector
+    - Add SphereCollider
+    - Inspector
+    - Inspector
+    - Inspector
+    - Inspector
+    - Inspector
+    - Selection Change
+    - Selection Change
+    - Paste Transform Values
+    - Inspector
+    - Inspector
+    - Inspector
+    - Selection Change
+    - Inspector
+    - Inspector
+    - Inspector
+    - Selection Change
+    - Inspector
+    - Inspector
+    - Selection Change
+    - Remove SphereCollider
+    - Inspector
+--- !u!4 &93602493
+Transform:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 93602491}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &173314107 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8422892626600285392, guid: 214e08cd5e5d74c458e2a81b7ec2c84c,
@@ -235,6 +359,54 @@ MonoBehaviour:
   MinTurnSpeed: 400
   MaxTurnSpeed: 1200
   JumpSpeed: 10
+--- !u!1 &309496592
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 309496593}
+  - component: {fileID: 309496594}
+  m_Layer: 0
+  m_Name: SceneVolume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &309496593
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 309496592}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 71.54962, y: 1.05, z: -30.91}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &309496594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 309496592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: fd3fda1d1b556ef43a8116c30c8b07e2, type: 2}
 --- !u!1 &340752122
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,174 +499,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &516146513
-GameObject:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 516146515}
-  - component: {fileID: 516146514}
-  m_Layer: 0
-  m_Name: UndoProRecords
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &516146514
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 516146513}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efa53029e0a62304caf81173265515b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  undoProRecords: []
-  undoState:
-    redoRecords: []
-    undoRecords:
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Modify Offset of ForceFieldMaterial
-    - Modify Offset of ForceFieldMaterial
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Add Effect Override
-    - Inspector
-    - Add Effect Override
-    - Inspector
-    - Add Effect Override
-    - Inspector
-    - Selection Change
-    - Selection Change
-    - Add PostProcessLayer
-    - Selection Change
-    - Remove MonoBehaviour
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Modify Emission of ForceFieldMaterial
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Modify Pattern of ForceFieldMaterial
-    - Modify Offset of ForceFieldMaterial
-    - Modify Offset of ForceFieldMaterial
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Inspector
-    - Inspector
-    - Inspector
-    - Inspector
-    - Inspector
-    - Inspector
-    - Inspector
-    - Inspector
-    - Inspector
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Inspector
-    - Modify Fill of ForceFieldMaterial
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Inspector
-    - Inspector
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Inspector
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Inspector
-    - Inspector
-    - Inspector
-    - Inspector
-    - Inspector
-    - Modify Offset of ForceFieldMaterial
-    - Modify Fresnel Power of ForceFieldMaterial
-    - Modify Offset of ForceFieldMaterial
-    - Modify Fresnel Power of ForceFieldMaterial
-    - Modify Fresnel Power of ForceFieldMaterial
-    - Modify Fresnel Power of ForceFieldMaterial
-    - Modify Fill of ForceFieldMaterial
-    - Modify Fill of ForceFieldMaterial
-    - Modify Fill of ForceFieldMaterial
-    - Selection Change
-    - Inspector
---- !u!4 &516146515
-Transform:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 516146513}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705507993
 GameObject:
@@ -676,7 +680,7 @@ Transform:
   m_GameObject: {fileID: 917680831}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 71.54962, y: 1.05, z: -30.91}
-  m_LocalScale: {x: 5.046, y: 5.046, z: 5.046}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
