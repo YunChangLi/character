@@ -190,7 +190,7 @@ MonoBehaviour:
   outputLeftKnob: {fileID: -5168907501263340705}
   outputRightKnob: {fileID: -4265301985389173979}
   StateName: Patrol
-  RunTime: 17.93206
+  RunTime: 1.9729162
   DeciderList:
   - {fileID: 7854803383140569561}
   IsActiveAction: 1
@@ -242,7 +242,7 @@ MonoBehaviour:
   outputLeftKnob: {fileID: 7345556059629933819}
   outputRightKnob: {fileID: -82184396891140079}
   StateName: Hit
-  RunTime: 1.001704
+  RunTime: 1.003086
   DeciderList:
   - {fileID: 3847682714803982320}
   IsActiveAction: 0
@@ -346,7 +346,7 @@ MonoBehaviour:
   outputLeftKnob: {fileID: -3268904078240347971}
   outputRightKnob: {fileID: 5874403245821345183}
   StateName: Follow
-  RunTime: 5.6513844
+  RunTime: 1.3521755
   DeciderList:
   - {fileID: 6130610157858939706}
   IsActiveAction: 1
