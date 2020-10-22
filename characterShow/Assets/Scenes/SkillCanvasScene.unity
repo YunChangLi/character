@@ -121,6 +121,51 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &132816532
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 132816534}
+  - component: {fileID: 132816533}
+  m_Layer: 0
+  m_Name: SkillManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &132816533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132816532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d232249bac57a6c4ca4851fd39002fee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPersistant: 1
+  SkillCount: 10
+--- !u!4 &132816534
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132816532}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 73.93781, y: 3.433827, z: -29.524467}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &608682701
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,115 +231,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &901279287
-GameObject:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 901279289}
-  - component: {fileID: 901279288}
-  m_Layer: 0
-  m_Name: UndoProRecords
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &901279288
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 901279287}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efa53029e0a62304caf81173265515b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  undoProRecords: []
-  undoState:
-    redoRecords: []
-    undoRecords:
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Rename Image
-    - Selection Change
-    - Rename Image
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
-    - Selection Change
---- !u!4 &901279289
-Transform:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 901279287}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1414277834
 GameObject:
@@ -470,6 +406,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1710287009
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1710287011}
+  - component: {fileID: 1710287010}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1710287010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710287009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9b9fa70ae79e6b4f8a55d58700407d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPersistant: 1
+--- !u!4 &1710287011
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710287009}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 73.93781, y: 3.433827, z: -29.524467}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1737617230
 GameObject:
@@ -658,6 +638,178 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f907f8a47b2182540b0ac0cfc1881ad2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1818685867
+GameObject:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1818685869}
+  - component: {fileID: 1818685868}
+  m_Layer: 0
+  m_Name: UndoProRecords
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1818685868
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1818685867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efa53029e0a62304caf81173265515b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  undoProRecords: []
+  undoState:
+    redoRecords: []
+    undoRecords:
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Create GameObject
+    - Reparenting
+    - Reparenting
+    - Transform parenting workaround
+    - Add RectTransform
+    - Transform parenting workaround 2
+    - Transform parenting workaround 2
+    - Create GameObject
+    - Selection Change
+    - Toggle Selection And Descendants Picking
+    - Toggle Selection And Descendants Picking
+    - Rename GameObject
+    - Selection Change
+    - SkillBar Parenting
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Delete Game Objects
+    - Delete Game Objects
+    - Delete Game Objects
+    - Selection Change
+    - Selection Change
+    - Rename Skill
+    - Rename FireSkill
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Remove MonoBehaviour
+    - Add FireBallSkillContext
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Selection Change
+    - Inspector
+--- !u!4 &1818685869
+Transform:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1818685867}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2100863031
 GameObject:
   m_ObjectHideFlags: 0
@@ -668,11 +820,12 @@ GameObject:
   m_Component:
   - component: {fileID: 2100863032}
   - component: {fileID: 2100863035}
-  - component: {fileID: 2100863036}
   - component: {fileID: 2100863034}
   - component: {fileID: 2100863033}
+  - component: {fileID: 2100863036}
+  - component: {fileID: 2100863037}
   m_Layer: 5
-  m_Name: Skill
+  m_Name: FireBallSkill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -761,4 +914,19 @@ MonoBehaviour:
   IsInTheField: 0
   StoredPosition: {x: 0, y: 0, z: 0}
   IsOutOfBound: 0
-  skillData: {fileID: 0}
+  SkillEntity: {fileID: 11400000, guid: 8aa9cec753ebe2d4c8635fd034fb464b, type: 2}
+--- !u!114 &2100863037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100863031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8babf800b5934254d94a52421dca862c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DamageValue: 0
+  WeaponRange: 0
+  HitForce: 0
