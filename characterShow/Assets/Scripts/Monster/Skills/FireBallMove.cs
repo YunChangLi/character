@@ -2,20 +2,33 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+<<<<<<< Updated upstream
 public class FireBallMove : Projectile
 {
     public Transform TargetPoint { get; set; }
+=======
+public class FireBallMove : SkillObject
+{
+    public Transform TargetPoint;
+>>>>>>> Stashed changes
     public GameObject ImpactPrefab;
     public List<GameObject> Trails;
 
     protected override void Start()
     {
         base.Start();
+<<<<<<< Updated upstream
         TargetPoint = GameObject.FindWithTag("Player").transform;
         SetForwardDirection();
     }
 
     protected override void FixedUpdate()
+=======
+        SetForwardDirection();
+    }
+
+    protected void FixedUpdate()
+>>>>>>> Stashed changes
     {
         base.FixedUpdate();
         if(Speed != 0 && rigid != null)
@@ -57,7 +70,11 @@ public class FireBallMove : Projectile
 
     protected override void SetForwardDirection()
     {
+<<<<<<< Updated upstream
         var direction = TargetPoint.position - transform.position + Vector3.up * 0.5f;
+=======
+        var direction = TargetPoint.position - transform.position;
+>>>>>>> Stashed changes
         var rotation = Quaternion.LookRotation(direction);
         transform.localRotation = Quaternion.Lerp(transform.rotation, rotation, 1);
     }
