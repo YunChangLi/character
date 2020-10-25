@@ -28,5 +28,11 @@ namespace NodeEditorFramework.Standard
                 yield return null;
             }
         }
+
+        public override void Exit()
+        {
+            base.Exit();
+            ActionController.MonsterController.MoveDir = Vector3.zero;
+        }
     }
 }

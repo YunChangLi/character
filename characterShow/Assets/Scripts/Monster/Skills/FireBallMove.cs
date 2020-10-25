@@ -2,21 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FireBallMove : MonoBehaviour
+public class FireBallMove : Projectile
 {
-    public float Speed;
+    public Transform TargetPoint { get; set; }
     public GameObject ImpactPrefab;
     public List<GameObject> Trails;
 
-    private Rigidbody rigid;
-
-    private void Start()
+    protected override void Start()
     {
-        rigid = GetComponent<Rigidbody>();
+        base.Start();
+        TargetPoint = GameObject.FindWithTag("Player").transform;
+        SetForwardDirection();
     }
 
-    private void FixedUpdate()
+    protected override void FixedUpdate()
     {
+        base.FixedUpdate();
         if(Speed != 0 && rigid != null)
         {
             rigid.position += transform.forward * (Speed * Time.deltaTime);
@@ -52,5 +53,12 @@ public class FireBallMove : MonoBehaviour
         }
 
         Destroy(gameObject);
+    }
+
+    protected override void SetForwardDirection()
+    {
+        var direction = TargetPoint.position - transform.position + Vector3.up * 0.5f;
+        var rotation = Quaternion.LookRotation(direction);
+        transform.localRotation = Quaternion.Lerp(transform.rotation, rotation, 1);
     }
 }

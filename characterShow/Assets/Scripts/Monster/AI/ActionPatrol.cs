@@ -40,6 +40,12 @@ namespace NodeEditorFramework.Standard
             }
         }
 
+        public override void Exit()
+        {
+            base.Exit();
+            ActionController.MonsterController.MoveDir = Vector3.zero;
+        }
+
         public override void ActionBody()
         {
             PatrolRadius = RTEditorGUI.FloatField(new GUIContent("Patrol Radius", "Radius of patrol range with center at spawn position"), PatrolRadius);

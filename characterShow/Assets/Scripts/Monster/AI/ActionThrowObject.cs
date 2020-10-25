@@ -42,13 +42,18 @@ namespace NodeEditorFramework.Standard
         {
             ActionController.Animator.SetTrigger("Attack");
             ActionController.MonsterController.CanMove = false;
+            ActionController.MonsterController.LookAtTarget = targetObject;
+            // 投擲前會持續面向玩家
             while (RunTime < ThrowDelay)
             {
-                ActionController.MonsterController.LookAtTarget = targetObject;
                 yield return null;
             }
             ActionController.MonsterController.LookAtTarget = null;
-            yield return null;
+
+            Vector3 newOffset = Quaternion.AngleAxis(AIObject.transform.rotation.eulerAngles.y, Vector3.up) * ThrowPosOffset;
+            GameObject rock = Instantiate(ThrowObject, AIObject.transform.position + newOffset, Quaternion.identity);
+            var skillObject = rock.GetComponent<Projectile>();
+            skillObject.Shoot();
         }
 
         public override void Exit()

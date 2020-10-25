@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MonsterController : MonoBehaviour
 {
-    public Vector3 MoveDir { get; set; }
+    public Vector3 MoveDir { get; set; }    // 移動方向，不移動時須設為0向量
     public GameObject LookAtTarget { get; set; }
     public bool JumpInput { get; set; }
     public bool CanMove { get; set; }
@@ -15,7 +15,7 @@ public class MonsterController : MonoBehaviour
     private CharacterController characterController;
     private MonsterInfo monsterInfo;
     private float desiredForwardSpeed;
-    private float forwardSpeed;
+    private float forwardSpeed = 0;
     private float acceleration = 5;
     private bool isGrounded = false;
     private Vector3 movement;
@@ -56,9 +56,6 @@ public class MonsterController : MonoBehaviour
         //Vector2 moveInput = new Vector2(ActionController.Info.MovementDir.x, playerInfo.MovementDir.z);
         if (MoveDir.sqrMagnitude > 1f)
             MoveDir.Normalize();
-
-        if (!CanMove)
-            return;
 
         // 根據Input計算速度
         desiredForwardSpeed = MoveDir.magnitude * MaxMoveSpeed;
@@ -134,7 +131,9 @@ public class MonsterController : MonoBehaviour
 
     public virtual void UpdateAnimator()
     {
-        if(forwardSpeed != 0)
+        if (forwardSpeed != 0)
             animator.SetBool("Walk", true);
+        else
+            animator.SetBool("Walk", false);
     }
 }
