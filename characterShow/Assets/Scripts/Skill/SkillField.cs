@@ -8,6 +8,9 @@ public class SkillField : MonoBehaviour
 {
     private DropField dropField;
     private Skill skillEntity;
+    private ISkillContext skillContext;
+    public string StoredSkillID;
+
 
     private void Awake()
     {
@@ -22,11 +25,20 @@ public class SkillField : MonoBehaviour
         
         var skillObj = (SkillCard)obj;
         
-        obj.transform.position = transform.position;
+        obj.transform.position = transform.position; //擺放位置
         skillEntity = skillObj.SkillEntity;
-        skillEntity.initialize(skillObj);
-        SkillManager.instance.RegistToSkillBar(skillEntity.GetSkillContext());
+        skillContext = obj.GetComponent<ISkillContext>();
+        StoredSkillID = skillObj.SkillEntity.GetSkillID();
+        dropField.hasItem = true;
         
-
     }
+    public Skill GetSkillEntity()
+    {
+        return skillEntity;
+    }
+    public ISkillContext GetSkillContext()
+    {
+        return skillContext;
+    }
+
 }

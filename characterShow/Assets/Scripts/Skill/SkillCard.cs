@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 /// <summary>
 /// Skill UI : operation
@@ -10,4 +11,19 @@ using UnityEngine;
 public class SkillCard : MovableImageUI
 {
     public Skill SkillEntity;
+    
+
+    public override void OnEndDrag(PointerEventData eventData)
+    {
+        base.OnEndDrag(eventData);
+        if (IsInTheField)
+        {
+            Debug.Log("In the Field.");
+        }  
+        else
+        {
+            Debug.Log("Not in the Field");
+        }
+            
+    }
 }

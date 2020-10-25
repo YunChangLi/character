@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+using UnityEngine.Events;
 
 public class SkillManager : Singleton<SkillManager>
 {
@@ -8,8 +10,10 @@ public class SkillManager : Singleton<SkillManager>
     /// SkillRegist : 當玩家將技能拉入快捷鍵技能列表
     /// SkillUnRegist : 當玩家將技能拉出快捷鍵技能列表
     /// </summary>
-    public Dictionary<string, ISkillContext> mActiveSkillDict;
+    public Dictionary<string, Skill> mActiveSkillDict;
     public int SkillCount;
+    private SkillApplyUI skillApplyUI; //用快捷鍵使用的UI
+    private SkillSettingUI skillSettingUI; //技能設定用的UI
 
     public override void Awake()
     {
@@ -19,13 +23,20 @@ public class SkillManager : Singleton<SkillManager>
 
     public void ManagerInit()
     {
-        mActiveSkillDict = new Dictionary<string, ISkillContext>(SkillCount);
-       
+        mActiveSkillDict = new Dictionary<string, Skill>(SkillCount);
+        skillSettingUI = FindObjectOfType<SkillSettingUI>();
+        skillApplyUI = FindObjectOfType<SkillApplyUI>();
+        skillSettingUI.SkillSettingUIInit();
+        skillApplyUI.SkillApplyingUIInit();
+
+
     }
-    public void RegistToSkillBar(ISkillContext skill)
+    public void RegistToSkillBar(Skill skill , int index )
     {
-        Debug.Log("SkillContext : " + skill + " , " + skill.ID);
-        mActiveSkillDict.Add(skill.ID, skill);
+        Debug.Log("SkillContext : " + skill + " , " + skill.GetSkillID());
+        mActiveSkillDict.Add(skill.GetSkillID(), skill);
+        skillApplyUI.AssignTheSkillData(skill, index , GameDataManager.instance.flowData.keyDatas.skillsShortCut[index]);
+
     }
     public bool UnRegistFromSkillBar(string skillID)
     {

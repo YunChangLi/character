@@ -15,10 +15,11 @@ public class FireBallSkill : Skill
     /// assign value
     /// </summary>
     /// <param name="obj"></param>
-    public override void initialize(SkillCard card)// change to the Skill bar
+    public override void initialize(ISkillContext skillContext)// change to the Skill bar
     {
         Debug.Log("initialize");
-        SkillTriggable = card.GetComponent<FireBallSkillContext>();
+        SkillTriggable = (FireBallSkillContext)skillContext;
+        SkillTriggable.ID = this.skillID;
         SkillTriggable.DamageValue = this.DamageValue;
         SkillTriggable.WeaponRange = this.WeaponRange;
         SkillTriggable.HitForce = this.HitForce;

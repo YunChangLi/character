@@ -2,14 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FireBallSkillContext :MonoBehaviour ,  ISkillContext
+public class WaterBallSkillContext : MonoBehaviour  , ISkillContext
 {
-    public string ID { get; set; }
     public float DamageValue ;
-    public float WeaponRange ;
+    public float WeaponRange;
     public float HitForce ;
-
-    
+    public string ID { get; set ; }
 
     public void PrepareSkill()
     {
@@ -18,7 +16,6 @@ public class FireBallSkillContext :MonoBehaviour ,  ISkillContext
 
     public void StartSkill()
     {
-       
     }
 
     public void StopSkill()
@@ -26,5 +23,5 @@ public class FireBallSkillContext :MonoBehaviour ,  ISkillContext
         
     }
 
-    
+   
 }

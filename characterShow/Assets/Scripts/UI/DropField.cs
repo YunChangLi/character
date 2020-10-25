@@ -7,6 +7,7 @@ public class DropField : MonoBehaviour
 {
     public List<DropCondition> DropConditions = new List<DropCondition>();
     public event Action<MovableImageUI> OnDropHandler; //統整所有drop的動作
+    public bool hasItem = false;
 
     public bool Accepts(MovableImageUI movable) 
     {

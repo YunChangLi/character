@@ -14,11 +14,9 @@ public class GameFlowData
 
     }
     public GameFlowData() {
-        keyDatas = new ShortCutData();
-        keyDatas.Skill_1 = KeyCode.Alpha1;
-        keyDatas.Skill_2 = KeyCode.Alpha2;
-        keyDatas.Skill_3 = KeyCode.Alpha3;
-        keyDatas.openBag = KeyCode.M;
-        keyDatas.menu = KeyCode.Escape;
+        KeyCode[] tempSkillsKey = { KeyCode.F1 , KeyCode.F2 , KeyCode.F3 , KeyCode.F4 , KeyCode.F5 , KeyCode.F6 , KeyCode.F7
+                                    , KeyCode.F8 , KeyCode.F9 , KeyCode.F10};
+        keyDatas = new ShortCutData(tempSkillsKey , KeyCode.B , KeyCode.M);
+
     }
 }

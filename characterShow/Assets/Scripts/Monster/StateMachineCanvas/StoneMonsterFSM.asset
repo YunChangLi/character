@@ -190,10 +190,10 @@ MonoBehaviour:
   outputLeftKnob: {fileID: -5168907501263340705}
   outputRightKnob: {fileID: -4265301985389173979}
   StateName: Patrol
-  RunTime: 2.004729
+  RunTime: 0.021569401
   DeciderList:
   - {fileID: 7854803383140569561}
-  IsActiveAction: 1
+  IsActiveAction: 0
   Clip: {fileID: 0}
   SoundDelay: 0
   PatrolRadius: 10
@@ -242,10 +242,10 @@ MonoBehaviour:
   outputLeftKnob: {fileID: 7345556059629933819}
   outputRightKnob: {fileID: -82184396891140079}
   StateName: Hit
-  RunTime: 1.003086
+  RunTime: 0.20285
   DeciderList:
   - {fileID: 3847682714803982320}
-  IsActiveAction: 0
+  IsActiveAction: 1
   Clip: {fileID: 0}
   SoundDelay: 0
   AttackRangeOffset: {x: 0, y: 0, z: 0.75}
@@ -346,10 +346,10 @@ MonoBehaviour:
   outputLeftKnob: {fileID: -3268904078240347971}
   outputRightKnob: {fileID: 5874403245821345183}
   StateName: Follow
-  RunTime: 1.3521755
+  RunTime: 0.0245638
   DeciderList:
   - {fileID: 6130610157858939706}
-  IsActiveAction: 1
+  IsActiveAction: 0
   Clip: {fileID: 0}
   SoundDelay: 0
 --- !u!114 &649086346440829102
