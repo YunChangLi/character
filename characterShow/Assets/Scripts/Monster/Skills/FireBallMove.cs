@@ -4,24 +4,7 @@ using UnityEngine;
 
 public class FireBallMove : Projectile
 {
-    public Transform TargetPoint;
-    public GameObject ImpactPrefab;
     public List<GameObject> Trails;
-
-    protected override void Start()
-    {
-        base.Start();
-        SetForwardDirection();
-    }
-
-    protected override void FixedUpdate()
-    {
-        base.FixedUpdate();
-        if(Speed != 0 && rigid != null)
-        {
-            rigid.position += transform.forward * (Speed * Time.deltaTime);
-        }
-    }
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -52,12 +35,5 @@ public class FireBallMove : Projectile
         }
 
         Destroy(gameObject);
-    }
-
-    protected override void SetForwardDirection()
-    {
-        var direction = TargetPoint.position - transform.position;
-        var rotation = Quaternion.LookRotation(direction);
-        transform.localRotation = Quaternion.Lerp(transform.rotation, rotation, 1);
     }
 }

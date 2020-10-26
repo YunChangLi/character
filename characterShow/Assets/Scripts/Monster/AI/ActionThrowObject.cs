@@ -40,7 +40,7 @@ namespace NodeEditorFramework.Standard
 
         public override IEnumerator Process()
         {
-            ActionController.Animator.SetTrigger("Attack");
+            ActionController.Animator.SetTrigger("Throw");
             ActionController.MonsterController.CanMove = false;
             ActionController.MonsterController.LookAtTarget = targetObject;
             // 投擲前會持續面向玩家
@@ -50,9 +50,12 @@ namespace NodeEditorFramework.Standard
             }
             ActionController.MonsterController.LookAtTarget = null;
 
+            // 計算新的發射點
             Vector3 newOffset = Quaternion.AngleAxis(AIObject.transform.rotation.eulerAngles.y, Vector3.up) * ThrowPosOffset;
+            // 生成投射物
             GameObject rock = Instantiate(ThrowObject, AIObject.transform.position + newOffset, Quaternion.identity);
             var skillObject = rock.GetComponent<Projectile>();
+            skillObject.TargetPos = targetObject.transform.position + Vector3.up;
             skillObject.Shoot();
         }
 
