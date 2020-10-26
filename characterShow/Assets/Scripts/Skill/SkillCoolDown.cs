@@ -33,7 +33,7 @@ public class SkillCoolDown : MonoBehaviour
     }
     private void Update()
     {
-        bool coolDownComplete = (Time.deltaTime > nextReadyTime);
+        bool coolDownComplete = (Time.time > nextReadyTime);
         if (coolDownComplete)
         {
             skillReady();
@@ -66,8 +66,8 @@ public class SkillCoolDown : MonoBehaviour
         DarkMask.enabled = true;
         CoolDownCountText.enabled = true;
 
-        skillAudioSource.clip = skill?.SkillSound;
+       /* skillAudioSource.clip = skill?.SkillSound;
         skillAudioSource.Play();
-        skill.TriggerSkill();
+        skill.TriggerSkill();*/
     }
 }
