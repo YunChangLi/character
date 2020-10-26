@@ -50,14 +50,10 @@ namespace NodeEditorFramework.Standard
             }
             ActionController.MonsterController.LookAtTarget = null;
 
-<<<<<<< Updated upstream
             Vector3 newOffset = Quaternion.AngleAxis(AIObject.transform.rotation.eulerAngles.y, Vector3.up) * ThrowPosOffset;
             GameObject rock = Instantiate(ThrowObject, AIObject.transform.position + newOffset, Quaternion.identity);
             var skillObject = rock.GetComponent<Projectile>();
             skillObject.Shoot();
-=======
-            GameObject rock = Instantiate(ThrowObject);
->>>>>>> Stashed changes
         }
 
         public override void Exit()
