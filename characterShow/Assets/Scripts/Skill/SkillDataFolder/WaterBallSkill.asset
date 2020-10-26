@@ -15,7 +15,7 @@ MonoBehaviour:
   SkillName: New Skill
   SkillSprite: {fileID: 0}
   SkillSound: {fileID: 0}
-  SkillCoolDown: 1
+  SkillCoolDown: 10
   skillID: 5ac0fe67-51c7-440f-ae78-b575bc0db135
   DamageValue: 1
   WeaponRange: 50

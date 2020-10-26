@@ -8,6 +8,7 @@ public class GameDataManager : Singleton<GameDataManager>
 
     private void Awake()
     {
+        base.Awake();
         ManagerInit();
     }
     public void ManagerInit() {
