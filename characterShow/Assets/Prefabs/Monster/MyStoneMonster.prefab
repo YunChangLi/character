@@ -302,11 +302,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StateMachineCanvas: {fileID: 11400000, guid: 58d453395772d134db4c04b2b706c485, type: 2}
-  CurrentActionNode: {fileID: 0}
   Animator: {fileID: 7894317375993901654}
   MonsterInfo: {fileID: 4666019668977482667}
   MonsterController: {fileID: 7087226956091218160}
   Drawer: {fileID: 898146248}
+  ShowCurrentAction: 0
 --- !u!114 &4666019668977482667
 MonoBehaviour:
   m_ObjectHideFlags: 0

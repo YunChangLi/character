@@ -30,6 +30,9 @@ namespace NodeEditorFramework.Standard
         // 投擲物
         public GameObject ThrowObject;
 
+        // 傷害
+        public float Damage;
+
         private GameObject targetObject;
 
         public override void Init()
@@ -55,8 +58,9 @@ namespace NodeEditorFramework.Standard
             // 生成投射物
             GameObject rock = Instantiate(ThrowObject, AIObject.transform.position + newOffset, Quaternion.identity);
             var skillObject = rock.GetComponent<Projectile>();
-            skillObject.TargetPos = targetObject.transform.position + Vector3.up;
-            skillObject.Shoot();
+            skillObject.TargetPos = targetObject.transform.position + Vector3.up;   // 設定目標
+            skillObject.Damage = Damage;                                            // 設定傷害
+            skillObject.Shoot();                                                    // 發射
         }
 
         public override void Exit()
@@ -78,6 +82,7 @@ namespace NodeEditorFramework.Standard
             EditorGUILayout.EndHorizontal();
             ThrowDelay = RTEditorGUI.FloatField(new GUIContent("Throw Delay", "Delay before throw object"), ThrowDelay);
             ThrowObject = RTEditorGUI.ObjectField(new GUIContent("Throw Object", "Object to throw"), ThrowObject, false);
+            Damage = RTEditorGUI.FloatField(new GUIContent("Damage", "Damage of the projectile"), Damage);
         }
     }
 }

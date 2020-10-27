@@ -926,7 +926,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StateMachineCanvas: {fileID: 11400000, guid: 0ccfe1753128ff845b734efc93e2069d, type: 2}
-  CurrentActionNode: {fileID: 0}
   Animator: {fileID: 8338112607285237427}
   MonsterInfo: {fileID: 1067924978469913}
   MonsterController: {fileID: 1067924978469912}

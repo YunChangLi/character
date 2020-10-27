@@ -19,7 +19,9 @@ namespace NodeEditorFramework.Standard
 
         public Vector3 AttackRangeSize;     // 攻擊範圍大小
 
-        public float DamageAreaKeepTime;    // 傷害區域出現時間
+        public float DamageAreaDelayTime;   // 傷害區域出現的延遲時間
+
+        public float DamageAreaKeepTime;    // 傷害區域持續時間
 
         public float Damage;                // 傷害量
 
@@ -36,6 +38,7 @@ namespace NodeEditorFramework.Standard
             ActionController.Animator.SetTrigger("Attack");
             ActionController.MonsterController.CanMove = false;
             Vector3 newOffset = Quaternion.AngleAxis(AIObject.transform.rotation.eulerAngles.y, Vector3.up) * AttackRangeOffset;
+            yield return new WaitForSeconds(DamageAreaDelayTime);
             DamageAreaCreator.instance.CreateCubeArea(AIObject.transform.position + newOffset, AIObject.transform.rotation, AttackRangeSize, 5, DamageAreaKeepTime);
             yield return null;
         }
@@ -65,6 +68,7 @@ namespace NodeEditorFramework.Standard
             EditorGUIUtility.labelWidth = 100;
             EditorGUILayout.EndHorizontal();
 
+            DamageAreaDelayTime = RTEditorGUI.FloatField(new GUIContent("Area Delay Time", "Delay time before damage area"), DamageAreaDelayTime);
             DamageAreaKeepTime = RTEditorGUI.FloatField(new GUIContent("Area Keep Time", "Keep time for damage area"), DamageAreaKeepTime);
             Damage = RTEditorGUI.FloatField(new GUIContent("Damage", "Damage of attack"), Damage);
         }

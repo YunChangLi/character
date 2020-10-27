@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-6547719027192957682
+--- !u!114 &-8713230492920177133
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12,666 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
   m_Name: Input
   m_EditorClassIdentifier: 
-  body: {fileID: -2123776775950041915}
-  direction: 1
-  maxConnectionCount: 1
-  styleID: Float
-  _connections:
-  - {fileID: 1990174167907121339}
-  - {fileID: 5018540912246889049}
-  side: 4
-  sidePosition: 69
-  sideOffset: 0
---- !u!114 &-6485795895332640943
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
-  m_Name: Input
-  m_EditorClassIdentifier: 
-  body: {fileID: 6130610157858939706}
+  body: {fileID: 6963599691502605007}
   direction: 1
   maxConnectionCount: 1
   styleID: System.String
   _connections:
-  - {fileID: -3268904078240347971}
+  - {fileID: 8506435939263650896}
   side: 2
-  sidePosition: 49
+  sidePosition: 48.5
   sideOffset: 0
---- !u!114 &-6483065974849629678
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
-  m_Name: Input
-  m_EditorClassIdentifier: 
-  body: {fileID: -2123776775950041915}
-  direction: 1
-  maxConnectionCount: 1
-  styleID: Float
-  _connections: []
-  side: 2
-  sidePosition: 69
-  sideOffset: 0
---- !u!114 &-5168907501263340705
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
-  m_Name: Output
-  m_EditorClassIdentifier: 
-  body: {fileID: -2123776775950041915}
-  direction: 2
-  maxConnectionCount: 1
-  styleID: System.String
-  _connections: []
-  side: 4
-  sidePosition: 201
-  sideOffset: 0
---- !u!114 &-5142845166152070322
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
-  m_Name: Input
-  m_EditorClassIdentifier: 
-  body: {fileID: 444572940973286612}
-  direction: 1
-  maxConnectionCount: 1
-  styleID: Float
-  _connections: []
-  side: 4
-  sidePosition: 69
-  sideOffset: 0
---- !u!114 &-4265301985389173979
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
-  m_Name: Output
-  m_EditorClassIdentifier: 
-  body: {fileID: -2123776775950041915}
-  direction: 2
-  maxConnectionCount: 1
-  styleID: System.String
-  _connections:
-  - {fileID: 9155032233146688843}
-  side: 2
-  sidePosition: 201
-  sideOffset: 0
---- !u!114 &-4026159650690146667
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
-  m_Name: Input
-  m_EditorClassIdentifier: 
-  body: {fileID: -938971134098934839}
-  direction: 1
-  maxConnectionCount: 1
-  styleID: Float
-  _connections:
-  - {fileID: -227634966274718412}
-  side: 2
-  sidePosition: 69
-  sideOffset: 0
---- !u!114 &-3268904078240347971
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
-  m_Name: Output
-  m_EditorClassIdentifier: 
-  body: {fileID: 444572940973286612}
-  direction: 2
-  maxConnectionCount: 1
-  styleID: System.String
-  _connections:
-  - {fileID: -6485795895332640943}
-  side: 4
-  sidePosition: 181
-  sideOffset: 0
---- !u!114 &-2123776775950041915
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4b2b9ee20867414e80ea0dc863a28f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvas: {fileID: 11400000}
-  position: {x: -130, y: -330}
-  dynamicConnectionPorts: []
-  nodeGUIHeight: {x: 196, y: 210}
-  backgroundColor: {r: 1, g: 0.85, b: 0.92, a: 1}
-  IsFold: 1
-  FoldStatus: Fold
-  inputLeftKnob: {fileID: -6547719027192957682}
-  inputRightKnob: {fileID: -6483065974849629678}
-  outputLeftKnob: {fileID: -5168907501263340705}
-  outputRightKnob: {fileID: -4265301985389173979}
-  StateName: Patrol
-  RunTime: 0.021569401
-  DeciderList:
-  - {fileID: 7854803383140569561}
-  IsActiveAction: 0
-  Clip: {fileID: 0}
-  SoundDelay: 0
-  PatrolRadius: 10
---- !u!114 &-1551725030881934966
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
-  m_Name: Input
-  m_EditorClassIdentifier: 
-  body: {fileID: 3847682714803982320}
-  direction: 1
-  maxConnectionCount: 1
-  styleID: System.String
-  _connections:
-  - {fileID: -82184396891140079}
-  side: 4
-  sidePosition: 49
-  sideOffset: 0
---- !u!114 &-938971134098934839
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52a687e5b69338145b0793e2b55de1f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvas: {fileID: 11400000}
-  position: {x: -860, y: 20}
-  dynamicConnectionPorts: []
-  nodeGUIHeight: {x: 196, y: 310}
-  backgroundColor: {r: 1, g: 0.85, b: 0.92, a: 1}
-  IsFold: 1
-  FoldStatus: Fold
-  inputLeftKnob: {fileID: 3514513186937630367}
-  inputRightKnob: {fileID: -4026159650690146667}
-  outputLeftKnob: {fileID: 7345556059629933819}
-  outputRightKnob: {fileID: -82184396891140079}
-  StateName: Hit
-  RunTime: 0.20285
-  DeciderList:
-  - {fileID: 3847682714803982320}
-  IsActiveAction: 1
-  Clip: {fileID: 0}
-  SoundDelay: 0
-  AttackRangeOffset: {x: 0, y: 0, z: 0.75}
-  AttackRangeSize: {x: 1, y: 0.61, z: 1.29}
-  DamageAreaKeepTime: 1
-  Damage: 0
---- !u!114 &-227634966274718412
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
-  m_Name: Output
-  m_EditorClassIdentifier: 
-  body: {fileID: 6130610157858939706}
-  direction: 2
-  maxConnectionCount: 0
-  styleID: Float
-  _connections:
-  - {fileID: -4026159650690146667}
-  side: 4
-  sidePosition: 241
-  sideOffset: 0
---- !u!114 &-82184396891140079
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
-  m_Name: Output
-  m_EditorClassIdentifier: 
-  body: {fileID: -938971134098934839}
-  direction: 2
-  maxConnectionCount: 1
-  styleID: System.String
-  _connections:
-  - {fileID: -1551725030881934966}
-  side: 2
-  sidePosition: 301
-  sideOffset: 0
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5449f935bdd5a064fb16fcd6030db356, type: 3}
-  m_Name: StoneMonsterFSM
-  m_EditorClassIdentifier: 
-  editorStates:
-  - {fileID: 5409763234059263067}
-  saveName: StoneMonsterFSM
-  savePath: Assets\Scripts\Monster\StateMachineCanvas\StoneMonsterFSM.asset
-  livesInScene: 0
-  nodes:
-  - {fileID: -2123776775950041915}
-  - {fileID: 444572940973286612}
-  - {fileID: 7854803383140569561}
-  - {fileID: 2004683006057999893}
-  - {fileID: 6130610157858939706}
-  - {fileID: -938971134098934839}
-  - {fileID: 3847682714803982320}
-  groups: []
-  FirstStateNode: {fileID: 2004683006057999893}
-  HasStartNode: 1
---- !u!114 &444572940973286612
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aed1cb8d4a4380949a43c914f6473868, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvas: {fileID: 11400000}
-  position: {x: -109.5, y: 65}
-  dynamicConnectionPorts: []
-  nodeGUIHeight: {x: 196, y: 190}
-  backgroundColor: {r: 1, g: 0.85, b: 0.92, a: 1}
-  IsFold: 1
-  FoldStatus: Fold
-  inputLeftKnob: {fileID: -5142845166152070322}
-  inputRightKnob: {fileID: 2579680107310309995}
-  outputLeftKnob: {fileID: -3268904078240347971}
-  outputRightKnob: {fileID: 5874403245821345183}
-  StateName: Follow
-  RunTime: 0.0245638
-  DeciderList:
-  - {fileID: 6130610157858939706}
-  IsActiveAction: 0
-  Clip: {fileID: 0}
-  SoundDelay: 0
---- !u!114 &649086346440829102
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
-  m_Name: Output
-  m_EditorClassIdentifier: 
-  body: {fileID: 7854803383140569561}
-  direction: 2
-  maxConnectionCount: 0
-  styleID: Float
-  _connections:
-  - {fileID: 2579680107310309995}
-  side: 4
-  sidePosition: 221
-  sideOffset: 0
---- !u!114 &1990174167907121339
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
-  m_Name: Output
-  m_EditorClassIdentifier: 
-  body: {fileID: 2004683006057999893}
-  direction: 2
-  maxConnectionCount: 0
-  styleID: Float
-  _connections:
-  - {fileID: -6547719027192957682}
-  side: 2
-  sidePosition: 49
-  sideOffset: 0
---- !u!114 &2004683006057999893
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94af8616d0237714c89d4e522e60a222, type: 3}
-  m_Name: Entry State
-  m_EditorClassIdentifier: 
-  canvas: {fileID: 11400000}
-  position: {x: -693.5, y: -330}
-  dynamicConnectionPorts: []
-  nodeGUIHeight: {x: 200, y: 78}
-  backgroundColor: {r: 0, g: 1, b: 1, a: 1}
-  IsFold: 1
-  FoldStatus: Fold
-  outputKnob: {fileID: 1990174167907121339}
-  FirstActionNode: {fileID: -2123776775950041915}
---- !u!114 &2579680107310309995
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
-  m_Name: Input
-  m_EditorClassIdentifier: 
-  body: {fileID: 444572940973286612}
-  direction: 1
-  maxConnectionCount: 1
-  styleID: Float
-  _connections:
-  - {fileID: 649086346440829102}
-  side: 2
-  sidePosition: 69
-  sideOffset: 0
---- !u!114 &3514513186937630367
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
-  m_Name: Input
-  m_EditorClassIdentifier: 
-  body: {fileID: -938971134098934839}
-  direction: 1
-  maxConnectionCount: 1
-  styleID: Float
-  _connections: []
-  side: 4
-  sidePosition: 69
-  sideOffset: 0
---- !u!114 &3847682714803982320
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70747e764d0190f4eba065f5d301e6d6, type: 3}
-  m_Name: WaitTime
-  m_EditorClassIdentifier: 
-  canvas: {fileID: 11400000}
-  position: {x: -480, y: -140}
-  dynamicConnectionPorts: []
-  nodeGUIHeight: {x: 199, y: 170}
-  backgroundColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  IsFold: 1
-  FoldStatus: Fold
-  inputLeftKnob: {fileID: -1551725030881934966}
-  inputRightKnob: {fileID: 4159207373321214948}
-  outputLeftKnob: {fileID: 7705769679999671099}
-  outputRightKnob: {fileID: 5018540912246889049}
-  Type: 0
-  Order: 0
-  NextNode: {fileID: -2123776775950041915}
-  WaitTime: 1
---- !u!114 &3950752046253780764
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
-  m_Name: Input
-  m_EditorClassIdentifier: 
-  body: {fileID: 6130610157858939706}
-  direction: 1
-  maxConnectionCount: 1
-  styleID: System.String
-  _connections: []
-  side: 4
-  sidePosition: 49
-  sideOffset: 0
---- !u!114 &4159207373321214948
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
-  m_Name: Input
-  m_EditorClassIdentifier: 
-  body: {fileID: 3847682714803982320}
-  direction: 1
-  maxConnectionCount: 1
-  styleID: System.String
-  _connections: []
-  side: 2
-  sidePosition: 49
-  sideOffset: 0
---- !u!114 &4463469679707086147
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
-  m_Name: Output
-  m_EditorClassIdentifier: 
-  body: {fileID: 7854803383140569561}
-  direction: 2
-  maxConnectionCount: 0
-  styleID: Float
-  _connections: []
-  side: 2
-  sidePosition: 221
-  sideOffset: 0
---- !u!114 &5018540912246889049
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
-  m_Name: Output
-  m_EditorClassIdentifier: 
-  body: {fileID: 3847682714803982320}
-  direction: 2
-  maxConnectionCount: 0
-  styleID: Float
-  _connections:
-  - {fileID: -6547719027192957682}
-  side: 2
-  sidePosition: 161
-  sideOffset: 0
---- !u!114 &5409763234059263067
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6ab6487237ff124ea4c2aa5de9ce3fb, type: 3}
-  m_Name: MainEditorState
-  m_EditorClassIdentifier: 
-  myCustomStateVariable: 0
-  canvas: {fileID: 0}
-  parentEditor: {fileID: 0}
-  selectedNode: {fileID: 7854803383140569561}
-  panOffset: {x: 11, y: -85.2}
-  zoom: 1
---- !u!114 &5874403245821345183
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
-  m_Name: Output
-  m_EditorClassIdentifier: 
-  body: {fileID: 444572940973286612}
-  direction: 2
-  maxConnectionCount: 1
-  styleID: System.String
-  _connections: []
-  side: 2
-  sidePosition: 181
-  sideOffset: 0
---- !u!114 &6130610157858939706
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ba53fa1402c7a14cb5c7e899cd446d5, type: 3}
-  m_Name: DetectPlayerBox
-  m_EditorClassIdentifier: 
-  canvas: {fileID: 11400000}
-  position: {x: -423.2, y: 135.79999}
-  dynamicConnectionPorts: []
-  nodeGUIHeight: {x: 199, y: 250}
-  backgroundColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  IsFold: 1
-  FoldStatus: Fold
-  inputLeftKnob: {fileID: 3950752046253780764}
-  inputRightKnob: {fileID: -6485795895332640943}
-  outputLeftKnob: {fileID: -227634966274718412}
-  outputRightKnob: {fileID: 8863079804791569375}
-  Type: 0
-  Order: 0
-  NextNode: {fileID: -938971134098934839}
-  IsRangeStable: 0
-  DetectOffset: {x: 0, y: 0, z: 0.75}
-  DetectSize: {x: 1, y: 0.61, z: 1.29}
---- !u!114 &7345556059629933819
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
-  m_Name: Output
-  m_EditorClassIdentifier: 
-  body: {fileID: -938971134098934839}
-  direction: 2
-  maxConnectionCount: 1
-  styleID: System.String
-  _connections: []
-  side: 4
-  sidePosition: 301
-  sideOffset: 0
---- !u!114 &7705769679999671099
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
-  m_Name: Output
-  m_EditorClassIdentifier: 
-  body: {fileID: 3847682714803982320}
-  direction: 2
-  maxConnectionCount: 0
-  styleID: Float
-  _connections: []
-  side: 4
-  sidePosition: 161
-  sideOffset: 0
---- !u!114 &7854803383140569561
+--- !u!114 &-8304862115917722368
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -690,17 +40,78 @@ MonoBehaviour:
   backgroundColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   IsFold: 1
   FoldStatus: Fold
-  inputLeftKnob: {fileID: 9155032233146688843}
-  inputRightKnob: {fileID: 8928368361540859805}
-  outputLeftKnob: {fileID: 649086346440829102}
-  outputRightKnob: {fileID: 4463469679707086147}
+  inputLeftKnob: {fileID: 3253232542116167183}
+  inputRightKnob: {fileID: 5251388118083246662}
+  outputLeftKnob: {fileID: 1467037688073380325}
+  outputRightKnob: {fileID: -72174964074184557}
   Type: 0
   Order: 0
-  NextNode: {fileID: 444572940973286612}
+  NextNode: {fileID: -3939856838907777061}
   IsRangeStable: 0
   DetectOffset: {x: 0, y: 0, z: 0}
   DetectRadius: 10
---- !u!114 &8863079804791569375
+--- !u!114 &-7643307923261212207
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Input
+  m_EditorClassIdentifier: 
+  body: {fileID: 3217367484155399446}
+  direction: 1
+  maxConnectionCount: 1
+  styleID: Float
+  _connections:
+  - {fileID: 8674698987197005214}
+  side: 2
+  sidePosition: 68.5
+  sideOffset: 0
+--- !u!114 &-5069875911806370912
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Input
+  m_EditorClassIdentifier: 
+  body: {fileID: 4405535238484281669}
+  direction: 1
+  maxConnectionCount: 1
+  styleID: System.String
+  _connections: []
+  side: 2
+  sidePosition: 48.5
+  sideOffset: 0
+--- !u!114 &-4151281094091782879
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Input
+  m_EditorClassIdentifier: 
+  body: {fileID: 179939493423043794}
+  direction: 1
+  maxConnectionCount: 1
+  styleID: Float
+  _connections: []
+  side: 2
+  sidePosition: 69
+  sideOffset: 0
+--- !u!114 &-4012306779205301206
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -712,15 +123,291 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
   m_Name: Output
   m_EditorClassIdentifier: 
-  body: {fileID: 6130610157858939706}
+  body: {fileID: -1235537976757855023}
+  direction: 2
+  maxConnectionCount: 0
+  styleID: Float
+  _connections:
+  - {fileID: 4469139632252275926}
+  side: 2
+  sidePosition: 48.5
+  sideOffset: 0
+--- !u!114 &-3939856838907777061
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aed1cb8d4a4380949a43c914f6473868, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 11400000}
+  position: {x: -109.5, y: 65}
+  dynamicConnectionPorts: []
+  nodeGUIHeight: {x: 196, y: 187}
+  backgroundColor: {r: 1, g: 0.85, b: 0.92, a: 1}
+  IsFold: 1
+  FoldStatus: Fold
+  inputLeftKnob: {fileID: 4474395682027218392}
+  inputRightKnob: {fileID: -3615348104159313556}
+  outputLeftKnob: {fileID: 8506435939263650896}
+  outputRightKnob: {fileID: 1236278843407431349}
+  StateName: Follow
+  RunTime: 0.0151276
+  DeciderList:
+  - {fileID: 6963599691502605007}
+  IsActiveAction: 0
+  Clip: {fileID: 0}
+  SoundDelay: 0
+--- !u!114 &-3615348104159313556
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Input
+  m_EditorClassIdentifier: 
+  body: {fileID: -3939856838907777061}
+  direction: 1
+  maxConnectionCount: 1
+  styleID: Float
+  _connections:
+  - {fileID: 1467037688073380325}
+  side: 2
+  sidePosition: 68.5
+  sideOffset: 0
+--- !u!114 &-3464308660085559819
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Output
+  m_EditorClassIdentifier: 
+  body: {fileID: 3217367484155399446}
+  direction: 2
+  maxConnectionCount: 1
+  styleID: System.String
+  _connections: []
+  side: 4
+  sidePosition: 316.5
+  sideOffset: 0
+--- !u!114 &-2187349015713943283
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Input
+  m_EditorClassIdentifier: 
+  body: {fileID: 4405535238484281669}
+  direction: 1
+  maxConnectionCount: 1
+  styleID: System.String
+  _connections:
+  - {fileID: 4259702714452993390}
+  side: 4
+  sidePosition: 48.5
+  sideOffset: 0
+--- !u!114 &-1550843169650979465
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Output
+  m_EditorClassIdentifier: 
+  body: {fileID: 4405535238484281669}
+  direction: 2
+  maxConnectionCount: 0
+  styleID: Float
+  _connections: []
+  side: 4
+  sidePosition: 159.5
+  sideOffset: 0
+--- !u!114 &-1342171591936066194
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Output
+  m_EditorClassIdentifier: 
+  body: {fileID: 4405535238484281669}
+  direction: 2
+  maxConnectionCount: 0
+  styleID: Float
+  _connections:
+  - {fileID: 4469139632252275926}
+  side: 2
+  sidePosition: 159.5
+  sideOffset: 0
+--- !u!114 &-1235537976757855023
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94af8616d0237714c89d4e522e60a222, type: 3}
+  m_Name: Entry State
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 11400000}
+  position: {x: -693.5, y: -330}
+  dynamicConnectionPorts: []
+  nodeGUIHeight: {x: 200, y: 76}
+  backgroundColor: {r: 0, g: 1, b: 1, a: 1}
+  IsFold: 1
+  FoldStatus: Fold
+  outputKnob: {fileID: -4012306779205301206}
+  FirstActionNode: {fileID: 179939493423043794}
+--- !u!114 &-72174964074184557
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Output
+  m_EditorClassIdentifier: 
+  body: {fileID: -8304862115917722368}
   direction: 2
   maxConnectionCount: 0
   styleID: Float
   _connections: []
   side: 2
-  sidePosition: 241
+  sidePosition: 221
   sideOffset: 0
---- !u!114 &8928368361540859805
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5449f935bdd5a064fb16fcd6030db356, type: 3}
+  m_Name: StoneMonsterFSM
+  m_EditorClassIdentifier: 
+  editorStates:
+  - {fileID: 5020592760990318729}
+  saveName: StoneMonsterFSM
+  savePath: Assets\Scripts\Monster\StateMachineCanvas\StoneMonsterFSM.asset
+  livesInScene: 0
+  nodes:
+  - {fileID: 179939493423043794}
+  - {fileID: -3939856838907777061}
+  - {fileID: -8304862115917722368}
+  - {fileID: -1235537976757855023}
+  - {fileID: 6963599691502605007}
+  - {fileID: 3217367484155399446}
+  - {fileID: 4405535238484281669}
+  groups: []
+  FirstStateNode: {fileID: 6374281019807993739, guid: 8e925e85e06e9c54e8bcd282b9498661,
+    type: 2}
+  HasStartNode: 1
+--- !u!114 &179939493423043794
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4b2b9ee20867414e80ea0dc863a28f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 11400000}
+  position: {x: -130, y: -330}
+  dynamicConnectionPorts: []
+  nodeGUIHeight: {x: 196, y: 210}
+  backgroundColor: {r: 1, g: 0.85, b: 0.92, a: 1}
+  IsFold: 1
+  FoldStatus: Fold
+  inputLeftKnob: {fileID: 4469139632252275926}
+  inputRightKnob: {fileID: -4151281094091782879}
+  outputLeftKnob: {fileID: 6194973921715974142}
+  outputRightKnob: {fileID: 7244448289299037712}
+  StateName: Patrol
+  RunTime: 0.015300101
+  DeciderList:
+  - {fileID: -8304862115917722368}
+  IsActiveAction: 0
+  Clip: {fileID: 0}
+  SoundDelay: 0
+  PatrolRadius: 10
+--- !u!114 &1236278843407431349
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Output
+  m_EditorClassIdentifier: 
+  body: {fileID: -3939856838907777061}
+  direction: 2
+  maxConnectionCount: 1
+  styleID: System.String
+  _connections: []
+  side: 2
+  sidePosition: 178.5
+  sideOffset: 0
+--- !u!114 &1467037688073380325
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Output
+  m_EditorClassIdentifier: 
+  body: {fileID: -8304862115917722368}
+  direction: 2
+  maxConnectionCount: 0
+  styleID: Float
+  _connections:
+  - {fileID: -3615348104159313556}
+  side: 4
+  sidePosition: 221
+  sideOffset: 0
+--- !u!114 &2934358474603951314
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -732,7 +419,231 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
   m_Name: Input
   m_EditorClassIdentifier: 
-  body: {fileID: 7854803383140569561}
+  body: {fileID: 6963599691502605007}
+  direction: 1
+  maxConnectionCount: 1
+  styleID: System.String
+  _connections: []
+  side: 4
+  sidePosition: 48.5
+  sideOffset: 0
+--- !u!114 &2946473050843645445
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Output
+  m_EditorClassIdentifier: 
+  body: {fileID: 6963599691502605007}
+  direction: 2
+  maxConnectionCount: 0
+  styleID: Float
+  _connections: []
+  side: 2
+  sidePosition: 237.5
+  sideOffset: 0
+--- !u!114 &3217367484155399446
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52a687e5b69338145b0793e2b55de1f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 11400000}
+  position: {x: -860, y: 20}
+  dynamicConnectionPorts: []
+  nodeGUIHeight: {x: 196, y: 325}
+  backgroundColor: {r: 1, g: 0.85, b: 0.92, a: 1}
+  IsFold: 1
+  FoldStatus: Fold
+  inputLeftKnob: {fileID: 5251342987877775389}
+  inputRightKnob: {fileID: -7643307923261212207}
+  outputLeftKnob: {fileID: -3464308660085559819}
+  outputRightKnob: {fileID: 4259702714452993390}
+  StateName: Hit
+  RunTime: 0.3251224
+  DeciderList:
+  - {fileID: 4405535238484281669}
+  IsActiveAction: 1
+  Clip: {fileID: 0}
+  SoundDelay: 0
+  AttackRangeOffset: {x: 0, y: 0, z: 0.75}
+  AttackRangeSize: {x: 1, y: 0.61, z: 1.29}
+  DamageAreaDelayTime: 0.2
+  DamageAreaKeepTime: 0.8
+  Damage: 0
+--- !u!114 &3253232542116167183
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Input
+  m_EditorClassIdentifier: 
+  body: {fileID: -8304862115917722368}
+  direction: 1
+  maxConnectionCount: 1
+  styleID: System.String
+  _connections:
+  - {fileID: 7244448289299037712}
+  side: 4
+  sidePosition: 49
+  sideOffset: 0
+--- !u!114 &4259702714452993390
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Output
+  m_EditorClassIdentifier: 
+  body: {fileID: 3217367484155399446}
+  direction: 2
+  maxConnectionCount: 1
+  styleID: System.String
+  _connections:
+  - {fileID: -2187349015713943283}
+  side: 2
+  sidePosition: 316.5
+  sideOffset: 0
+--- !u!114 &4405535238484281669
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70747e764d0190f4eba065f5d301e6d6, type: 3}
+  m_Name: WaitTime
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 11400000}
+  position: {x: -480, y: -140}
+  dynamicConnectionPorts: []
+  nodeGUIHeight: {x: 199, y: 168}
+  backgroundColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  IsFold: 1
+  FoldStatus: Fold
+  inputLeftKnob: {fileID: -2187349015713943283}
+  inputRightKnob: {fileID: -5069875911806370912}
+  outputLeftKnob: {fileID: -1550843169650979465}
+  outputRightKnob: {fileID: -1342171591936066194}
+  Type: 0
+  Order: 0
+  NextNode: {fileID: 179939493423043794}
+  WaitTime: 1
+--- !u!114 &4469139632252275926
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Input
+  m_EditorClassIdentifier: 
+  body: {fileID: 179939493423043794}
+  direction: 1
+  maxConnectionCount: 1
+  styleID: Float
+  _connections:
+  - {fileID: -4012306779205301206}
+  - {fileID: -1342171591936066194}
+  side: 4
+  sidePosition: 69
+  sideOffset: 0
+--- !u!114 &4474395682027218392
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Input
+  m_EditorClassIdentifier: 
+  body: {fileID: -3939856838907777061}
+  direction: 1
+  maxConnectionCount: 1
+  styleID: Float
+  _connections: []
+  side: 4
+  sidePosition: 68.5
+  sideOffset: 0
+--- !u!114 &5020592760990318729
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6ab6487237ff124ea4c2aa5de9ce3fb, type: 3}
+  m_Name: MainEditorState
+  m_EditorClassIdentifier: 
+  myCustomStateVariable: 0
+  canvas: {fileID: 0}
+  parentEditor: {fileID: 0}
+  selectedNode: {fileID: 3217367484155399446}
+  panOffset: {x: 466, y: -226.59999}
+  zoom: 0.8
+--- !u!114 &5251342987877775389
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Input
+  m_EditorClassIdentifier: 
+  body: {fileID: 3217367484155399446}
+  direction: 1
+  maxConnectionCount: 1
+  styleID: Float
+  _connections: []
+  side: 4
+  sidePosition: 68.5
+  sideOffset: 0
+--- !u!114 &5251388118083246662
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Input
+  m_EditorClassIdentifier: 
+  body: {fileID: -8304862115917722368}
   direction: 1
   maxConnectionCount: 1
   styleID: System.String
@@ -740,7 +651,7 @@ MonoBehaviour:
   side: 2
   sidePosition: 49
   sideOffset: 0
---- !u!114 &9155032233146688843
+--- !u!114 &6194973921715974142
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -750,14 +661,105 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
-  m_Name: Input
+  m_Name: Output
   m_EditorClassIdentifier: 
-  body: {fileID: 7854803383140569561}
-  direction: 1
+  body: {fileID: 179939493423043794}
+  direction: 2
+  maxConnectionCount: 1
+  styleID: System.String
+  _connections: []
+  side: 4
+  sidePosition: 201
+  sideOffset: 0
+--- !u!114 &6963599691502605007
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba53fa1402c7a14cb5c7e899cd446d5, type: 3}
+  m_Name: DetectPlayerBox
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 11400000}
+  position: {x: -423.2, y: 135.79999}
+  dynamicConnectionPorts: []
+  nodeGUIHeight: {x: 199, y: 246}
+  backgroundColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  IsFold: 1
+  FoldStatus: Fold
+  inputLeftKnob: {fileID: 2934358474603951314}
+  inputRightKnob: {fileID: -8713230492920177133}
+  outputLeftKnob: {fileID: 8674698987197005214}
+  outputRightKnob: {fileID: 2946473050843645445}
+  Type: 0
+  Order: 0
+  NextNode: {fileID: 3217367484155399446}
+  IsRangeStable: 0
+  DetectOffset: {x: 0, y: 0, z: 0.75}
+  DetectSize: {x: 1, y: 0.61, z: 1.29}
+--- !u!114 &7244448289299037712
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Output
+  m_EditorClassIdentifier: 
+  body: {fileID: 179939493423043794}
+  direction: 2
   maxConnectionCount: 1
   styleID: System.String
   _connections:
-  - {fileID: -4265301985389173979}
+  - {fileID: 3253232542116167183}
+  side: 2
+  sidePosition: 201
+  sideOffset: 0
+--- !u!114 &8506435939263650896
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Output
+  m_EditorClassIdentifier: 
+  body: {fileID: -3939856838907777061}
+  direction: 2
+  maxConnectionCount: 1
+  styleID: System.String
+  _connections:
+  - {fileID: -8713230492920177133}
   side: 4
-  sidePosition: 49
+  sidePosition: 178.5
+  sideOffset: 0
+--- !u!114 &8674698987197005214
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Output
+  m_EditorClassIdentifier: 
+  body: {fileID: 6963599691502605007}
+  direction: 2
+  maxConnectionCount: 0
+  styleID: Float
+  _connections:
+  - {fileID: -7643307923261212207}
+  side: 4
+  sidePosition: 237.5
   sideOffset: 0

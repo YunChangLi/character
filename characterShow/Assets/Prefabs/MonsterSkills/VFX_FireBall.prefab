@@ -9517,9 +9517,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1565074608335660591}
-  - component: {fileID: 3355974157150839189}
   - component: {fileID: 2278267498010088443}
   - component: {fileID: -302919894177356131}
+  - component: {fileID: 189617189450623591}
   m_Layer: 0
   m_Name: VFX_FireBall
   m_TagString: Untagged
@@ -9544,24 +9544,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3355974157150839189
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4551632830624492287}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a85fa32faca87ff499637946ee6f3df3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Speed: 30
-  ImpactPrefab: {fileID: 7820950075738378256, guid: 9a877c22572b5c540a488ce72763fcfe,
-    type: 3}
-  Trails:
-  - {fileID: 2133775004}
-  - {fileID: 1013322243132025802}
 --- !u!54 &2278267498010088443
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9591,6 +9573,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.2, y: 1.2, z: 1.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &189617189450623591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4551632830624492287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a21542e61f23b93459b34a8634618572, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 30
+  ImpactPrefab: {fileID: 7820950075738378256, guid: 9a877c22572b5c540a488ce72763fcfe,
+    type: 3}
+  Trails:
+  - {fileID: 2133775004}
+  - {fileID: 1013322243132025802}
 --- !u!1001 &3666142933381427946
 PrefabInstance:
   m_ObjectHideFlags: 0
