@@ -56,4 +56,12 @@ public class SkillManager : Singleton<SkillManager>
             activeSkill.Value.SetSkillShortCut(KeyCode.A);
         }
     }*/
+    public SkillSettingUI GetSkillSettingCanvas()
+    {
+        return skillSettingUI;
+    }
+    public SkillApplyUI GetSkillApplyUI()
+    {
+        return skillApplyUI;
+    }
 }

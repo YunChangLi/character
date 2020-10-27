@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class SkillSettingUI : MonoBehaviour
 {
     public SkillField[] skills;
-    public Button StoredButton; 
+    public Button StoredButton;
+    public GameObject ChosenSkillsGroup;
 
     //put on the skill manager init
     public void SkillSettingUIInit()

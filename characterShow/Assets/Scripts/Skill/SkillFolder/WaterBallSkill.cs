@@ -5,10 +5,14 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "WaterBallSkill", menuName = "New Skill/WaterBallSkill")]
 public class WaterBallSkill : Skill
 {
+    public override string SkillName => "WaterBallSkill";
     public float DamageValue = 1;
     public float WeaponRange = 50f;
     public float HitForce = 100f;
     private WaterBallSkillContext waterBallContext;
+
+    
+
     public override ISkillContext GetSkillContext()
     {
         return waterBallContext;

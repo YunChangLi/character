@@ -16,5 +16,12 @@ public class SkillCard : MovableImageUI
     {
         Destroy(movOld.gameObject);
     }
+    /*public override void OnDrag(PointerEventData eventData)
+    {
+        if (ItemField != null)
+            CanDrag = false;
+
+        base.OnDrag(eventData);
+    }*/
 
 }

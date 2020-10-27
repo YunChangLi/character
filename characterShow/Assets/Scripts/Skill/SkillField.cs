@@ -9,7 +9,6 @@ public class SkillField : DropField
 {
     private Skill skillEntity;
     private ISkillContext skillContext;
-    public string StoredSkillID;
     private Color skillFieldColor;
 
 
@@ -39,17 +38,12 @@ public class SkillField : DropField
         else 
         {
             obj.GetRect().anchoredPosition = obj.StoredPosition;//Return
-            var skillCard = Instantiate(skillObj, transform.position, Quaternion.identity);
-            skillCard.transform.parent = this.transform;
-            skillCard.ItemField = this;
-            skillCard.UIInitialized();
-            dropItem = skillCard;
+            CreateChosenSkillCard(skillObj);
         }
 
         
         skillEntity = skillObj.SkillEntity;
         skillContext = obj.GetComponent<ISkillContext>();
-        StoredSkillID = skillObj.SkillEntity.GetSkillID();
         
         
     }
@@ -60,6 +54,7 @@ public class SkillField : DropField
         {
             dropItem = null;
             skillEntity = null;
+
         }
             
     }
@@ -70,6 +65,15 @@ public class SkillField : DropField
     public ISkillContext GetSkillContext()
     {
         return skillContext;
+    }
+    private void CreateChosenSkillCard(SkillCard skillcard) 
+    {
+        var skillChosenCard = Instantiate(skillcard, transform.position, Quaternion.identity);
+        skillChosenCard.name = "SkillChosenCard(" + skillcard.SkillEntity.SkillName + ")";
+        skillChosenCard.transform.parent = SkillManager.instance.GetSkillSettingCanvas().ChosenSkillsGroup.transform;
+        skillChosenCard.ItemField = this;
+        skillChosenCard.UIInitialized();
+        dropItem = skillChosenCard;
     }
 
 

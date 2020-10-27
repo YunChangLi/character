@@ -18,14 +18,14 @@ public abstract class MovableImageUI : MonoBehaviour ,  IDragHandler , IBeginDra
     public event Action<PointerEventData> OnDragHandler;
     public event Action<PointerEventData , bool> OnEndDragHandler;
 
-    private RectTransform rectTransform;
+    protected RectTransform rectTransform;
     private Canvas canvas;
 
     private void Awake()
     {
         UIInitialized();
     }
-    public void UIInitialized()
+    public virtual void UIInitialized()
     {
         rectTransform = GetComponent<RectTransform>();
         canvas = GetComponentInParent<Canvas>();
@@ -36,9 +36,10 @@ public abstract class MovableImageUI : MonoBehaviour ,  IDragHandler , IBeginDra
     {
         if (!CanDrag)
         {
+            Debug.Log("Cannot Drag");
             return;
         }
-
+        Debug.Log("Can Drag");
         OnDragHandler?.Invoke(eventData); //在drag之前會發生什麼是
 
         rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
@@ -48,9 +49,10 @@ public abstract class MovableImageUI : MonoBehaviour ,  IDragHandler , IBeginDra
     {
         if (!CanDrag)
         {
+            Debug.Log("Cannot Begin Drag");
             return;
         }
-
+        Debug.Log("Can Begin Drag");
         OnBeginDragHandler?.Invoke(eventData);
     }
 
@@ -73,30 +75,44 @@ public abstract class MovableImageUI : MonoBehaviour ,  IDragHandler , IBeginDra
             }
         }
         //找到dropField
-        if (dropField != null ) {
-
-            if (dropField.GetDropItem() != null) //如果欄位上已有物品，做替換
+        if (dropField != null) {
+            if (dropField == ItemField) //無拉出框內保留原地
             {
-                MoveItemToFilledField(dropField.GetDropItem(), this);
-            }
-            if (dropField.Accepts(this))//確認可以放置物品 && 物品事前無在欄位中
-            {
-                dropField.Drop(this); //開始放置
-                OnEndDragHandler?.Invoke(eventData, true);//放置完後，需做的處理
-                ItemField = dropField;
+                this.transform.position = ItemField.transform.position;
                 return;
             }
-            
+            if (dropField.Accepts(this))//確認可以放置物品
+            {
+                if (dropField.GetDropItem() != null) //如果欄位上已有物品
+                {
+                    MoveItemToFilledField(dropField.GetDropItem(), this);
+                }
+
+                dropField.Drop(this); //開始放置
+                OnEndDragHandler?.Invoke(eventData, true);//放置完後，需做的處理
+
+                if (ItemField != null) //從一個欄位移到另一個欄位
+                {
+                    //將之前欄位的紀錄清空
+                    realeseField(ItemField);
+                    Destroy(this.gameObject);
+
+                }
+                return;
+
+            }
+
         }
-        
-        else if (ItemField != null)//物件離開欄位 釋放ItemField
+        else 
         {
-            Debug.Log("release : " + ItemField);
-            ItemField.UnDrop(this) ;
-            ItemField = null;
-            Destroy(this.gameObject);
-            return;
+            if (ItemField != null) //將物件拉離欄位
+            {
+                realeseField(ItemField);//物件離開欄位 釋放ItemField
+                Destroy(this.gameObject);//刪除物件
+                return;
+            }
         }
+        //找到dropfield但不允許放入或未抓到dropField
         rectTransform.anchoredPosition = StoredPosition;
         OnEndDragHandler?.Invoke(eventData, false);
 
@@ -106,5 +122,11 @@ public abstract class MovableImageUI : MonoBehaviour ,  IDragHandler , IBeginDra
         return rectTransform;
     }
     public abstract void MoveItemToFilledField(MovableImageUI movOld , MovableImageUI movNew);
+    private void realeseField(DropField field)
+    {
+        Debug.Log("release : " + field);
+        field.UnDrop(this);
+        field = null;
+    }
 
 }

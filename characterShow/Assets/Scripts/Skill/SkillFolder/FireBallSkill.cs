@@ -5,11 +5,14 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "FireBallSkill",menuName = "New Skill/FireBallSkill")]
 public class FireBallSkill : Skill
 {
+    public override string SkillName => "FireBallSkill";
     public float DamageValue = 1;
     public float WeaponRange = 50f;
     public float HitForce = 100f;
 
     private FireBallSkillContext SkillTriggable;
+
+    
 
     /// <summary>
     /// assign value
