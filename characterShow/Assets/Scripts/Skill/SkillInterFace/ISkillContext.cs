@@ -6,6 +6,6 @@ public interface ISkillContext
 {
     string ID { get; set; }
     void PrepareSkill();
-    void StartSkill();
-    void StopSkill();
+    IEnumerator StartSkill();
+    IEnumerator StopSkill();
 }

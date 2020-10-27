@@ -70,7 +70,7 @@ public class SkillField : DropField
     {
         var skillChosenCard = Instantiate(skillcard, transform.position, Quaternion.identity);
         skillChosenCard.name = "SkillChosenCard(" + skillcard.SkillEntity.SkillName + ")";
-        skillChosenCard.transform.parent = SkillManager.instance.GetSkillSettingCanvas().ChosenSkillsGroup.transform;
+        skillChosenCard.transform.parent = SkillManager.instance.GetSkillSettingCanvas().GetSkillChosenGroup().transform;
         skillChosenCard.ItemField = this;
         skillChosenCard.UIInitialized();
         dropItem = skillChosenCard;

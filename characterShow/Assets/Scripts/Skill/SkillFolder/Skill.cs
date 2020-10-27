@@ -13,7 +13,6 @@ public abstract class Skill : ScriptableObject
     protected string skillID = System.Guid.NewGuid().ToString();
 
     public abstract void initialize(ISkillContext skillContext);
-    public abstract void TriggerSkill();
     public abstract ISkillContext GetSkillContext();
 
     public virtual string GetSkillID()

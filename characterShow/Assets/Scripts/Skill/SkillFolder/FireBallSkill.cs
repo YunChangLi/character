@@ -29,10 +29,6 @@ public class FireBallSkill : Skill
         SkillTriggable.PrepareSkill();
     }
 
-    public override void TriggerSkill()
-    {
-        SkillTriggable.StartSkill();
-    }
     public override ISkillContext GetSkillContext()
     {
         return SkillTriggable;

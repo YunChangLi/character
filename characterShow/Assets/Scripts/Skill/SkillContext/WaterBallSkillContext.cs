@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WaterBallSkillContext : MonoBehaviour  , ISkillContext
+public class WaterBallSkillContext : MonoBehaviour , ISkillContext
 {
     public float DamageValue ;
     public float WeaponRange;
@@ -14,14 +14,13 @@ public class WaterBallSkillContext : MonoBehaviour  , ISkillContext
         
     }
 
-    public void StartSkill()
+    public IEnumerator StartSkill()
     {
+        yield return null;
     }
 
-    public void StopSkill()
+    public IEnumerator StopSkill()
     {
-        
+        yield return null;
     }
-
-   
 }

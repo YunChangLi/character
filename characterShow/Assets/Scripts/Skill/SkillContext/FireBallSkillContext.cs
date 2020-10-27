@@ -9,22 +9,22 @@ public class FireBallSkillContext :MonoBehaviour ,  ISkillContext
     public float WeaponRange ;
     public float HitForce ;
 
-    
+
 
     public void PrepareSkill()
-    {
-        
-    }
-
-    public void StartSkill()
     {
        
     }
 
-    public void StopSkill()
+    public IEnumerator StartSkill()
     {
-        
+        yield return null;
     }
 
-    
+    public IEnumerator StopSkill()
+    {
+        yield return null;
+    }
+
+
 }

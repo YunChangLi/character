@@ -34,9 +34,15 @@ public class SkillManager : Singleton<SkillManager>
     public void RegistToSkillBar(Skill skill , int index )
     {
         Debug.Log("SkillContext : " + skill + " , " + skill.GetSkillID());
-        mActiveSkillDict.Add(skill.GetSkillID(), skill);
-        skillApplyUI.AssignTheSkillData(skill, index , GameDataManager.instance.flowData.keyDatas.skillsShortCut[index]);
+        if(!mActiveSkillDict.ContainsKey(skill.GetSkillID())) //確認是否添加過
+             mActiveSkillDict.Add(skill.GetSkillID(), skill);
 
+        
+
+    }
+    public Skill GetSkill(string skillID)
+    {
+        return mActiveSkillDict[skillID];
     }
     public bool UnRegistFromSkillBar(string skillID)
     {
@@ -63,5 +69,13 @@ public class SkillManager : Singleton<SkillManager>
     public SkillApplyUI GetSkillApplyUI()
     {
         return skillApplyUI;
+    }
+    public void DestroyTheSkillChosenCard(GameObject skillChosenGroup)
+    {
+        foreach (Transform child in skillChosenGroup.transform)
+        {
+            Destroy(child.gameObject);
+        }
+
     }
 }

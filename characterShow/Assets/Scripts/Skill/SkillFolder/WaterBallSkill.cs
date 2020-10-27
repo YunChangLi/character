@@ -29,8 +29,4 @@ public class WaterBallSkill : Skill
         waterBallContext.PrepareSkill();
     }
 
-    public override void TriggerSkill()
-    {
-        waterBallContext.StartSkill();
-    }
 }

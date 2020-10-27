@@ -19,9 +19,10 @@ public class SkillCoolDown : MonoBehaviour
     private float nextReadyTime; //下次冷卻結束時間
     private float coolDownTimeLeft; //用作倒數的時間數
 
-    public void initialize(Skill selectedSkill , KeyCode keycode)
+    public void initialize(string skillID , KeyCode keycode)
     {
-        skill = selectedSkill;
+        skill = SkillManager.instance.GetSkill(skillID);
+        skillContext = skill.GetSkillContext();
         ShortCut = keycode;
         myButtonImage = GetComponent<Image>();
         skillAudioSource = GetComponent<AudioSource>() ?? gameObject.AddComponent<AudioSource>();
@@ -37,7 +38,7 @@ public class SkillCoolDown : MonoBehaviour
         if (coolDownComplete)
         {
             skillReady();
-            if (Input.GetKeyDown(ShortCut))
+            if (Input.GetKeyDown(ShortCut) && skill != null)
             {
                 shortCutTrigger();
             }
@@ -51,6 +52,8 @@ public class SkillCoolDown : MonoBehaviour
     {
         CoolDownCountText.enabled = false;
         DarkMask.enabled = false;
+        skillContext?.PrepareSkill();
+        
     }
     private void coolDown()
     {
@@ -66,8 +69,8 @@ public class SkillCoolDown : MonoBehaviour
         DarkMask.enabled = true;
         CoolDownCountText.enabled = true;
 
-       /* skillAudioSource.clip = skill?.SkillSound;
-        skillAudioSource.Play();
-        skill.TriggerSkill();*/
+        /* skillAudioSource.clip = skill?.SkillSound;
+         skillAudioSource.Play();*/
+        StartCoroutine(skillContext.StartSkill());
     }
 }
