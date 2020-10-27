@@ -11,19 +11,10 @@ using UnityEngine.EventSystems;
 public class SkillCard : MovableImageUI
 {
     public Skill SkillEntity;
-    
 
-    public override void OnEndDrag(PointerEventData eventData)
+    public override void MoveItemToFilledField(MovableImageUI movOld, MovableImageUI movNew)
     {
-        base.OnEndDrag(eventData);
-        if (IsInTheField)
-        {
-            Debug.Log("In the Field.");
-        }  
-        else
-        {
-            Debug.Log("Not in the Field");
-        }
-            
+        Destroy(movOld.gameObject);
     }
+
 }

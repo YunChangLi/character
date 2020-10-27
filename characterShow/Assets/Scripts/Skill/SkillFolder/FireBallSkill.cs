@@ -17,7 +17,7 @@ public class FireBallSkill : Skill
     /// <param name="obj"></param>
     public override void initialize(ISkillContext skillContext)// change to the Skill bar
     {
-        Debug.Log("initialize");
+        Debug.Log("initialize : Fireball");
         SkillTriggable = (FireBallSkillContext)skillContext;
         SkillTriggable.ID = this.skillID;
         SkillTriggable.DamageValue = this.DamageValue;

@@ -6,11 +6,11 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(CanvasGroup))]
-public class MovableImageUI : MonoBehaviour ,  IDragHandler , IBeginDragHandler , IEndDragHandler
+public abstract class MovableImageUI : MonoBehaviour ,  IDragHandler , IBeginDragHandler , IEndDragHandler
 {
     
-    public bool IsInTheField = false;  
     public bool IsOutOfBound = false;
+    public bool IsNotReturn = false;
     public Vector3 StoredPosition; //紀錄所屬位置
     public DropField ItemField; //紀錄所屬欄位
 
@@ -23,9 +23,12 @@ public class MovableImageUI : MonoBehaviour ,  IDragHandler , IBeginDragHandler 
 
     private void Awake()
     {
+        UIInitialized();
+    }
+    public void UIInitialized()
+    {
         rectTransform = GetComponent<RectTransform>();
         canvas = GetComponentInParent<Canvas>();
-
     }
     public bool CanDrag { get; set; } = true;
 
@@ -70,29 +73,38 @@ public class MovableImageUI : MonoBehaviour ,  IDragHandler , IBeginDragHandler 
             }
         }
         //找到dropField
-        if (dropField != null && !dropField.hasItem) {
+        if (dropField != null ) {
 
-            if (dropField.Accepts(this) && !IsInTheField)//確認可以放置物品 && 物品事前無在欄位中
+            if (dropField.GetDropItem() != null) //如果欄位上已有物品，做替換
+            {
+                MoveItemToFilledField(dropField.GetDropItem(), this);
+            }
+            if (dropField.Accepts(this))//確認可以放置物品 && 物品事前無在欄位中
             {
                 dropField.Drop(this); //開始放置
                 OnEndDragHandler?.Invoke(eventData, true);//放置完後，需做的處理
                 ItemField = dropField;
-                IsInTheField = true;
                 return;
             }
             
         }
-        //物件離開欄位 釋放parent
-        if (ItemField != null)
+        
+        else if (ItemField != null)//物件離開欄位 釋放ItemField
         {
             Debug.Log("release : " + ItemField);
-            ItemField.hasItem = false;
+            ItemField.UnDrop(this) ;
             ItemField = null;
+            Destroy(this.gameObject);
+            return;
         }
-        IsInTheField = false;
         rectTransform.anchoredPosition = StoredPosition;
         OnEndDragHandler?.Invoke(eventData, false);
 
     }
+    public RectTransform GetRect()
+    {
+        return rectTransform;
+    }
+    public abstract void MoveItemToFilledField(MovableImageUI movOld , MovableImageUI movNew);
 
 }

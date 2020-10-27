@@ -21,7 +21,7 @@ public class SkillSettingUI : MonoBehaviour
         {
             if (skills[i].GetSkillEntity() != null) 
             {
-                skills[i].GetSkillEntity().initialize(skills[i].GetSkillContext());
+                skills[i].GetSkillEntity().initialize(skills[i].GetSkillContext()); // skill初始化
                 SkillManager.instance.RegistToSkillBar(skills[i].GetSkillEntity() , i);
                
             }

@@ -16,7 +16,7 @@ public class WaterBallSkill : Skill
 
     public override void initialize(ISkillContext skillContext)
     {
-        Debug.Log("initialize");
+        Debug.Log("initialize : WaterBall");
         waterBallContext = (WaterBallSkillContext)skillContext;
         waterBallContext.ID = this.skillID;
         waterBallContext.DamageValue = this.DamageValue;
