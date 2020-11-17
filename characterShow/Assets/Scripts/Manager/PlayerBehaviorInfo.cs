@@ -16,12 +16,13 @@ public class PlayerBehaviorInfo : BehaviorInfo
     private Vector3 movement;
     
     public bool JumpInput;
+    public bool IsSkill = false;
 
     public Vector3 MovementDir 
     {
         get 
         {
-            if (IsBlocked) return Vector3.zero;
+            if (IsBlocked && IsSkill) return Vector3.zero;
             else return movement;
         }
     }
@@ -29,9 +30,13 @@ public class PlayerBehaviorInfo : BehaviorInfo
     /// <summary>
     /// player 各種狀態
     /// </summary>
-    public bool CanAttack
+    public bool CanAttack 
     {
-        get { return !IsBlocked /*&& IsGrounded */ && isAttack; }
+        get { return !IsBlocked && !IsSkill  && isAttack; }
+    }
+    public bool CanSkill
+    {
+        get { return IsSkill; }
     }
     public bool IsDefense
     {

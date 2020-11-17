@@ -58,6 +58,7 @@ public class PlayerController : MonoBehaviour
             GetComponent<Animator>().SetBool("isMove", false);
         }
         Attacking();
+        Debug.Log("A: " + playerInfo.CanAttack);
     }
 
     private void CalculateMovement()

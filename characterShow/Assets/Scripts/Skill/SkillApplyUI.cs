@@ -12,10 +12,12 @@ public class SkillApplyUI : MonoBehaviour
     public void SkillApplyingUIInit() 
     {
         SkillApplyList = this.GetComponentsInChildren<SkillCoolDown>();
+        foreach (SkillCoolDown coolDown in SkillApplyList)
+            coolDown.Initialize();
     }
     public void AssignTheSkillData(string skillID , int index , KeyCode keyCode)
     {
-        SkillApplyList[index].initialize(skillID , keyCode);
+        SkillApplyList[index].SkillCardInitialize(skillID , keyCode);
     }
 
 }

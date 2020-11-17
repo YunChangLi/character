@@ -34,8 +34,12 @@ public class SkillManager : Singleton<SkillManager>
     public void RegistToSkillBar(Skill skill , int index )
     {
         Debug.Log("SkillContext : " + skill + " , " + skill.GetSkillID());
-        if(!mActiveSkillDict.ContainsKey(skill.GetSkillID())) //確認是否添加過
-             mActiveSkillDict.Add(skill.GetSkillID(), skill);
+        if (!mActiveSkillDict.ContainsKey(skill.GetSkillID())) // 確認是否添加過
+        { 
+            mActiveSkillDict.Add(skill.GetSkillID(), skill);
+           
+        } 
+            
 
         
 

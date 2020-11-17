@@ -5,10 +5,14 @@ using UnityEngine;
 public class GamePlayerManager : Singleton<GamePlayerManager>
 {
     public GameObject Player { get; set; }
-    
 
+    public override void Awake()
+    {
+        base.Awake();
+        ManagerInit();
+    }
     public void ManagerInit() {
-        //Player = FindObjectOfType<PlayerBase>();
+        Player = GameObject.FindGameObjectWithTag("Player");
         
     }
     

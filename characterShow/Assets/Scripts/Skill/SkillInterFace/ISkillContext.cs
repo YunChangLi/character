@@ -4,6 +4,7 @@ using UnityEngine;
 
 public interface ISkillContext 
 {
+    GameObject player { get;set; }
     string ID { get; set; }
     void PrepareSkill();
     IEnumerator StartSkill();

@@ -5,6 +5,11 @@ using UnityEngine;
 public class FireBallSkillContext :MonoBehaviour ,  ISkillContext
 {
     public string ID { get; set; }
+    public GameObject player
+    {
+        get { return GamePlayerManager.instance.Player; }
+        set { }
+    }
     public float DamageValue ;
     public float WeaponRange ;
     public float HitForce ;

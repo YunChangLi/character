@@ -14,14 +14,23 @@ public class SkillCoolDown : MonoBehaviour
     [SerializeField] private ISkillContext skillContext;
     [SerializeField] private KeyCode ShortCut;
 
+    private GameObject player;
+    private PlayerBehaviorInfo playerInfo;
     private Image myButtonImage;
     private AudioSource skillAudioSource;
     private float coolDownDuration;
     private float nextReadyTime; //下次冷卻結束時間
     private float coolDownTimeLeft; //用作倒數的時間數
 
-    public void initialize(string skillID , KeyCode keycode)
+    public void Initialize() 
     {
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerInfo = player.GetComponent<PlayerBehaviorInfo>();
+        skillReady();
+    }
+    public void SkillCardInitialize(string skillID , KeyCode keycode)
+    {
+        
         skill = SkillManager.instance.GetSkill(skillID);
         skillContext = skill.GetSkillContext();
         ShortCut = keycode;
@@ -30,24 +39,30 @@ public class SkillCoolDown : MonoBehaviour
         myButtonImage.sprite = skill?.SkillSprite;
         DarkMask.sprite = skill?.SkillSprite;
         coolDownDuration = skill.SkillCoolDown;
-        skillReady();
 
     }
     private void Update()
     {
         bool coolDownComplete = (Time.time > nextReadyTime);
-        if (coolDownComplete)
+        if (player != null) 
         {
-            skillReady();
-            if (Input.GetKeyDown(ShortCut) && skill != null)
+            if (coolDownComplete)
             {
-                shortCutTrigger();
+
+                skillReady();
+                if (Input.GetKeyDown(ShortCut) && skill != null)
+                {
+
+                    shortCutTrigger();
+                }
+            }
+            else
+            {
+                
+                coolDown();
             }
         }
-        else
-        {
-            coolDown();
-        }
+       
     }
     private void skillReady() 
     {
