@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Shader Graphs_swordSkillOne
+  m_Shader: {fileID: -6465566751694194690, guid: 0119c6e7cba7c4441832f09afc3421fa,
+    type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - Texture2D_7547A418:
+        m_Texture: {fileID: 2800000, guid: ce46aaeb7ca14a1418f6c539580bce24, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_B6F1CA17:
+        m_Texture: {fileID: 2800000, guid: f4da30a223a78034fbc3c563d2a924a7, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_CC99B307:
+        m_Texture: {fileID: 2800000, guid: 3c94236cfdd0fcc4b8fd91e7d12dabec, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_1D91E85C: 0.5
+    - Vector1_6318E614: 30
+    - Vector1_8D9C47CB: 2
+    - Vector1_A9A43474: 0.5
+    - Vector1_AAE39E15: 15
+    - Vector1_E5EBBD04: 0.01
+    m_Colors:
+    - Color_7A7463D5: {r: 0, g: 1.098039, b: 3.294118, a: 0}
+    - Color_ABD83D53: {r: 51.37788, g: 0, b: 0.5379882, a: 1}
+    - Color_AF5F0E2: {r: 1, g: 1, b: 1, a: 1}
+    - Vector2_ACDDB372: {r: 0, g: 0.2, b: 0, a: 0}

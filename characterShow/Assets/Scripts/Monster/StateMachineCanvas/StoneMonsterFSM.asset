@@ -156,7 +156,7 @@ MonoBehaviour:
   outputLeftKnob: {fileID: 8506435939263650896}
   outputRightKnob: {fileID: 1236278843407431349}
   StateName: Follow
-  RunTime: 0.0151276
+  RunTime: 0.031182501
   DeciderList:
   - {fileID: 6963599691502605007}
   IsActiveAction: 0
@@ -332,8 +332,7 @@ MonoBehaviour:
   - {fileID: 3217367484155399446}
   - {fileID: 4405535238484281669}
   groups: []
-  FirstStateNode: {fileID: 6374281019807993739, guid: 8e925e85e06e9c54e8bcd282b9498661,
-    type: 2}
+  FirstStateNode: {fileID: -1235537976757855023}
   HasStartNode: 1
 --- !u!114 &179939493423043794
 MonoBehaviour:
@@ -359,7 +358,7 @@ MonoBehaviour:
   outputLeftKnob: {fileID: 6194973921715974142}
   outputRightKnob: {fileID: 7244448289299037712}
   StateName: Patrol
-  RunTime: 0.015300101
+  RunTime: 0.0327488
   DeciderList:
   - {fileID: -8304862115917722368}
   IsActiveAction: 0
@@ -471,7 +470,7 @@ MonoBehaviour:
   outputLeftKnob: {fileID: -3464308660085559819}
   outputRightKnob: {fileID: 4259702714452993390}
   StateName: Hit
-  RunTime: 0.3251224
+  RunTime: 0.40047455
   DeciderList:
   - {fileID: 4405535238484281669}
   IsActiveAction: 1

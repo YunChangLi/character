@@ -5,13 +5,14 @@ using UnityEngine.UI;
 
 public class SkillCoolDown : MonoBehaviour
 {
-    public KeyCode ShortCut;
+    
     public Image skillImage;
     public Image DarkMask;
     public Text CoolDownCountText;
 
     [SerializeField] private Skill skill;
     [SerializeField] private ISkillContext skillContext;
+    [SerializeField] private KeyCode ShortCut;
 
     private Image myButtonImage;
     private AudioSource skillAudioSource;

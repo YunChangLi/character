@@ -39,7 +39,6 @@ public class PlayerController : MonoBehaviour
         characterController = GetComponent<CharacterController>();
         playerInfo = GetComponent<PlayerBehaviorInfo>();
         cameraSetting = FindObjectOfType<CameraSetting>();
-        //PTaskController = GetComponent<PlayerTaskController>();
     }
 
     private void FixedUpdate()
@@ -58,6 +57,7 @@ public class PlayerController : MonoBehaviour
         {
             GetComponent<Animator>().SetBool("isMove", false);
         }
+        Attacking();
     }
 
     private void CalculateMovement()
@@ -171,5 +171,21 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 moveInput = new Vector2(playerInfo.MovementDir.x, playerInfo.MovementDir.z);
         return !Mathf.Approximately(moveInput.sqrMagnitude, 0f);
+    }
+    public void Attacking()
+    {
+        //Debug.Log(this.GetComponent<PlayerBehaviorInfo>().CanAttack);
+        GetComponent<Animator>().SetFloat("StateTime", Mathf.Repeat(GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).normalizedTime, 1f));
+        //animator.ResetTrigger("Attack");
+
+        if (playerInfo.CanAttack)
+        {
+            GetComponent<Animator>().SetTrigger("Attack");
+        }
+        else
+        {
+            GetComponent<Animator>().ResetTrigger("Attack");
+        }
+
     }
 }
